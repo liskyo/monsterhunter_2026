@@ -1,0 +1,1814 @@
+[
+    {
+        "icon": 0,
+        "names": {
+            "EN": "Anjanath",
+            "JP": "アンジャナフ",
+            "FR": "Anjanath"
+        },
+        "type": "brute",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 1,
+        "names": {
+            "EN": "Barroth (covered in mud)",
+            "FR": "Barroth (covered in mud)",
+            "JP": "ボルボロス (covered in mud)"
+        },
+        "type": "brute",
+        "attack": {
+            "muddy": 1,
+            "water": 2
+        },
+        "weak": {
+            "water": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 3,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 1,
+        "names": {
+            "EN": "Barroth (not covered in mud)",
+            "FR": "Barroth (not covered in mud)",
+            "JP": "ボルボロス (not covered in mud)"
+        },
+        "type": "brute",
+        "attack": {
+            "muddy": 1,
+            "water": 2
+        },
+        "weak": {
+            "fire": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 3,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 2,
+        "names": {
+            "EN": "Diablos",
+            "JP": "ディアブロス",
+            "FR": "Diablos"
+        },
+        "type": "flying",
+        "attack": {
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 3,
+        "names": {
+            "EN": "Great Girros",
+            "JP": "ドスギルオス",
+            "FR": "Grand Girros"
+        },
+        "type": "fanged",
+        "attack": {
+            "paralysis": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 3,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 4,
+        "names": {
+            "EN": "Great Jagras",
+            "JP": "ドスジャグラス",
+            "FR": "Grand Jagras"
+        },
+        "type": "fanged",
+        "attack": {
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 3,
+            "paralysis": 3,
+            "blast": 3,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 5,
+        "names": {
+            "EN": "Jyuratodus (covered in mud)",
+            "JP": "ジュラトドス (covered in mud)",
+            "FR": "Jyuratodus (covered in mud)"
+        },
+        "type": "piscine",
+        "attack": {
+            "water": 1,
+            "muddy": 2
+        },
+        "weak": {
+            "water": 3,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 5,
+        "names": {
+            "EN": "Jyuratodus (not covered in mud)",
+            "JP": "ジュラトドス (not covered in mud)",
+            "FR": "Jyuratodus (not covered in mud)"
+        },
+        "type": "piscine",
+        "attack": {
+            "water": 1,
+            "muddy": 2
+        },
+        "weak": {
+            "fire": 1,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 6,
+        "names": {
+            "EN": "Kulu-Ya-Ku",
+            "JP": "クルルヤック",
+            "FR": "Kulu-Ya-Ku"
+        },
+        "type": "bird",
+        "attack": {
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 18,
+        "names": {
+            "EN": "Lavasioth (when hardened)",
+            "JP": "ヴォルガノス (when hardened)",
+            "FR": "Lavasioth (when hardened)"
+        },
+        "type": "piscine",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 18,
+        "names": {
+            "EN": "Lavasioth (not hardened)",
+            "JP": "ヴォルガノス (not hardened)",
+            "FR": "Lavasioth (not hardened)"
+        },
+        "type": "piscine",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 7,
+        "names": {
+            "EN": "Legiana",
+            "JP": "レイギエナ",
+            "FR": "Legiana"
+        },
+        "type": "flying",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 1,
+            "thunder": 3,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 8,
+        "names": {
+            "EN": "Nergigante",
+            "JP": "ネルギガンテ",
+            "FR": "Nergigante"
+        },
+        "type": "elder",
+        "attack": {
+        },
+        "weak": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 9,
+        "names": {
+            "EN": "Odogaron",
+            "JP": "オドガロン",
+            "FR": "Odogaron"
+        },
+        "type": "fanged",
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 2,
+            "ice": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 10,
+        "names": {
+            "EN": "Paolumu",
+            "JP": "パオウルムー",
+            "FR": "Paolumu"
+        },
+        "type": "flying",
+        "attack": {
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 11,
+        "names": {
+            "EN": "Pukei-Pukei",
+            "JP": "プケプケ",
+            "FR": "Pukei-Pukei"
+        },
+        "type": "bird",
+        "attack": {
+            "poison": 1
+        },
+        "weak": {
+            "fire": 2,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 3,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 12,
+        "names": {
+            "EN": "Radobaan",
+            "JP": "ラドバルキン",
+            "FR": "Radobaan"
+        },
+        "type": "brute",
+        "attack": {
+            "sleep": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 13,
+        "names": {
+            "EN": "Rathalos",
+            "JP": "リオレウス",
+            "FR": "Rathalos"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "stun": 2,
+            "poison": 3
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 14,
+        "names": {
+            "EN": "Rathian",
+            "JP": "リオレイア",
+            "FR": "Rathian"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 15,
+        "names": {
+            "EN": "Tobi-Kadachi",
+            "JP": "トビカガチ",
+            "FR": "Tobi-Kadachi"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 16,
+        "names": {
+            "EN": "Tzitzi-Ya-Ku",
+            "JP": "ツィツィヤック",
+            "FR": "Tzitzi-Ya-Ku"
+        },
+        "type": "bird",
+        "attack": {
+            "stun": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 3,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 19,
+        "names": {
+            "EN": "Uragaan",
+            "JP": "ウラガンキン",
+            "FR": "Uragaan"
+        },
+        "type": "brute",
+        "attack": {
+            "fire": 1,
+            "sleep": 2
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 17,
+        "names": {
+            "EN": "Zorah Magdaros",
+            "JP": "ゾラ・マグダラオス",
+            "FR": "Zorah Magdaros"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3
+        }
+    },
+    {
+        "icon": 20,
+        "names": {
+            "EN": "Deviljho",
+            "JP": "イビルジョー",
+            "FR": "Deviljho"
+        },
+        "type": "brute",
+        "attack": {
+            "dragon": 1,
+            "defdown": 2,
+            "fire": 3,
+            "ice": 4,
+            "water": 5
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 21,
+        "names": {
+            "EN": "Dodogama",
+            "JP": "ドドガマル",
+            "FR": "Dodogama"
+        },
+        "type": "fanged",
+        "attack": {
+            "blast": 1
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 22,
+        "names": {
+            "EN": "Kushala Daora",
+            "JP": "クシャルダオラ",
+            "FR": "Kushala Daora"
+        },
+        "type": "elder",
+        "attack": {
+            "dragon": 1,
+            "ice": 2,
+            "snowman": 3
+        },
+        "weak": {
+            "fire": 1,
+            "thunder": 3,
+            "dragon": 2,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 23,
+        "names": {
+            "EN": "Teostra",
+            "JP": "テオ・テスカトル",
+            "FR": "Teostra"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1,
+            "dragon": 2,
+            "blast": 3
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 24,
+        "names": {
+            "EN": "Vaal Hazak",
+            "JP": "ヴァルハザク",
+            "FR": "Vaal Hazak"
+        },
+        "type": "elder",
+        "attack": {
+            "effluvial": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 25,
+        "names": {
+            "EN": "Kirin",
+            "JP": "キリン",
+            "FR": "Kirin"
+        },
+        "type": "elder",
+        "attack": {
+            "thunder": 1,
+            "stun": 2
+        },
+        "weak": {
+            "fire": 3,
+            "water": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 2,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 26,
+        "names": {
+            "EN": "Black Diablos",
+            "JP": "ディアブロス（亜種）",
+            "FR": "Diablos Noire"
+        },
+        "type": "flying",
+        "attack": {
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 27,
+        "names": {
+            "EN": "Azure Rathalos",
+            "JP": "リオレウス亜種",
+            "FR": "Rathalos Azur"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "stun": 2,
+            "poison": 3
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 28,
+        "names": {
+            "EN": "Pink Rathian",
+            "JP": "リオレイア（亜種）",
+            "FR": "Rathian Sakura"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 29,
+        "names": {
+            "EN": "Xeno'jiiva",
+            "JP": "ゼノ・ジーヴァ",
+            "FR": "Xeno'jiiva"
+        },
+        "type": "elder",
+        "attack": {
+            "dragon": 1,
+            "fire": 2
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 3,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 30,
+        "names": {
+            "EN": "Bazelgeuse",
+            "JP": "バゼルギウス",
+            "FR": "Bazelgeuse"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 31,
+        "names": {
+            "EN": "Kulve Taroth (covered in gold)",
+            "JP": "マム・タロト (covered in gold)",
+            "FR": "Kulve Taroth (covered in gold)"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 31,
+        "names": {
+            "EN": "Kulve Taroth (not covered in gold)",
+            "JP": "マム・タロト (not covered in gold)",
+            "FR": "Kulve Taroth (not covered in gold)"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 2,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 32,
+        "names": {
+            "EN": "Lunastra",
+            "JP": "ナナ・テスカトリ",
+            "FR": "Lunastra"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 33,
+        "names": {
+            "EN": "Behemoth",
+            "JP": "ベヒーモス",
+            "FR": "Behemoth"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1,
+            "thunder": 2,
+            "bleeding": 3
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 34,
+        "names": {
+            "EN": "Leshen",
+            "JP": "レーシェン",
+            "FR": "Leshen"
+        },
+        "type": "relict",
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 3,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 35,
+        "names": {
+            "EN": "Ancient Leshen",
+            "JP": "エンシェント・レーシェン",
+            "FR": "Vieux Leshen"
+        },
+        "type": "relict",
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 36,
+        "names": {
+            "EN": "Beotodus",
+            "JP": "ブラントドス",
+            "FR": "Beotodus"
+        },
+        "type": "piscine",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 37,
+        "names": {
+            "EN": "Banbaro",
+            "JP": "ヴァルハザク",
+            "FR": "Banbaro"
+        },
+        "type": "brute",
+        "attack": {
+        },
+        "weak": {
+            "fire": 2,
+            "thunder": 1,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 3
+        }
+    },
+    {
+        "icon": 38,
+        "names": {
+            "EN": "Viper Tobi-Kadachi",
+            "JP": "パオウルムー亜種",
+            "FR": "Tobi-Kadachi Vipère"
+        },
+        "type": "fanged",
+        "attack": {
+            "npoison": 3,
+            "poison": 2,
+            "paralysis": 1
+        },
+        "weak": {
+            "fire": 1,
+            "thunder": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 39,
+        "names": {
+            "EN": "Nightshade Paolumu",
+            "JP": "パオウルムー亜種",
+            "FR": "Paolumu Belladone"
+        },
+        "type": "flying",
+        "attack": {
+            "sleep": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "thunder": 1,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 40,
+        "names": {
+            "EN": "Coral Pukei-Pukei",
+            "JP": "プケプケ亜種",
+            "FR": "Pukei-Pukei Corail"
+        },
+        "type": "bird",
+        "attack": {
+            "water": 1
+        },
+        "weak": {
+            "fire": 1,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 41,
+        "names": {
+            "EN": "Barioth",
+            "JP": "ベリオロス",
+            "FR": "Barioth"
+        },
+        "type": "flying",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 42,
+        "names": {
+            "EN": "Nargacuga",
+            "JP": "ナルガクルガ",
+            "FR": "Nargacuga"
+        },
+        "type": "flying",
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 2,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 43,
+        "names": {
+            "EN": "Glavenus",
+            "JP": "ディノバルド",
+            "FR": "Glavenus"
+        },
+        "type": "brute",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 1,
+            "ice": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 44,
+        "names": {
+            "EN": "Brachydios",
+            "JP": "ブラキディオス",
+            "FR": "Brachydios"
+        },
+        "type": "brute",
+        "attack": {
+            "blast": 1
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 45,
+        "names": {
+            "EN": "Tigrex",
+            "JP": "ティガレックス",
+            "FR": "Tigrex"
+        },
+        "type": "flying",
+        "attack": {
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 46,
+        "names": {
+            "EN": "Shrieking Legiana",
+            "JP": "凍て刺すレイギエナ",
+            "FR": "Legiana blizzard"
+        },
+        "type": "flying",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 47,
+        "names": {
+            "EN": "Velkhana",
+            "JP": "イヴェルカーナ",
+            "FR": "Velkhana"
+        },
+        "type": "elder",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 48,
+        "names": {
+            "EN": "Fulgur Anjanath (not charged)",
+            "JP": "アンジャナフ亜種 (not charged)",
+            "FR": "Anjanath tonnerre (not charged)"
+        },
+        "type": "brute",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 48,
+        "names": {
+            "EN": "Fulgur Anjanath (charged)",
+            "JP": "アンジャナフ亜種 (charged)",
+            "FR": "Anjanath tonnerre (charged)"
+        },
+        "type": "brute",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 49,
+        "names": {
+            "EN": "Acidic Glavenus (not crystallized)",
+            "JP": "ディノバルド亜種 (not crystallized)",
+            "FR": "Glavenus acide (not crystallized)"
+        },
+        "type": "brute",
+        "attack": {
+            "defdown": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 49,
+        "names": {
+            "EN": "Acidic Glavenus (crystallized)",
+            "JP": "ディノバルド亜種 (crystallized)",
+            "FR": "Glavenus acide (crystallized)"
+        },
+        "type": "brute",
+        "attack": {
+            "defdown": 1
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 50,
+        "names": {
+            "EN": "Seething Bazelgeuse",
+            "JP": "紅蓮滾るバゼルギウス",
+            "FR": "Bazelgeuse vulcan"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "water": 1,
+            "thunder": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 3,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 51,
+        "names": {
+            "EN": "Blackveil Vaal Hazak",
+            "JP": "死を纏うヴァルハザク",
+            "FR": "Vaal Hazak fléau"
+        },
+        "type": "elder",
+        "attack": {
+            "effluvial": 1
+        },
+        "weak": {
+            "fire": 2,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 52,
+        "names": {
+            "EN": "Namielle",
+            "JP": "ネロミェール",
+            "FR": "Namielle"
+        },
+        "type": "elder",
+        "attack": {
+            "water": 1,
+            "thunder": 1
+        },
+        "weak": {
+            "fire": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 53,
+        "names": {
+            "EN": "Ebony Odogaron",
+            "JP": "オドガロン亜種",
+            "FR": "Odogaron désastre"
+        },
+        "type": "fanged",
+        "attack": {
+            "dragon": 1,
+            "bleeding": 2
+        },
+        "weak": {
+            "fire": 2,
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 1,
+            "poison": 3,
+            "sleep": 2,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 54,
+        "names": {
+            "EN": "Savage Deviljho",
+            "JP": "怒り喰らうイビルジョー",
+            "FR": "Deviljho Carnage"
+        },
+        "type": "brute",
+        "attack": {
+            "dragon": 1,
+            "defdown": 2,
+            "fire": 3
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 3,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 3,
+            "sleep": 3,
+            "paralysis": 3,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 55,
+        "names": {
+            "EN": "Shara Ishvalda",
+            "JP": "アン・イシュワルダ",
+            "FR": "Shara Ishvalda"
+        },
+        "type": "elder",
+        "attack": {
+            "stun": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "paralysis": 1,
+            "blast": 3,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 56,
+        "names": {
+            "EN": "Zinogre",
+            "JP": "ジンオウガ",
+            "FR": "Zinogre"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1,
+            "paralysis": 2
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 57,
+        "names": {
+            "EN": "Rajang",
+            "JP": "ラージャン",
+            "FR": "Rajang"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "water": 1,
+            "ice": 3,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 58,
+        "names": {
+            "EN": "Yian Garuga",
+            "JP": "イャンガルルガ",
+            "FR": "Yian Garuga"
+        },
+        "type": "bird",
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "water": 3,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 59,
+        "names": {
+            "EN": "Brute Tigrex",
+            "JP": "ティガレックス亜種",
+            "FR": "Tigrex berserk"
+        },
+        "type": "flying",
+        "attack": {
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 60,
+        "names": {
+            "EN": "Gold Rathian",
+            "JP": "リオレイア（希少種）",
+            "FR": "Rathian d'or"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "npoison": 2
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 3,
+            "ice": 1,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 61,
+        "names": {
+            "EN": "Stygian Zinogre (not emitting light)",
+            "JP": "ジンオウガ亜種",
+            "FR": "Zinogre stygien"
+        },
+        "type": "fanged",
+        "attack": {
+            "dragon": 1
+        },
+        "weak": {
+            "thunder": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 61,
+        "names": {
+            "EN": "Stygian Zinogre (emitting light)",
+            "JP": "ジンオウガ亜種",
+            "FR": "Zinogre stygien"
+        },
+        "type": "fanged",
+        "attack": {
+            "dragon": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 62,
+        "names": {
+            "EN": "Safi'jiiva",
+            "JP": "ムフェト・ジーヴァ",
+            "FR": "Safi'jiiva"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1
+        },
+        "weak": {
+            "fire": 2,
+            "water": 2,
+            "thunder": 2,
+            "ice": 2,
+            "dragon": 3,
+            "poison": 3,
+            "sleep": 1,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 63,
+        "names": {
+            "EN": "Silver Rathalos",
+            "JP": "リオレウス（希少種）",
+            "FR": "Rathalos d'argent"
+        },
+        "type": "flying",
+        "attack": {
+            "fire": 1,
+            "poison": 2
+        },
+        "weak": {
+            "water": 3,
+            "thunder": 2,
+            "ice": 2,
+            "poison": 1,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 64,
+        "names": {
+            "EN": "Alatreon (on fire)",
+            "JP": "アルバトリオン (on fire)",
+            "FR": "Alatreon (on fire)"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 4,
+            "dragon": 5
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 64,
+        "names": {
+            "EN": "Alatreon (on dragon)",
+            "JP": "アルバトリオン (on dragon)",
+            "FR": "Alatreon (on dragon)"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 4,
+            "dragon": 5
+        },
+        "weak": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 1,
+            "ice": 1,
+            "dragon": 2,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 64,
+        "names": {
+            "EN": "Alatreon (on ice)",
+            "JP": "アルバトリオン (on ice)",
+            "FR": "Alatreon (on ice)"
+        },
+        "type": "elder",
+        "attack": {
+            "fire": 1,
+            "water": 2,
+            "thunder": 3,
+            "ice": 4,
+            "dragon": 5
+        },
+        "weak": {
+            "fire": 3,
+            "water": 1,
+            "thunder": 2,
+            "dragon": 1,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 1,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 65,
+        "names": {
+            "EN": "Furious Rajang",
+            "JP": "激昂ラージャン",
+            "FR": "Rajang orage"
+        },
+        "type": "fanged",
+        "attack": {
+            "thunder": 1
+        },
+        "weak": {
+            "water": 1,
+            "ice": 3,
+            "poison": 1,
+            "sleep": 1,
+            "paralysis": 1,
+            "blast": 2,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 66,
+        "names": {
+            "EN": "Raging Brachydios",
+            "JP": "猛り爆ぜるブラキディオス",
+            "FR": "Brachydios tempête"
+        },
+        "type": "brute",
+        "attack": {
+            "blast": 1,
+            "fire": 2
+        },
+        "weak": {
+            "water": 2,
+            "thunder": 1,
+            "ice": 3,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 1,
+            "stun": 2
+        }
+    },
+    {
+        "icon": 67,
+        "names": {
+            "EN": "Ruiner Nergigante",
+            "JP": "悉くを滅ぼすネルギガンテ",
+            "FR": "Nergigante chaos"
+        },
+        "type": "elder",
+        "attack": {
+            "bleeding": 1
+        },
+        "weak": {
+            "fire": 1,
+            "water": 1,
+            "thunder": 2,
+            "ice": 1,
+            "dragon": 3,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 3,
+            "stun": 1
+        }
+    },
+    {
+        "icon": 68,
+        "names": {
+            "EN": "Frostfang Barioth",
+            "JP": "氷刃佩くベリオロス",
+            "FR": "Barioth crocgivre"
+        },
+        "type": "flying",
+        "attack": {
+            "ice": 1
+        },
+        "weak": {
+            "fire": 3,
+            "thunder": 2,
+            "dragon": 1,
+            "poison": 2,
+            "sleep": 2,
+            "paralysis": 2,
+            "blast": 2,
+            "stun": 2
+        }
+    }
+]
