@@ -61,6 +61,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+import { supabase } from '../supabase'
 
 // --- 狀態定義 ---
 const gold = ref(2500)
@@ -129,16 +130,44 @@ const handleHatchClick = () => {
 
     const mName = randomMonster.names?.EN || randomMonster.name || 'Unknown'
     const sName = randomSkill.names?.EN || randomSkill.name || randomSkill.skills?.[0]?.name || '神秘力量'
+    
+    // 隨機屬性 (可以改成從 JSON 讀取，這裡暫時隨機)
+    const elements = ['fire', 'water', 'normal']
+    const element = elements[Math.floor(Math.random() * elements.length)]
 
     hatchedMonster.value = {
       name: mName,
+      element: element,
       image: `/game_images/monsters-small/${mName}.webp`,
-      skill: sName
+      skill: sName,
+      level: 1,
+      exp: 0,
+      maxExp: 100
     }
+
+    // 儲存到 Supabase
+    saveToSupabase(hatchedMonster.value)
 
     isShaking.value = false
     isHatched.value = true
   }, 1500)
+}
+
+const saveToSupabase = async (dragon) => {
+  try {
+    const { error } = await supabase.from('dragons').insert([{
+      name: dragon.name,
+      element: dragon.element,
+      level: dragon.level,
+      exp: dragon.exp,
+      maxExp: dragon.maxExp,
+      skills: [dragon.skill]
+    }])
+    if (error) throw error;
+    console.log('成功存入背包/牧場!');
+  } catch (err) {
+    console.error('儲存龍資料失敗:', err);
+  }
 }
 
 const resetHatchery = () => {

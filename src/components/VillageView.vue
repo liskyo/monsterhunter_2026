@@ -29,9 +29,9 @@
           <div class="icon">🥚</div>
           <span>孵化室</span>
         </button>
-        <button class="menu-item">
-          <div class="icon">⚒️</div>
-          <span>加工屋</span>
+        <button class="menu-item" @click="$emit('to-farm')">
+          <div class="icon">🏞️</div>
+          <span>龍之牧場</span>
         </button>
         <button class="menu-item active">
           <div class="icon">🏠</div>

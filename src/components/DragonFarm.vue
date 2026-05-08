@@ -1,0 +1,353 @@
+<template>
+  <div class="farm-container">
+    <div class="farm-bg">
+      <img src="/game_images/DragonFarm.png" alt="牧場背景" class="bg-img" />
+      <div class="overlay"></div>
+    </div>
+    
+    <header class="top-nav">
+      <button class="back-btn" @click="$emit('back')">↩ 返回</button>
+      <h2 class="title">龍之牧場</h2>
+      <div class="currency">🪙 {{ coins }}</div>
+    </header>
+
+    <div class="dragons-area">
+      <div 
+        v-for="dragon in dragons" 
+        :key="dragon.id"
+        class="dragon-wrapper"
+        :style="{ left: dragon.x + '%', top: dragon.y + '%' }"
+        @click="selectDragon(dragon)"
+      >
+        <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing }]">
+          <!-- 龍身 -->
+          <div class="dragon-body">
+            <!-- 翅膀 -->
+            <div class="wing wing-left"></div>
+            <div class="wing wing-right"></div>
+            <!-- 頭部與吐息 -->
+            <div class="head">
+              <div class="eye"></div>
+              <div v-if="dragon.isBreathing" class="breath" :class="dragon.element"></div>
+            </div>
+            <!-- 尾巴 -->
+            <div class="tail"></div>
+          </div>
+        </div>
+        <div class="dragon-shadow"></div>
+        <!-- 名字標籤 -->
+        <div class="dragon-label">Lv.{{ dragon.level }} {{ dragon.name }}</div>
+      </div>
+    </div>
+
+    <!-- 底部操作面板 -->
+    <transition name="slide-up">
+      <div v-if="selectedDragon" class="action-panel">
+        <div class="panel-header">
+          <div class="panel-title-group">
+            <span class="element-icon">{{ selectedDragon.element === 'fire' ? '🔥' : '💧' }}</span>
+            <h3>{{ selectedDragon.name }} <span class="lv-badge">Lv.{{ selectedDragon.level }}</span></h3>
+          </div>
+          <button class="close-btn" @click="selectedDragon = null">✕</button>
+        </div>
+        
+        <div class="stats-section">
+          <div class="exp-text">EXP: {{ selectedDragon.exp }} / {{ selectedDragon.maxExp }}</div>
+          <div class="progress-bg">
+            <div class="progress-fill" :class="selectedDragon.element" :style="{ width: (selectedDragon.exp / selectedDragon.maxExp * 100) + '%' }"></div>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="action-btn feed-btn" @click="feedDragon">
+            <span class="btn-icon">🥩</span>
+            <div class="btn-info">
+              <span class="btn-name">餵食</span>
+              <span class="btn-desc">+10 EXP</span>
+            </div>
+            <div class="cost">🪙 50</div>
+          </button>
+          
+          <button class="action-btn skill-btn" @click="learnSkill">
+            <span class="btn-icon">✨</span>
+            <div class="btn-info">
+              <span class="btn-name">學習技能</span>
+              <span class="btn-desc">解鎖新招式</span>
+            </div>
+            <div class="cost">🪙 200</div>
+          </button>
+          
+          <button class="action-btn interact-btn" @click="triggerBreath">
+            <span class="btn-icon">⚔️</span>
+            <div class="btn-info">
+              <span class="btn-name">展現力量</span>
+              <span class="btn-desc">觀看動畫</span>
+            </div>
+          </button>
+        </div>
+        
+        <div class="skills-list" v-if="selectedDragon.skills.length > 0">
+          <h4>已學會技能</h4>
+          <div class="skill-tags">
+            <span v-for="(skill, idx) in selectedDragon.skills" :key="idx" class="skill-tag" :class="selectedDragon.element">
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import { supabase } from '../supabase';
+
+const emit = defineEmits(['back']);
+const coins = ref(2500);
+
+// 從資料庫讀取的龍
+const dragons = ref([]);
+
+const selectedDragon = ref(null);
+let moveInterval = null;
+
+const fetchDragons = async () => {
+  try {
+    const { data, error } = await supabase.from('dragons').select('*');
+    if (error) throw error;
+    if (data) {
+      dragons.value = data.map(d => ({
+        ...d,
+        x: Math.max(15, Math.min(85, 20 + Math.random() * 60)),
+        y: Math.max(45, Math.min(85, 40 + Math.random() * 40)),
+        isWalking: false,
+        isBreathing: false
+      }));
+    }
+  } catch (err) {
+    console.error('獲取龍資料失敗:', err);
+  }
+};
+
+const selectDragon = (dragon) => {
+  selectedDragon.value = dragon;
+};
+
+const feedDragon = async () => {
+  if (!selectedDragon.value) return;
+  if (coins.value >= 50) {
+    coins.value -= 50;
+    selectedDragon.value.exp += 20;
+    
+    // 升級邏輯
+    if (selectedDragon.value.exp >= selectedDragon.value.maxExp) {
+      selectedDragon.value.level++;
+      selectedDragon.value.exp -= selectedDragon.value.maxExp;
+      selectedDragon.value.maxExp = Math.floor(selectedDragon.value.maxExp * 1.5);
+      triggerBreath();
+    }
+    
+    // 同步到 Supabase
+    if (selectedDragon.value.id) {
+      await supabase.from('dragons').update({
+        exp: selectedDragon.value.exp,
+        level: selectedDragon.value.level,
+        maxExp: selectedDragon.value.maxExp
+      }).eq('id', selectedDragon.value.id);
+    }
+  } else {
+    alert('金幣不足！');
+  }
+};
+
+const learnSkill = async () => {
+  if (!selectedDragon.value) return;
+  if (coins.value >= 200) {
+    const newSkill = selectedDragon.value.element === 'fire' ? '爆裂炎息' : '海嘯水砲';
+    if (!selectedDragon.value.skills.includes(newSkill)) {
+      coins.value -= 200;
+      selectedDragon.value.skills.push(newSkill);
+      triggerBreath();
+      
+      // 同步到 Supabase
+      if (selectedDragon.value.id) {
+        await supabase.from('dragons').update({
+          skills: selectedDragon.value.skills
+        }).eq('id', selectedDragon.value.id);
+      }
+    } else {
+      alert(`${selectedDragon.value.name} 已經學會所有基礎技能了!`);
+    }
+  } else {
+    alert('金幣不足！');
+  }
+};
+
+const triggerBreath = () => {
+  if (selectedDragon.value && !selectedDragon.value.isBreathing) {
+    selectedDragon.value.isBreathing = true;
+    setTimeout(() => {
+      // 由於 selectedDragon 可能在這 2 秒內被取消選取，直接改原始物件
+      const target = dragons.value.find(d => d.id === selectedDragon.value?.id);
+      if (target) target.isBreathing = false;
+    }, 2000);
+  }
+};
+
+// 隨機走動邏輯
+const randomWalk = () => {
+  dragons.value.forEach(dragon => {
+    // 40% 機率移動
+    if (Math.random() > 0.6 && !dragon.isBreathing) {
+      dragon.isWalking = true;
+      // 限制活動範圍
+      const newX = Math.max(15, Math.min(85, dragon.x + (Math.random() * 30 - 15)));
+      const newY = Math.max(45, Math.min(85, dragon.y + (Math.random() * 20 - 10)));
+      
+      dragon.x = newX;
+      dragon.y = newY;
+      
+      setTimeout(() => {
+        dragon.isWalking = false;
+      }, 2500); // 配合 CSS transition
+    }
+  });
+};
+
+onMounted(() => {
+  fetchDragons();
+  moveInterval = setInterval(randomWalk, 3500);
+});
+
+onUnmounted(() => {
+  if (moveInterval) clearInterval(moveInterval);
+});
+</script>
+
+<style scoped>
+.farm-container {
+  width: 100%; height: 100%; position: relative; overflow: hidden;
+  background: #000; font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+/* 背景設計 */
+.farm-bg { position: absolute; inset: 0; z-index: 0; }
+.bg-img { width: 100%; height: 100%; object-fit: cover; }
+.overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%, rgba(0,0,0,0.4) 100%); }
+
+/* 導航列 */
+.top-nav {
+  position: relative; z-index: 10; padding: 50px 20px 15px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+.back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; backdrop-filter: blur(5px); cursor: pointer; }
+.title { margin: 0; font-size: 1.2rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.currency { background: rgba(0,0,0,0.6); padding: 5px 12px; border-radius: 15px; font-weight: bold; border: 1px solid rgba(255,215,0,0.5); color: #ffd700; }
+
+/* 牧場互動區 */
+.dragons-area { position: absolute; top: 30%; bottom: 0; left: 0; right: 0; z-index: 5; }
+
+.dragon-wrapper {
+  position: absolute; transform: translate(-50%, -50%);
+  transition: left 2.5s ease-in-out, top 2.5s ease-in-out;
+  cursor: pointer; display: flex; flex-direction: column; align-items: center;
+}
+
+.dragon-label {
+  margin-top: 15px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 10px;
+  font-size: 0.7rem; font-weight: bold; white-space: nowrap; border: 1px solid rgba(255,255,255,0.2);
+  transition: opacity 0.3s; opacity: 0.8;
+}
+.dragon-wrapper:hover .dragon-label { opacity: 1; transform: scale(1.1); }
+
+/* 龍的本體 (CSS 繪製) */
+.dragon { position: relative; width: 60px; height: 60px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); transition: transform 0.3s; }
+.dragon:hover { transform: scale(1.1); }
+.dragon-body { width: 40px; height: 35px; background: #ccc; border-radius: 20px; position: absolute; bottom: 0; left: 10px; }
+.head { width: 25px; height: 25px; background: inherit; border-radius: 50%; position: absolute; top: -15px; left: -10px; }
+.eye { width: 6px; height: 6px; background: #fff; border-radius: 50%; position: absolute; top: 6px; left: 6px; box-shadow: 1px 0 0 #000 inset; }
+.tail { width: 20px; height: 10px; background: inherit; border-radius: 10px; position: absolute; bottom: 5px; right: -15px; transform-origin: left; animation: wagTail 2s infinite ease-in-out; }
+.wing { width: 30px; height: 25px; background: rgba(255,255,255,0.7); position: absolute; top: -10px; border-radius: 30px 0 30px 0; transform-origin: bottom right; }
+.wing-left { left: -5px; animation: flapWing 1s infinite alternate ease-in-out; }
+.wing-right { right: 5px; transform: scaleX(-1); animation: flapWing 1s infinite alternate-reverse ease-in-out; }
+
+/* 屬性配色 */
+.fire .dragon-body { background: linear-gradient(135deg, #ff4e50, #f9d423); }
+.fire .wing { background: rgba(255, 100, 50, 0.8); }
+.water .dragon-body { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
+.water .wing { background: rgba(100, 200, 255, 0.8); }
+
+/* 動作狀態 */
+.walking .wing { animation-duration: 0.3s; } /* 走動時翅膀拍快一點 */
+.walking .dragon-body { animation: bounceBody 0.4s infinite alternate ease-in-out; }
+
+/* 吐息動畫 */
+.breath { position: absolute; top: 10px; left: -50px; width: 60px; height: 15px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; }
+.breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 8px #ff5722); }
+.breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
+
+/* 影子 */
+.dragon-shadow { width: 40px; height: 10px; background: rgba(0,0,0,0.4); border-radius: 50%; filter: blur(2px); margin-top: -5px; }
+
+/* 底部操作面板 (玻璃擬態) */
+.action-panel {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 20;
+  background: rgba(20, 20, 25, 0.85); backdrop-filter: blur(15px); border-top: 1px solid rgba(255,255,255,0.1);
+  border-radius: 30px 30px 0 0; padding: 25px 20px 40px; box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+}
+
+.panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.panel-title-group { display: flex; align-items: center; gap: 10px; }
+.element-icon { font-size: 1.5rem; background: rgba(255,255,255,0.1); padding: 5px; border-radius: 50%; }
+.panel-title-group h3 { margin: 0; font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+.lv-badge { font-size: 0.8rem; background: #ffd700; color: #000; padding: 2px 8px; border-radius: 10px; }
+.close-btn { background: rgba(255,255,255,0.1); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+.close-btn:hover { background: rgba(255, 71, 71, 0.5); }
+
+/* 經驗條 */
+.stats-section { margin-bottom: 20px; }
+.exp-text { font-size: 0.85rem; font-weight: bold; margin-bottom: 5px; color: #ccc; text-align: right; }
+.progress-bg { height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); }
+.progress-fill { height: 100%; border-radius: 5px; transition: width 0.5s ease-out; }
+.progress-fill.fire { background: linear-gradient(90deg, #ff9800, #f44336); box-shadow: 0 0 10px #f44336; }
+.progress-fill.water { background: linear-gradient(90deg, #00bcd4, #2196f3); box-shadow: 0 0 10px #2196f3; }
+
+/* 操作按鈕網格 */
+.action-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.action-btn { 
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; 
+  padding: 12px; display: flex; align-items: center; gap: 10px; color: white; cursor: pointer; transition: all 0.2s; 
+}
+.interact-btn { grid-column: span 2; justify-content: center; background: rgba(255,255,255,0.1); }
+.action-btn:active { transform: scale(0.95); background: rgba(255,255,255,0.2); }
+.btn-icon { font-size: 1.8rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+.btn-info { display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
+.btn-name { font-weight: bold; font-size: 0.95rem; }
+.btn-desc { font-size: 0.7rem; color: #aaa; }
+.cost { font-size: 0.8rem; font-weight: bold; background: rgba(0,0,0,0.5); padding: 3px 8px; border-radius: 10px; color: #ffd700; }
+
+/* 技能列表 */
+.skills-list h4 { margin: 0 0 10px 0; font-size: 0.9rem; color: #ddd; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag { padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+.skill-tag.fire { background: rgba(244, 67, 54, 0.3); border: 1px solid #f44336; color: #ffc107; }
+.skill-tag.water { background: rgba(33, 150, 243, 0.3); border: 1px solid #2196f3; color: #e1f5fe; }
+
+/* 動畫設定 */
+@keyframes flapWing { 0% { transform: rotate(0deg); } 100% { transform: rotate(-40deg); } }
+@keyframes wagTail { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-15deg); } }
+@keyframes bounceBody { 0% { transform: translateY(0); } 100% { transform: translateY(-5px); } }
+@keyframes breathShoot { 
+  0% { opacity: 0; transform: scaleX(0); } 
+  20% { opacity: 1; transform: scaleX(1); } 
+  80% { opacity: 1; transform: scaleX(1); } 
+  100% { opacity: 0; transform: scaleX(1.2); } 
+}
+
+/* 面板滑出動畫 */
+.slide-up-enter-active, .slide-up-leave-active { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.slide-up-enter-from, .slide-up-leave-to { opacity: 0; transform: translateY(100%); }
+</style>
