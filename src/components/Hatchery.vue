@@ -62,6 +62,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { supabase } from '../supabase'
+import { monsterZhMap } from '../utils/monsterI18n'
 
 // --- 狀態定義 ---
 const gold = ref(2500)
@@ -129,6 +130,7 @@ const handleHatchClick = () => {
     const randomSkill = skillPool.value[Math.floor(Math.random() * skillPool.value.length)]
 
     const mName = randomMonster.name || 'Unknown'
+    const zhName = monsterZhMap[mName] || mName
     const sName = randomSkill.names?.EN || randomSkill.name || randomSkill.skills?.[0]?.name || '神秘力量'
     
     // 從 API 取得屬性 (若無則隨機)
@@ -136,7 +138,7 @@ const handleHatchClick = () => {
     const element = typeof elements[0] === 'string' ? elements[0] : elements[Math.floor(Math.random() * elements.length)]
 
     hatchedMonster.value = {
-      name: mName,
+      name: zhName,
       element: element,
       image: `/game_images/monsters-small/${mName}.webp`,
       skill: sName,

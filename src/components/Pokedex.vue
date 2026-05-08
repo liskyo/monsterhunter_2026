@@ -82,6 +82,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
+import { monsterZhMap, speciesZhMap } from '../utils/monsterI18n';
 
 const emit = defineEmits(['back']);
 
@@ -101,10 +102,15 @@ const initPokedex = async () => {
     
     monsters.value = largeMonsters.map((m, index) => {
       const mName = m.name || 'Unknown';
+      const zhName = monsterZhMap[mName] || mName;
+      const sp = m.species?.toLowerCase() || '';
+      const zhSpecies = speciesZhMap[sp] || m.species || '未知種';
+      
       return {
         originalIndex: index + 1,
-        name: mName,
-        type: m.species || '未知種',
+        name: zhName,
+        englishName: mName,
+        type: zhSpecies,
         description: m.description || '棲息於各地的大型魔物，生態仍有許多未解之謎。',
         image: `/game_images/monsters-small/${mName}.webp`
       };
@@ -114,8 +120,8 @@ const initPokedex = async () => {
     console.error('圖鑑資料載入失敗:', err);
     // 備援資料
     monsters.value = [
-      { originalIndex: 1, name: 'Rathalos', type: 'Flying Wyvern', description: '被稱為「天空王者」的飛龍。', image: '/game_images/monsters-small/Rathalos.webp' },
-      { originalIndex: 2, name: 'Zinogre', type: 'Fanged Wyvern', description: '全身纏繞雷電的牙龍種。', image: '/game_images/monsters-small/Zinogre.webp' }
+      { originalIndex: 1, name: '雄火龍', englishName: 'Rathalos', type: '飛龍種', description: '被稱為「天空王者」的飛龍。', image: '/game_images/monsters-small/Rathalos.webp' },
+      { originalIndex: 2, name: '雷狼龍', englishName: 'Zinogre', type: '牙龍種', description: '全身纏繞雷電的牙龍種。', image: '/game_images/monsters-small/Zinogre.webp' }
     ];
   } finally {
     isLoading.value = false;
@@ -129,7 +135,10 @@ onMounted(() => {
 const filteredMonsters = computed(() => {
   if (!searchQuery.value) return monsters.value;
   const q = searchQuery.value.toLowerCase();
-  return monsters.value.filter(m => m.name.toLowerCase().includes(q));
+  return monsters.value.filter(m => 
+    m.name.toLowerCase().includes(q) || 
+    (m.englishName && m.englishName.toLowerCase().includes(q))
+  );
 });
 
 const selectMonster = (monster) => {
