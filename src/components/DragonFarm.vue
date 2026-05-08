@@ -39,19 +39,12 @@
         @click="selectDragon(dragon)"
       >
         <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing }]">
-          <!-- 龍身 -->
-          <div class="dragon-body">
-            <!-- 翅膀 -->
-            <div class="wing wing-left"></div>
-            <div class="wing wing-right"></div>
-            <!-- 頭部與吐息 -->
-            <div class="head">
-              <div class="eye"></div>
-              <div v-if="dragon.isBreathing" class="breath" :class="dragon.element"></div>
-            </div>
-            <!-- 尾巴 -->
-            <div class="tail"></div>
-          </div>
+          <!-- 真實龍的圖片 -->
+          <img v-if="dragon.image" :src="dragon.image" class="real-dragon-img" alt="Dragon" />
+          <div v-else class="real-dragon-img placeholder-dragon">🐲</div>
+          
+          <!-- 吐息特效 (保留) -->
+          <div v-if="dragon.isBreathing" class="breath" :class="dragon.element"></div>
         </div>
         <div class="dragon-shadow"></div>
         <!-- 名字標籤 -->
@@ -277,9 +270,10 @@ onUnmounted(() => {
 }
 .back-btn:hover { background: rgba(255,255,255,0.2); transform: translateX(-3px); }
 
-.title-wrap { display: flex; flex-direction: column; align-items: center; }
+.title-wrap { display: flex; flex-direction: column; align-items: center; max-width: 50%; }
 .title { 
-  margin: 0; font-size: 1.8rem; font-weight: 900; 
+  margin: 0; font-size: 1.4rem; font-weight: 900; 
+  white-space: nowrap;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -319,26 +313,15 @@ onUnmounted(() => {
 }
 .dragon-wrapper:hover .dragon-label { opacity: 1; transform: scale(1.1); }
 
-/* 龍的本體 (CSS 繪製) */
-.dragon { position: relative; width: 60px; height: 60px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); transition: transform 0.3s; }
+/* 龍的本體 (圖片替換) */
+.dragon { position: relative; width: 80px; height: 80px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); transition: transform 0.3s; display: flex; align-items: center; justify-content: center; }
 .dragon:hover { transform: scale(1.1); }
-.dragon-body { width: 40px; height: 35px; background: #ccc; border-radius: 20px; position: absolute; bottom: 0; left: 10px; }
-.head { width: 25px; height: 25px; background: inherit; border-radius: 50%; position: absolute; top: -15px; left: -10px; }
-.eye { width: 6px; height: 6px; background: #fff; border-radius: 50%; position: absolute; top: 6px; left: 6px; box-shadow: 1px 0 0 #000 inset; }
-.tail { width: 20px; height: 10px; background: inherit; border-radius: 10px; position: absolute; bottom: 5px; right: -15px; transform-origin: left; animation: wagTail 2s infinite ease-in-out; }
-.wing { width: 30px; height: 25px; background: rgba(255,255,255,0.7); position: absolute; top: -10px; border-radius: 30px 0 30px 0; transform-origin: bottom right; }
-.wing-left { left: -5px; animation: flapWing 1s infinite alternate ease-in-out; }
-.wing-right { right: 5px; transform: scaleX(-1); animation: flapWing 1s infinite alternate-reverse ease-in-out; }
-
-/* 屬性配色 */
-.fire .dragon-body { background: linear-gradient(135deg, #ff4e50, #f9d423); }
-.fire .wing { background: rgba(255, 100, 50, 0.8); }
-.water .dragon-body { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
-.water .wing { background: rgba(100, 200, 255, 0.8); }
+.real-dragon-img { width: 100%; height: 100%; object-fit: contain; animation: idleFloat 3s infinite ease-in-out; }
+.placeholder-dragon { font-size: 3rem; display: flex; align-items: center; justify-content: center; }
 
 /* 動作狀態 */
-.walking .wing { animation-duration: 0.3s; } /* 走動時翅膀拍快一點 */
-.walking .dragon-body { animation: bounceBody 0.4s infinite alternate ease-in-out; }
+.walking .real-dragon-img { animation: walkBounce 0.5s infinite alternate ease-in-out; }
+.breathing .real-dragon-img { animation: breatheScale 2s; }
 
 /* 吐息動畫 */
 .breath { position: absolute; top: 10px; left: -50px; width: 60px; height: 15px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; }
@@ -393,9 +376,9 @@ onUnmounted(() => {
 .skill-tag.water { background: rgba(33, 150, 243, 0.3); border: 1px solid #2196f3; color: #e1f5fe; }
 
 /* 動畫設定 */
-@keyframes flapWing { 0% { transform: rotate(0deg); } 100% { transform: rotate(-40deg); } }
-@keyframes wagTail { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-15deg); } }
-@keyframes bounceBody { 0% { transform: translateY(0); } 100% { transform: translateY(-5px); } }
+@keyframes idleFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes walkBounce { 0% { transform: translateY(0) rotate(0); } 100% { transform: translateY(-10px) rotate(5deg); } }
+@keyframes breatheScale { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15) rotate(-5deg); } }
 @keyframes breathShoot { 
   0% { opacity: 0; transform: scaleX(0); } 
   20% { opacity: 1; transform: scaleX(1); } 
