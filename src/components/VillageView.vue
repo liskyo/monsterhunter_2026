@@ -238,7 +238,7 @@ onUnmounted(() => {
 .flying .companion-img { animation: flyHover 0.3s infinite alternate ease-in-out; }
 
 /* 吐息動畫 */
-.breath { position: absolute; top: 40px; left: -90px; width: 120px; height: 25px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; pointer-events: none; }
+.breath { position: absolute; top: 55%; margin-top: -12px; left: -90px; width: 120px; height: 25px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; pointer-events: none; }
 .breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 8px #ff5722); }
 .breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
 

@@ -35,6 +35,7 @@
         v-for="dragon in dragons" 
         :key="dragon.id"
         class="dragon-wrapper"
+        :class="{ 'is-dragging': draggedDragon && draggedDragon.dragon.id === dragon.id }"
         :style="{ left: dragon.x + '%', top: dragon.y + '%' }"
         @mousedown="startDrag($event, dragon)"
         @touchstart="startDrag($event, dragon)"
@@ -412,6 +413,10 @@ onUnmounted(() => {
   transition: left 2.5s ease-in-out, top 2.5s ease-in-out;
   cursor: pointer; display: flex; flex-direction: column; align-items: center;
 }
+.dragon-wrapper.is-dragging {
+  transition: none; /* 移除拖拉時的延遲 */
+  z-index: 50; /* 確保拖拉時在最上層 */
+}
 
 .dragon-label {
   margin-top: 2px; background: rgba(0,0,0,0.85); padding: 3px 8px; border-radius: 50px;
@@ -440,7 +445,7 @@ onUnmounted(() => {
 .flying .real-dragon-img { animation: flyHover 0.4s infinite alternate ease-in-out; }
 
 /* 吐息動畫升級 */
-.breath { position: absolute; top: -10px; left: -250px; width: 300px; height: 35px; border-radius: 10px; opacity: 0; animation: blastShock 2s cubic-bezier(0.1, 0.8, 0.1, 1); transform-origin: right center; z-index: 100; pointer-events: none; background: linear-gradient(90deg, transparent, #ccc, #fff); filter: drop-shadow(0 0 15px #fff) brightness(2); }
+.breath { position: absolute; top: 55%; margin-top: -17px; left: -250px; width: 300px; height: 35px; border-radius: 10px; opacity: 0; animation: blastShock 2s cubic-bezier(0.1, 0.8, 0.1, 1); transform-origin: right center; z-index: 100; pointer-events: none; background: linear-gradient(90deg, transparent, #ccc, #fff); filter: drop-shadow(0 0 15px #fff) brightness(2); }
 .breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 20px #ff5722) brightness(2); }
 .breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 20px #0288d1) brightness(2); }
 
