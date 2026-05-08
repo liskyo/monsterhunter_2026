@@ -37,9 +37,9 @@
           <div class="icon">🏠</div>
           <span>村基地</span>
         </button>
-        <button class="menu-item" @click="$emit('to-battle')">
-          <div class="icon">🗺️</div>
-          <span>出擊</span>
+        <button class="menu-item" @click="$emit('to-pokedex')">
+          <div class="icon">📖</div>
+          <span>圖鑑</span>
         </button>
         <button class="menu-item" @click="$emit('to-inventory')">
           <div class="icon">🎒</div>

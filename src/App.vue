@@ -21,10 +21,11 @@
       </div>
     </div>
 
-    <VillageView v-else-if="currentPage === 'VILLAGE'" @to-hatchery="currentPage = 'HATCHERY'" @to-farm="currentPage = 'FARM'" @to-inventory="currentPage = 'INVENTORY'" />
+    <VillageView v-else-if="currentPage === 'VILLAGE'" @to-hatchery="currentPage = 'HATCHERY'" @to-farm="currentPage = 'FARM'" @to-inventory="currentPage = 'INVENTORY'" @to-pokedex="currentPage = 'POKEDEX'" />
     <Hatchery v-else-if="currentPage === 'HATCHERY'" @back="currentPage = 'VILLAGE'" />
     <DragonFarm v-else-if="currentPage === 'FARM'" @back="currentPage = 'VILLAGE'" />
     <Inventory v-else-if="currentPage === 'INVENTORY'" @back="currentPage = 'VILLAGE'" />
+    <Pokedex v-else-if="currentPage === 'POKEDEX'" @back="currentPage = 'VILLAGE'" />
   </div>
 </template>
 
@@ -34,6 +35,7 @@ import VillageView from './components/VillageView.vue'
 import Hatchery from './components/Hatchery.vue'
 import DragonFarm from './components/DragonFarm.vue'
 import Inventory from './components/Inventory.vue'
+import Pokedex from './components/Pokedex.vue'
 
 const currentPage = ref('START')
 const enterVillage = () => { currentPage.value = 'VILLAGE' }
