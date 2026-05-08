@@ -1,5 +1,5 @@
 <template>
-  <div class="farm-container">
+  <div class="farm-container" :class="{ shaking: isShaking }" @mousemove="onDragMove" @mouseup="stopDrag" @mouseleave="stopDrag" @touchmove.prevent="onDragMove" @touchend="stopDrag">
     <div class="farm-bg">
       <img src="/game_images/DragonFarm.png" alt="牧場背景" class="bg-img" />
       <div class="overlay"></div>
@@ -36,7 +36,8 @@
         :key="dragon.id"
         class="dragon-wrapper"
         :style="{ left: dragon.x + '%', top: dragon.y + '%' }"
-        @click="selectDragon(dragon)"
+        @mousedown="startDrag($event, dragon)"
+        @touchstart="startDrag($event, dragon)"
       >
         <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing, flying: dragon.isFlying }]" :style="{ width: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px`, height: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px` }">
           <div class="dragon-flip-wrapper" :style="{ transform: `scaleX(${dragon.direction || 1})` }">
@@ -133,6 +134,8 @@ const dragons = ref([]);
 const isLoading = ref(true);
 
 const selectedDragon = ref(null);
+const isShaking = ref(false);
+const draggedDragon = ref(null);
 let moveInterval = null;
 
 const fetchDragons = async () => {
@@ -173,6 +176,57 @@ const fetchDragons = async () => {
 
 const selectDragon = (dragon) => {
   selectedDragon.value = dragon;
+};
+
+// 拖拉系統邏輯
+const startDrag = (event, dragon) => {
+  const clientX = event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
+  const clientY = event.type.includes('mouse') ? event.clientY : event.touches[0].clientY;
+  
+  draggedDragon.value = {
+    dragon,
+    startX: clientX,
+    startY: clientY,
+    initX: dragon.x,
+    initY: dragon.y,
+    moved: false
+  };
+  dragon.isWalking = false;
+  dragon.isFlying = false;
+};
+
+const onDragMove = (event) => {
+  if (!draggedDragon.value) return;
+  
+  const clientX = event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
+  const clientY = event.type.includes('mouse') ? event.clientY : event.touches[0].clientY;
+  
+  const dx = clientX - draggedDragon.value.startX;
+  const dy = clientY - draggedDragon.value.startY;
+  
+  if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+    draggedDragon.value.moved = true;
+  }
+  
+  const container = document.querySelector('.dragons-area');
+  const rect = container.getBoundingClientRect();
+  const percentX = (dx / rect.width) * 100;
+  const percentY = (dy / rect.height) * 100;
+  
+  const newX = Math.max(5, Math.min(95, draggedDragon.value.initX + percentX));
+  const newY = Math.max(20, Math.min(90, draggedDragon.value.initY + percentY));
+  
+  draggedDragon.value.dragon.x = newX;
+  draggedDragon.value.dragon.y = newY;
+};
+
+const stopDrag = () => {
+  if (draggedDragon.value) {
+    if (!draggedDragon.value.moved) {
+      selectDragon(draggedDragon.value.dragon);
+    }
+    draggedDragon.value = null;
+  }
 };
 
 // 收回背包邏輯
@@ -247,9 +301,11 @@ const triggerBreath = () => {
     
     // 關閉面板讓玩家觀賞動畫
     selectedDragon.value = null;
+    isShaking.value = true;
     
     setTimeout(() => {
       target.isBreathing = false;
+      isShaking.value = false;
     }, 2000);
   }
 };
@@ -303,8 +359,9 @@ onUnmounted(() => {
   color: white;
 }
 
-/* 背景設計 */
-.farm-bg { position: absolute; inset: 0; z-index: 0; }
+/* 背景處理 */
+.farm-container.shaking { animation: earthquake 0.3s infinite; }
+.farm-bg { position: absolute; inset: -10px; z-index: 0; }
 .bg-img { width: 100%; height: 100%; object-fit: cover; }
 .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 40%, rgba(0,0,0,0.4) 100%); }
 
@@ -382,10 +439,10 @@ onUnmounted(() => {
 .breathing .real-dragon-img { animation: breatheScale 2s; }
 .flying .real-dragon-img { animation: flyHover 0.4s infinite alternate ease-in-out; }
 
-/* 吐息動畫 */
-.breath { position: absolute; top: 10px; left: -50px; width: 60px; height: 15px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; pointer-events: none; background: linear-gradient(90deg, transparent, #ccc, #fff); filter: drop-shadow(0 0 5px #fff); }
-.breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 8px #ff5722); }
-.breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
+/* 吐息動畫升級 */
+.breath { position: absolute; top: -10px; left: -250px; width: 300px; height: 35px; border-radius: 10px; opacity: 0; animation: blastShock 2s cubic-bezier(0.1, 0.8, 0.1, 1); transform-origin: right center; z-index: 100; pointer-events: none; background: linear-gradient(90deg, transparent, #ccc, #fff); filter: drop-shadow(0 0 15px #fff) brightness(2); }
+.breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 20px #ff5722) brightness(2); }
+.breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 20px #0288d1) brightness(2); }
 
 /* 影子 */
 .dragon-shadow { 
@@ -446,11 +503,20 @@ onUnmounted(() => {
   0% { transform: translateY(-40px) scaleY(1.05); filter: drop-shadow(0 40px 15px rgba(0,0,0,0.4)) brightness(1.1); }
   100% { transform: translateY(-30px) scaleY(0.95); filter: drop-shadow(0 30px 10px rgba(0,0,0,0.6)) brightness(1.1); }
 }
-@keyframes breathShoot { 
-  0% { opacity: 0; transform: scaleX(0); } 
-  20% { opacity: 1; transform: scaleX(1); } 
-  80% { opacity: 1; transform: scaleX(1); } 
-  100% { opacity: 0; transform: scaleX(1.2); } 
+@keyframes blastShock {
+  0% { opacity: 0; transform: scaleX(0) scaleY(0.1); }
+  10% { opacity: 1; transform: scaleX(1.5) scaleY(2.5); filter: brightness(2); }
+  20% { opacity: 1; transform: scaleX(1) scaleY(1.5); }
+  80% { opacity: 0.8; transform: scaleX(1) scaleY(1); }
+  100% { opacity: 0; transform: scaleX(1.2) scaleY(0); }
+}
+@keyframes earthquake {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3px, 2px); }
+  40% { transform: translate(3px, -2px); }
+  60% { transform: translate(-2px, -3px); }
+  80% { transform: translate(2px, 3px); }
+  100% { transform: translate(0, 0); }
 }
 
 /* 空牧場樣式 */
