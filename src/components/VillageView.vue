@@ -20,7 +20,37 @@
     </header>
 
     <main class="village-main">
-      <div class="alert-bubble">💬 老村長：今天也有新的龍蛋運到喔！</div>
+      <div v-if="companion" class="companion-area">
+        <div class="alert-bubble companion-speech">💬 {{ companion.name }} 看起來精神很好！</div>
+        <img :src="companion.image" class="companion-img" @click="showCompanionSelect = true" />
+        <div class="companion-label">
+          <span class="lv">Lv.{{ companion.level }}</span> <span class="name-text">{{ companion.name }}</span>
+          <button class="change-btn" @click.stop="showCompanionSelect = true">🔁 更換</button>
+        </div>
+      </div>
+      <div v-else class="alert-bubble">💬 老村長：去孵化室取得你的第一隻魔物吧！</div>
+      
+      <!-- 更換隨行獸選單 -->
+      <transition name="fade">
+        <div v-if="showCompanionSelect" class="modal-overlay" @click="showCompanionSelect = false">
+          <div class="modal-content" @click.stop>
+            <h3>選擇隨行獸</h3>
+            <div class="dragon-list">
+              <div 
+                v-for="d in myDragons" 
+                :key="d.id" 
+                class="dragon-option" 
+                :class="{ active: companion && d.id === companion.id }"
+                @click="selectCompanion(d)"
+              >
+                <img :src="d.image" class="option-img" />
+                <span>Lv.{{ d.level }} {{ d.name }}</span>
+              </div>
+            </div>
+            <button class="close-modal" @click="showCompanionSelect = false">關閉</button>
+          </div>
+        </div>
+      </transition>
     </main>
 
     <footer class="bottom-menu">
@@ -49,6 +79,46 @@
     </footer>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import { supabase } from '../supabase';
+
+const emit = defineEmits(['to-hatchery', 'to-farm', 'to-inventory', 'to-pokedex']);
+
+const myDragons = ref([]);
+const companion = ref(null);
+const showCompanionSelect = ref(false);
+
+const fetchDragons = async () => {
+  try {
+    const { data, error } = await supabase.from('dragons').select('*').order('created_at', { ascending: true });
+    if (error) throw error;
+    if (data && data.length > 0) {
+      myDragons.value = data;
+      // 讀取上次選擇的隨行獸，沒有的話預設第一隻
+      const savedId = localStorage.getItem('companionDragonId');
+      if (savedId) {
+        companion.value = data.find(d => d.id === savedId) || data[0];
+      } else {
+        companion.value = data[0];
+      }
+    }
+  } catch (err) {
+    console.error('獲取隨行獸資料失敗:', err);
+  }
+};
+
+const selectCompanion = (dragon) => {
+  companion.value = dragon;
+  localStorage.setItem('companionDragonId', dragon.id);
+  showCompanionSelect.value = false;
+};
+
+onMounted(() => {
+  fetchDragons();
+});
+</script>
 
 <style scoped>
 .village-container {
@@ -101,9 +171,71 @@
 }
 .chip:hover { transform: scale(1.05); }
 
-/* 中間提示 */
-.village-main { flex: 1; position: relative; z-index: 5; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 40px; }
-.alert-bubble { background: rgba(255,255,255,0.9); color: #333; padding: 10px 20px; border-radius: 20px 20px 20px 0; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: bounce 3s infinite; }
+/* 中間提示與隨行獸 */
+.village-main { flex: 1; position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 20px; }
+.alert-bubble { background: rgba(255,255,255,0.9); color: #333; padding: 10px 20px; border-radius: 20px 20px 20px 0; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: bounce 3s infinite; margin-bottom: 15px; }
+
+.companion-area { display: flex; flex-direction: column; align-items: center; }
+.companion-speech { animation: float-bubble 4s infinite ease-in-out; border-radius: 20px 20px 0 20px; }
+.companion-img {
+  width: 180px; height: 180px; object-fit: contain;
+  filter: drop-shadow(0 15px 15px rgba(0,0,0,0.8));
+  animation: float-dragon 4s ease-in-out infinite;
+  cursor: pointer; transition: transform 0.3s;
+}
+.companion-img:hover { transform: scale(1.1); }
+.companion-label {
+  margin-top: -10px; background: rgba(0,0,0,0.8); padding: 6px 16px; border-radius: 30px;
+  border: 1px solid rgba(255, 215, 0, 0.5); color: white; font-weight: bold; font-size: 0.85rem;
+  display: flex; align-items: center; gap: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+.companion-label .lv { color: #ffd700; }
+.companion-label .name-text { letter-spacing: 1px; }
+.change-btn {
+  background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white;
+  padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: bold; cursor: pointer;
+  transition: background 0.2s; margin-left: 5px;
+}
+.change-btn:hover { background: rgba(255,255,255,0.3); }
+
+/* Modal 選單 */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center; z-index: 100;
+}
+.modal-content {
+  background: linear-gradient(135deg, rgba(30,30,35,0.95), rgba(15,15,20,0.95));
+  width: 85%; max-height: 70vh; border-radius: 25px; padding: 25px 20px;
+  border: 1px solid rgba(255,215,0,0.3); display: flex; flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+.modal-content h3 { color: #ffd700; margin: 0 0 15px 0; text-align: center; font-family: 'Cinzel', serif; letter-spacing: 2px; }
+.dragon-list {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  overflow-y: auto; padding-right: 5px; max-height: 50vh;
+}
+.dragon-option {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 15px; padding: 15px 10px; display: flex; flex-direction: column; align-items: center;
+  cursor: pointer; transition: all 0.2s;
+}
+.dragon-option.active {
+  border-color: #ffd700; background: rgba(255, 215, 0, 0.15);
+  box-shadow: inset 0 0 15px rgba(255,215,0,0.2);
+}
+.dragon-option:active { transform: scale(0.95); }
+.option-img { width: 70px; height: 70px; object-fit: contain; margin-bottom: 8px; filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)); }
+.dragon-option span { color: white; font-size: 0.75rem; font-weight: 800; text-align: center; letter-spacing: 0.5px; }
+.close-modal {
+  margin-top: 20px; padding: 12px; border-radius: 15px;
+  background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);
+  font-weight: bold; cursor: pointer; transition: background 0.2s;
+}
+.close-modal:hover { background: rgba(255,255,255,0.2); }
+
+.fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
 
 /* 底部選單 */
 .bottom-menu {
@@ -136,5 +268,15 @@
 @keyframes float-icon {
   0%, 100% { transform: translateY(-5px) scale(1.3); }
   50% { transform: translateY(-8px) scale(1.3); }
+}
+
+@keyframes float-dragon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-bubble {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 </style>
