@@ -241,11 +241,15 @@ const learnSkill = async () => {
 
 const triggerBreath = () => {
   if (selectedDragon.value && !selectedDragon.value.isBreathing) {
-    selectedDragon.value.isBreathing = true;
+    const target = selectedDragon.value;
+    target.isWalking = false; // 停止移動
+    target.isBreathing = true;
+    
+    // 關閉面板讓玩家觀賞動畫
+    selectedDragon.value = null;
+    
     setTimeout(() => {
-      // 由於 selectedDragon 可能在這 2 秒內被取消選取，直接改原始物件
-      const target = dragons.value.find(d => d.id === selectedDragon.value?.id);
-      if (target) target.isBreathing = false;
+      target.isBreathing = false;
     }, 2000);
   }
 };
@@ -379,7 +383,7 @@ onUnmounted(() => {
 .flying .real-dragon-img { animation: flyHover 0.4s infinite alternate ease-in-out; }
 
 /* 吐息動畫 */
-.breath { position: absolute; top: 10px; left: -50px; width: 60px; height: 15px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; }
+.breath { position: absolute; top: 10px; left: -50px; width: 60px; height: 15px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; pointer-events: none; background: linear-gradient(90deg, transparent, #ccc, #fff); filter: drop-shadow(0 0 5px #fff); }
 .breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 8px #ff5722); }
 .breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
 
