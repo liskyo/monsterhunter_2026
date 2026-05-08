@@ -6,10 +6,29 @@
     </div>
     
     <header class="top-nav">
-      <button class="back-btn" @click="$emit('back')">↩ 返回</button>
-      <h2 class="title">龍之牧場</h2>
-      <div class="currency">🪙 {{ coins }}</div>
+      <button class="back-btn" @click="$emit('back')">
+        <span class="btn-icon">↩</span>
+        <span class="btn-text">返回村莊</span>
+      </button>
+      <div class="title-wrap">
+        <h2 class="title">龍之牧場</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="currency">
+        <span class="coin-glow">🪙</span>
+        <span class="coin-amount">{{ coins.toLocaleString() }}</span>
+      </div>
     </header>
+
+    <!-- 當牧場是空的時候顯示 -->
+    <div v-if="dragons.length === 0 && !isLoading" class="empty-farm">
+      <div class="empty-msg-box">
+        <div class="empty-icon">🏜️</div>
+        <h3>牧場目前空無一龍</h3>
+        <p>前往「孵化室」孵化你的第一隻魔物吧！</p>
+        <button class="refresh-btn" @click="fetchDragons">🔄 重新整理資料</button>
+      </div>
+    </div>
 
     <div class="dragons-area">
       <div 
@@ -108,12 +127,14 @@ const coins = ref(2500);
 
 // 從資料庫讀取的龍
 const dragons = ref([]);
+const isLoading = ref(true);
 
 const selectedDragon = ref(null);
 let moveInterval = null;
 
 const fetchDragons = async () => {
   try {
+    isLoading.value = true;
     const { data, error } = await supabase.from('dragons').select('*');
     if (error) throw error;
     if (data) {
@@ -127,6 +148,10 @@ const fetchDragons = async () => {
     }
   } catch (err) {
     console.error('獲取龍資料失敗:', err);
+    // 如果資料庫連不上，可以放幾隻測試用的龍
+    // dragons.value = [{ id: 'test', name: '測試火龍', element: 'fire', level: 1, exp: 0, maxExp: 100, skills: [], x: 50, y: 60 }];
+  } finally {
+    isLoading.value = false;
   }
 };
 
@@ -239,13 +264,41 @@ onUnmounted(() => {
 
 /* 導航列 */
 .top-nav {
-  position: relative; z-index: 10; padding: 50px 20px 15px;
+  position: relative; z-index: 100; padding: 60px 20px 20px;
   display: flex; justify-content: space-between; align-items: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.5) 70%, transparent);
 }
-.back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; backdrop-filter: blur(5px); cursor: pointer; }
-.title { margin: 0; font-size: 1.2rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-.currency { background: rgba(0,0,0,0.6); padding: 5px 12px; border-radius: 15px; font-weight: bold; border: 1px solid rgba(255,215,0,0.5); color: #ffd700; }
+.back-btn { 
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); 
+  color: white; padding: 8px 15px; border-radius: 50px; 
+  font-weight: bold; backdrop-filter: blur(10px); cursor: pointer;
+  display: flex; align-items: center; gap: 5px;
+  transition: all 0.3s;
+}
+.back-btn:hover { background: rgba(255,255,255,0.2); transform: translateX(-3px); }
+
+.title-wrap { display: flex; flex-direction: column; align-items: center; }
+.title { 
+  margin: 0; font-size: 1.8rem; font-weight: 900; 
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(to bottom, #ffffff 30%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.8)) drop-shadow(0 0 10px rgba(255,255,255,0.2));
+  font-family: 'Cinzel', serif;
+}
+.title-underline { width: 40px; height: 3px; background: #ffd700; margin-top: 5px; border-radius: 2px; box-shadow: 0 0 10px #ffd700; }
+
+.currency { 
+  background: rgba(0,0,0,0.7); padding: 8px 16px; border-radius: 50px; 
+  font-weight: 900; border: 2px solid #ffd700; color: #ffd700;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 0 20px rgba(255,215,0,0.2), inset 0 0 10px rgba(255,215,0,0.1);
+  font-size: 1.1rem;
+}
+.coin-glow { filter: drop-shadow(0 0 5px #ffd700); }
 
 /* 牧場互動區 */
 .dragons-area { position: absolute; top: 30%; bottom: 0; left: 0; right: 0; z-index: 5; }
@@ -257,9 +310,12 @@ onUnmounted(() => {
 }
 
 .dragon-label {
-  margin-top: 15px; background: rgba(0,0,0,0.7); padding: 4px 8px; border-radius: 10px;
-  font-size: 0.7rem; font-weight: bold; white-space: nowrap; border: 1px solid rgba(255,255,255,0.2);
-  transition: opacity 0.3s; opacity: 0.8;
+  margin-top: 15px; background: rgba(0,0,0,0.85); padding: 5px 12px; border-radius: 50px;
+  font-size: 0.75rem; font-weight: 800; white-space: nowrap; 
+  border: 1px solid #ffd700; color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: all 0.3s; opacity: 0.9;
+  letter-spacing: 1px;
 }
 .dragon-wrapper:hover .dragon-label { opacity: 1; transform: scale(1.1); }
 
@@ -346,6 +402,27 @@ onUnmounted(() => {
   80% { opacity: 1; transform: scaleX(1); } 
   100% { opacity: 0; transform: scaleX(1.2); } 
 }
+
+/* 空牧場樣式 */
+.empty-farm {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 10;
+}
+.empty-msg-box {
+  background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
+  padding: 40px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.1);
+  text-align: center; max-width: 80%;
+  animation: fadeIn 0.5s ease-out;
+}
+.empty-icon { font-size: 4rem; margin-bottom: 20px; filter: grayscale(0.5); }
+.empty-msg-box h3 { margin: 0 0 10px 0; font-size: 1.5rem; color: #fff; }
+.empty-msg-box p { color: #aaa; margin-bottom: 25px; }
+.refresh-btn {
+  background: #ffd700; color: #000; border: none; padding: 12px 24px; border-radius: 50px;
+  font-weight: 800; cursor: pointer; transition: all 0.2s;
+}
+.refresh-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255,215,0,0.4); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 /* 面板滑出動畫 */
 .slide-up-enter-active, .slide-up-leave-active { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
