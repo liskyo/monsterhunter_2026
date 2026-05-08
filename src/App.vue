@@ -8,7 +8,7 @@
       </div>
 
       <div class="title-container">
-        <p class="sub-title">LEGENDARY DEFENSE</p>
+        <p class="sub-title">Monster Hunter 2026</p>
         <h1 class="main-title">魔物獵人<br><span class="year">2026</span></h1>
       </div>
 
