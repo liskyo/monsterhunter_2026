@@ -9,7 +9,7 @@
 
       <div class="title-container">
         <p class="sub-title">LEGENDARY DEFENSE</p>
-        <h1 class="main-title">魔物守護者<br><span class="year">2026</span></h1>
+        <h1 class="main-title">魔物獵人<br><span class="year">2026</span></h1>
       </div>
 
       <div class="action-zone">
