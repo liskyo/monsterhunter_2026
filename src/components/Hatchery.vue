@@ -62,7 +62,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { supabase } from '../supabase'
-import { monsterZhMap } from '../utils/monsterI18n'
+import { monsterZhMap, validMonsterImages } from '../utils/monsterI18n'
 
 // --- 狀態定義 ---
 const gold = ref(2500)
@@ -90,8 +90,8 @@ const initGameData = async () => {
     const mData = await monsterRes.json()
     const sData = await skillRes.json()
 
-    // 處理資料格式 (過濾大型魔物)
-    monsterPool.value = Array.isArray(mData) ? mData.filter(m => m.type === 'large') : []
+    // 處理資料格式 (過濾大型魔物且我們有圖片的)
+    monsterPool.value = Array.isArray(mData) ? mData.filter(m => m.type === 'large' && validMonsterImages.includes(m.name)) : []
     skillPool.value = Array.isArray(sData) ? sData : Object.values(sData)
 
     console.log('✅ 資料載入成功:', monsterPool.value.length, '隻魔物')

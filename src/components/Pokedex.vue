@@ -82,7 +82,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { monsterZhMap, speciesZhMap } from '../utils/monsterI18n';
+import { monsterZhMap, speciesZhMap, validMonsterImages } from '../utils/monsterI18n';
 
 const emit = defineEmits(['back']);
 
@@ -97,8 +97,8 @@ const initPokedex = async () => {
     const res = await fetch('https://mhw-db.com/monsters');
     const data = await res.json();
     
-    // 過濾出大型魔物 (比較有龍的感覺)
-    const largeMonsters = data.filter(m => m.type === 'large');
+    // 過濾出大型魔物，並且只保留「我們本地有圖片的魔物」
+    const largeMonsters = data.filter(m => m.type === 'large' && validMonsterImages.includes(m.name));
     
     monsters.value = largeMonsters.map((m, index) => {
       const mName = m.name || 'Unknown';
