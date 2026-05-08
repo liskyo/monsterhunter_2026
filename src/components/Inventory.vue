@@ -85,8 +85,8 @@
           <button class="action-btn equip-btn" v-if="selectedItem.type === 'equipment'">
             ⚔️ 裝備
           </button>
-          <button class="action-btn farm-btn" v-if="selectedItem.type === 'dragon'">
-            🏞️ 放入牧場
+          <button class="action-btn farm-btn" v-if="selectedItem.type === 'dragon'" @click="toggleFarmStatus">
+            {{ isDragonInFarm(selectedItem) ? '🎒 收回背包' : '🏞️ 放入牧場' }}
           </button>
         </div>
       </div>
@@ -159,6 +159,32 @@ const filteredItems = computed(() => {
 
 const selectItem = (item) => {
   selectedItem.value = item;
+};
+
+// 牧場狀態管理
+const getFarmDragonIds = () => JSON.parse(localStorage.getItem('farm_dragon_ids') || '[]');
+const isDragonInFarm = (item) => {
+  if (!item || item.type !== 'dragon') return false;
+  const id = item.id.replace('d_', '');
+  return getFarmDragonIds().includes(id);
+};
+
+const toggleFarmStatus = () => {
+  if (!selectedItem.value) return;
+  const id = selectedItem.value.id.replace('d_', '');
+  let ids = getFarmDragonIds();
+  
+  if (ids.includes(id)) {
+    ids = ids.filter(i => i !== id);
+    alert(`${selectedItem.value.name} 已收回背包！`);
+  } else {
+    ids.push(id);
+    alert(`${selectedItem.value.name} 已放入牧場！`);
+  }
+  
+  localStorage.setItem('farm_dragon_ids', JSON.stringify(ids));
+  // 觸發 Vue 響應式更新按鈕文字
+  selectedItem.value = { ...selectedItem.value };
 };
 
 // 輔助函式

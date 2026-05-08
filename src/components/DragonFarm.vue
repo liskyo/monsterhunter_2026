@@ -98,6 +98,14 @@
               <span class="btn-desc">觀看動畫</span>
             </div>
           </button>
+          
+          <button class="action-btn recall-btn" @click="recallDragon">
+            <span class="btn-icon">🎒</span>
+            <div class="btn-info">
+              <span class="btn-name">收回背包</span>
+              <span class="btn-desc">返回清單</span>
+            </div>
+          </button>
         </div>
         
         <div class="skills-list" v-if="selectedDragon.skills.length > 0">
@@ -133,7 +141,18 @@ const fetchDragons = async () => {
     const { data, error } = await supabase.from('dragons').select('*');
     if (error) throw error;
     if (data) {
-      dragons.value = data.map(d => ({
+      // 升級相容性：如果從未設定過牧場清單，預設把所有已有的魔物放入牧場
+      let farmIdsStr = localStorage.getItem('farm_dragon_ids');
+      if (farmIdsStr === null) {
+        const allIds = data.map(d => d.id);
+        localStorage.setItem('farm_dragon_ids', JSON.stringify(allIds));
+        farmIdsStr = JSON.stringify(allIds);
+      }
+      
+      const farmIds = JSON.parse(farmIdsStr);
+      const farmData = data.filter(d => farmIds.includes(d.id));
+      
+      dragons.value = farmData.map(d => ({
         ...d,
         x: Math.max(15, Math.min(85, 20 + Math.random() * 60)),
         y: Math.max(45, Math.min(85, 40 + Math.random() * 40)),
@@ -154,6 +173,20 @@ const fetchDragons = async () => {
 
 const selectDragon = (dragon) => {
   selectedDragon.value = dragon;
+};
+
+// 收回背包邏輯
+const recallDragon = () => {
+  if (!selectedDragon.value) return;
+  const id = selectedDragon.value.id;
+  let ids = JSON.parse(localStorage.getItem('farm_dragon_ids') || '[]');
+  ids = ids.filter(i => i !== id);
+  localStorage.setItem('farm_dragon_ids', JSON.stringify(ids));
+  
+  // 更新畫面
+  dragons.value = dragons.value.filter(d => d.id !== id);
+  alert(`${selectedDragon.value.name} 已收回背包！`);
+  selectedDragon.value = null;
 };
 
 const feedDragon = async () => {
@@ -385,7 +418,8 @@ onUnmounted(() => {
   background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; 
   padding: 12px; display: flex; align-items: center; gap: 10px; color: white; cursor: pointer; transition: all 0.2s; 
 }
-.interact-btn { grid-column: span 2; justify-content: center; background: rgba(255,255,255,0.1); }
+.interact-btn { background: rgba(255,255,255,0.1); }
+.recall-btn { background: rgba(255,255,255,0.1); }
 .action-btn:active { transform: scale(0.95); background: rgba(255,255,255,0.2); }
 .btn-icon { font-size: 1.8rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
 .btn-info { display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
