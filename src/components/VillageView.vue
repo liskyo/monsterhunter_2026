@@ -21,17 +21,16 @@
 
     <main class="village-main">
       <div v-if="companion" class="companion-area">
-        <div class="alert-bubble companion-speech">💬 {{ companion.name }} 看起來精神很好！</div>
+        <div class="companion-label">
+          <span class="lv">Lv.{{ companion.level }}</span> <span class="name-text">{{ companion.name }}</span>
+          <button class="change-btn" @click.stop="showCompanionSelect = true">🔁 更換</button>
+        </div>
         <div class="companion-wrapper" :class="[companion.element, { walking: companion.isWalking, breathing: companion.isBreathing, flying: companion.isFlying }]">
           <div class="companion-shadow"></div>
           <div class="companion-flip" :style="{ transform: `scaleX(${companion.direction || 1})` }">
             <img :src="companion.image" class="companion-img" @click="showCompanionSelect = true" />
             <div v-if="companion.isBreathing" class="breath" :class="companion.element"></div>
           </div>
-        </div>
-        <div class="companion-label">
-          <span class="lv">Lv.{{ companion.level }}</span> <span class="name-text">{{ companion.name }}</span>
-          <button class="change-btn" @click.stop="showCompanionSelect = true">🔁 更換</button>
         </div>
       </div>
       <div v-else class="alert-bubble">💬 老村長：去孵化室取得你的第一隻魔物吧！</div>
@@ -215,7 +214,6 @@ onUnmounted(() => {
 .alert-bubble { background: rgba(255,255,255,0.9); color: #333; padding: 10px 20px; border-radius: 20px 20px 20px 0; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: bounce 3s infinite; margin-bottom: 15px; }
 
 .companion-area { position: absolute; top: 12%; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; width: 100%; z-index: 10; }
-.companion-speech { animation: float-bubble 4s infinite ease-in-out; border-radius: 20px 20px 0 20px; }
 
 .companion-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
 .companion-flip { position: relative; transition: transform 0.4s ease-in-out; display: flex; align-items: center; justify-content: center; }
@@ -245,7 +243,7 @@ onUnmounted(() => {
 .breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
 
 .companion-label {
-  margin-top: -10px; background: rgba(0,0,0,0.8); padding: 6px 16px; border-radius: 30px;
+  margin-bottom: -15px; background: rgba(0,0,0,0.8); padding: 6px 16px; border-radius: 30px;
   border: 1px solid rgba(255, 215, 0, 0.5); color: white; font-weight: bold; font-size: 0.85rem;
   display: flex; align-items: center; gap: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   z-index: 10;
