@@ -94,25 +94,26 @@ const selectedMonster = ref(null);
 const initPokedex = async () => {
   try {
     isLoading.value = true;
-    const res = await fetch('https://mhw-db.com/monsters');
+    const res = await fetch('/game_jsons/base_monsters.json');
     const data = await res.json();
     
     // 過濾出大型魔物，並且只保留「我們本地有圖片的魔物」
-    const largeMonsters = data.filter(m => m.type === 'large' && validMonsterImages.includes(m.name));
+    const largeMonsters = data.monsters.filter(m => m.isLarge && validMonsterImages.includes(m.englishName));
     
     monsters.value = largeMonsters.map((m, index) => {
-      const mName = m.name || 'Unknown';
-      const zhName = monsterZhMap[mName] || mName;
-      const sp = m.species?.toLowerCase() || '';
-      const zhSpecies = speciesZhMap[sp] || m.species || '未知種';
+      // 取得介紹 (取最後一代的介紹)
+      let desc = '棲息於各地的大型魔物，生態仍有許多未解之謎。';
+      if (m.games && m.games.length > 0) {
+        desc = m.games[m.games.length - 1].info || desc;
+      }
       
       return {
         originalIndex: index + 1,
-        name: zhName,
-        englishName: mName,
-        type: zhSpecies,
-        description: m.description || '棲息於各地的大型魔物，生態仍有許多未解之謎。',
-        image: `/game_images/monsters-small/${mName}.webp`
+        name: m.name,
+        englishName: m.englishName,
+        type: m.type || '未知種',
+        description: desc,
+        image: `/game_images/monsters-small/${m.englishName}.webp`
       };
     });
     
