@@ -1,0 +1,1802 @@
+[
+    {
+        "id": "skill_fire_UR_0",
+        "name": "真・焦息之極",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 449,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_UR_1",
+        "name": "極・爆柱零式",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 496,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_UR_2",
+        "name": "真・燼息亂舞",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 453,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_UR_3",
+        "name": "極・焚火",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 369,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_UR_4",
+        "name": "究極煉波",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 410,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_UR_5",
+        "name": "終焉・炎球一閃",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 358,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_UR_6",
+        "name": "滅・燼閃真打",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 368,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_UR_7",
+        "name": "究極焚息咆哮",
+        "element": "fire",
+        "rarity": "UR",
+        "base_damage": 483,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_0",
+        "name": "超・煉球之極",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 258,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_1",
+        "name": "霸・焚破",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 271,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_2",
+        "name": "超・焦爆",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 199,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_3",
+        "name": "絕・爆息",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 249,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_4",
+        "name": "霸・烈爆",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 191,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_5",
+        "name": "絕・烈波",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 180,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_6",
+        "name": "超・炎息",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 279,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SSR_7",
+        "name": "絕・焦閃零式",
+        "element": "fire",
+        "rarity": "SSR",
+        "base_damage": 272,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SR_0",
+        "name": "大焦破",
+        "element": "fire",
+        "rarity": "SR",
+        "base_damage": 103,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SR_1",
+        "name": "強焦波",
+        "element": "fire",
+        "rarity": "SR",
+        "base_damage": 113,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SR_2",
+        "name": "重燼波一閃",
+        "element": "fire",
+        "rarity": "SR",
+        "base_damage": 136,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SR_3",
+        "name": "迅炎柱",
+        "element": "fire",
+        "rarity": "SR",
+        "base_damage": 127,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SR_4",
+        "name": "大燼柱",
+        "element": "fire",
+        "rarity": "SR",
+        "base_damage": 92,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SR_5",
+        "name": "重煉閃咆哮",
+        "element": "fire",
+        "rarity": "SR",
+        "base_damage": 100,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_SR_6",
+        "name": "強焚爆亂舞",
+        "element": "fire",
+        "rarity": "SR",
+        "base_damage": 149,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_R_0",
+        "name": "炎柱",
+        "element": "fire",
+        "rarity": "R",
+        "base_damage": 47,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_R_1",
+        "name": "焦爆",
+        "element": "fire",
+        "rarity": "R",
+        "base_damage": 71,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_R_2",
+        "name": "炎火崩壞",
+        "element": "fire",
+        "rarity": "R",
+        "base_damage": 62,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_R_3",
+        "name": "焦破之極",
+        "element": "fire",
+        "rarity": "R",
+        "base_damage": 48,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_R_4",
+        "name": "烈爆",
+        "element": "fire",
+        "rarity": "R",
+        "base_damage": 64,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_R_5",
+        "name": "燼球一閃",
+        "element": "fire",
+        "rarity": "R",
+        "base_damage": 69,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_fire_R_6",
+        "name": "燼息猛擊",
+        "element": "fire",
+        "rarity": "R",
+        "base_damage": 40,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_0",
+        "name": "真・淵陣亂舞",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 353,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_1",
+        "name": "極・淵刃亂舞",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 402,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_2",
+        "name": "究極水嘯降臨",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 500,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_3",
+        "name": "滅・淵砲",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 463,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_4",
+        "name": "神・瀑流",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 441,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_5",
+        "name": "神・潮衝",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 498,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_6",
+        "name": "究極渦彈",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 468,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_UR_7",
+        "name": "究極淵衝零式",
+        "element": "water",
+        "rarity": "UR",
+        "base_damage": 474,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_0",
+        "name": "絕・波激真打",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 262,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_1",
+        "name": "絕・波流",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 270,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_2",
+        "name": "超・海波",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 245,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_3",
+        "name": "超・渦流",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 289,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_4",
+        "name": "超・水衝",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 293,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_5",
+        "name": "絕・水砲零式",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 240,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_6",
+        "name": "狂・水衝降臨",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 224,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SSR_7",
+        "name": "霸・渦激亂舞",
+        "element": "water",
+        "rarity": "SSR",
+        "base_damage": 256,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SR_0",
+        "name": "迅潮衝之極",
+        "element": "water",
+        "rarity": "SR",
+        "base_damage": 131,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SR_1",
+        "name": "大潮彈",
+        "element": "water",
+        "rarity": "SR",
+        "base_damage": 118,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SR_2",
+        "name": "大潮刃降臨",
+        "element": "water",
+        "rarity": "SR",
+        "base_damage": 123,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SR_3",
+        "name": "大波波",
+        "element": "water",
+        "rarity": "SR",
+        "base_damage": 145,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SR_4",
+        "name": "強渦衝",
+        "element": "water",
+        "rarity": "SR",
+        "base_damage": 116,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SR_5",
+        "name": "大淵彈真打",
+        "element": "water",
+        "rarity": "SR",
+        "base_damage": 103,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_SR_6",
+        "name": "強瀑激",
+        "element": "water",
+        "rarity": "SR",
+        "base_damage": 123,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_R_0",
+        "name": "波彈一閃",
+        "element": "water",
+        "rarity": "R",
+        "base_damage": 58,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_R_1",
+        "name": "潮陣",
+        "element": "water",
+        "rarity": "R",
+        "base_damage": 48,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_R_2",
+        "name": "渦刃真打",
+        "element": "water",
+        "rarity": "R",
+        "base_damage": 65,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_R_3",
+        "name": "淵彈真打",
+        "element": "water",
+        "rarity": "R",
+        "base_damage": 55,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_R_4",
+        "name": "海波",
+        "element": "water",
+        "rarity": "R",
+        "base_damage": 69,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_R_5",
+        "name": "水陣降臨",
+        "element": "water",
+        "rarity": "R",
+        "base_damage": 53,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_water_R_6",
+        "name": "波激猛擊",
+        "element": "water",
+        "rarity": "R",
+        "base_damage": 43,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_0",
+        "name": "極・霆霆亂舞",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 474,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_1",
+        "name": "極・轟槍",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 476,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_2",
+        "name": "滅・電擊崩壞",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 454,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_3",
+        "name": "終焉・電轟亂舞",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 354,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_4",
+        "name": "極・霆光降臨",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 491,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_5",
+        "name": "神・狂槍",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 370,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_6",
+        "name": "滅・雷擊一閃",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 471,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_UR_7",
+        "name": "真・霆霆狂亂",
+        "element": "thunder",
+        "rarity": "UR",
+        "base_damage": 366,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_0",
+        "name": "超・霆爆崩壞",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 228,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_1",
+        "name": "霸・雷光狂亂",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 181,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_2",
+        "name": "絕・閃光",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 245,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_3",
+        "name": "絕・閃霆崩壞",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 188,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_4",
+        "name": "霸・狂落猛擊",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 190,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_5",
+        "name": "霸・霆擊之極",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 251,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_6",
+        "name": "霸・閃怒亂舞",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 282,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SSR_7",
+        "name": "狂・雷怒猛擊",
+        "element": "thunder",
+        "rarity": "SSR",
+        "base_damage": 236,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SR_0",
+        "name": "重迅落",
+        "element": "thunder",
+        "rarity": "SR",
+        "base_damage": 108,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SR_1",
+        "name": "迅轟網降臨",
+        "element": "thunder",
+        "rarity": "SR",
+        "base_damage": 149,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SR_2",
+        "name": "迅電光咆哮",
+        "element": "thunder",
+        "rarity": "SR",
+        "base_damage": 148,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SR_3",
+        "name": "大迅擊零式",
+        "element": "thunder",
+        "rarity": "SR",
+        "base_damage": 104,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SR_4",
+        "name": "迅雷槍崩壞",
+        "element": "thunder",
+        "rarity": "SR",
+        "base_damage": 98,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SR_5",
+        "name": "重狂槍崩壞",
+        "element": "thunder",
+        "rarity": "SR",
+        "base_damage": 97,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_SR_6",
+        "name": "迅狂轟",
+        "element": "thunder",
+        "rarity": "SR",
+        "base_damage": 110,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_R_0",
+        "name": "轟霆狂亂",
+        "element": "thunder",
+        "rarity": "R",
+        "base_damage": 48,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_R_1",
+        "name": "轟槍之極",
+        "element": "thunder",
+        "rarity": "R",
+        "base_damage": 40,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_R_2",
+        "name": "閃轟",
+        "element": "thunder",
+        "rarity": "R",
+        "base_damage": 59,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_R_3",
+        "name": "轟怒真打",
+        "element": "thunder",
+        "rarity": "R",
+        "base_damage": 52,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_R_4",
+        "name": "閃霆零式",
+        "element": "thunder",
+        "rarity": "R",
+        "base_damage": 50,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_R_5",
+        "name": "迅轟之極",
+        "element": "thunder",
+        "rarity": "R",
+        "base_damage": 45,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_thunder_R_6",
+        "name": "迅槍",
+        "element": "thunder",
+        "rarity": "R",
+        "base_damage": 42,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_0",
+        "name": "極・冰破亂舞",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 381,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_1",
+        "name": "終焉・雪爆咆哮",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 362,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_2",
+        "name": "終焉・凜爆亂舞",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 486,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_3",
+        "name": "究極零晶",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 387,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_4",
+        "name": "神・凍封之極",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 445,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_5",
+        "name": "滅・凍結",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 384,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_6",
+        "name": "神・冰刺崩壞",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 414,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_UR_7",
+        "name": "極・寒爆猛擊",
+        "element": "ice",
+        "rarity": "UR",
+        "base_damage": 440,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_0",
+        "name": "狂・零刃",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 206,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_1",
+        "name": "霸・凜牙崩壞",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 222,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_2",
+        "name": "狂・冰刺",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 251,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_3",
+        "name": "霸・零刺",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 194,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_4",
+        "name": "超・零晶崩壞",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 202,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_5",
+        "name": "絕・凜爆",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 196,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_6",
+        "name": "狂・寒刃",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 184,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SSR_7",
+        "name": "絕・冰爆咆哮",
+        "element": "ice",
+        "rarity": "SSR",
+        "base_damage": 281,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SR_0",
+        "name": "大寒晶零式",
+        "element": "ice",
+        "rarity": "SR",
+        "base_damage": 112,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SR_1",
+        "name": "重寒爆降臨",
+        "element": "ice",
+        "rarity": "SR",
+        "base_damage": 128,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SR_2",
+        "name": "強雪破",
+        "element": "ice",
+        "rarity": "SR",
+        "base_damage": 145,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SR_3",
+        "name": "強冰結咆哮",
+        "element": "ice",
+        "rarity": "SR",
+        "base_damage": 141,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SR_4",
+        "name": "重冰封之極",
+        "element": "ice",
+        "rarity": "SR",
+        "base_damage": 131,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SR_5",
+        "name": "迅凜爆咆哮",
+        "element": "ice",
+        "rarity": "SR",
+        "base_damage": 146,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_SR_6",
+        "name": "強冰錐猛擊",
+        "element": "ice",
+        "rarity": "SR",
+        "base_damage": 127,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_R_0",
+        "name": "冰破",
+        "element": "ice",
+        "rarity": "R",
+        "base_damage": 80,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_R_1",
+        "name": "霜刃零式",
+        "element": "ice",
+        "rarity": "R",
+        "base_damage": 60,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_R_2",
+        "name": "凍刃",
+        "element": "ice",
+        "rarity": "R",
+        "base_damage": 64,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_R_3",
+        "name": "凍破亂舞",
+        "element": "ice",
+        "rarity": "R",
+        "base_damage": 51,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_R_4",
+        "name": "冰結",
+        "element": "ice",
+        "rarity": "R",
+        "base_damage": 46,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_R_5",
+        "name": "雪錐",
+        "element": "ice",
+        "rarity": "R",
+        "base_damage": 80,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_ice_R_6",
+        "name": "零晶",
+        "element": "ice",
+        "rarity": "R",
+        "base_damage": 40,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_0",
+        "name": "真・虛滅",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 447,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_1",
+        "name": "終焉・闇破猛擊",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 394,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_2",
+        "name": "滅・厄爪",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 352,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_3",
+        "name": "究極厄隕零式",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 383,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_4",
+        "name": "極・神隕之極",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 397,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_5",
+        "name": "真・闇破",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 477,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_6",
+        "name": "神・黑尾零式",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 437,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_UR_7",
+        "name": "神・黑波猛擊",
+        "element": "dragon",
+        "rarity": "UR",
+        "base_damage": 394,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_0",
+        "name": "絕・神波",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 229,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_1",
+        "name": "霸・龍咆哮猛擊",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 188,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_2",
+        "name": "絕・厄尾",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 265,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_3",
+        "name": "超・黑咆哮",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 254,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_4",
+        "name": "超・龍波猛擊",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 232,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_5",
+        "name": "狂・闇破",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 261,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_6",
+        "name": "霸・黑雷狂亂",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 288,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SSR_7",
+        "name": "超・黑波咆哮",
+        "element": "dragon",
+        "rarity": "SSR",
+        "base_damage": 295,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SR_0",
+        "name": "大黑破猛擊",
+        "element": "dragon",
+        "rarity": "SR",
+        "base_damage": 105,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SR_1",
+        "name": "重龍尾",
+        "element": "dragon",
+        "rarity": "SR",
+        "base_damage": 131,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SR_2",
+        "name": "強黑滅猛擊",
+        "element": "dragon",
+        "rarity": "SR",
+        "base_damage": 135,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SR_3",
+        "name": "迅神爪零式",
+        "element": "dragon",
+        "rarity": "SR",
+        "base_damage": 103,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SR_4",
+        "name": "重闇破",
+        "element": "dragon",
+        "rarity": "SR",
+        "base_damage": 92,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SR_5",
+        "name": "重虛息狂亂",
+        "element": "dragon",
+        "rarity": "SR",
+        "base_damage": 124,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_SR_6",
+        "name": "強神息",
+        "element": "dragon",
+        "rarity": "SR",
+        "base_damage": 92,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_R_0",
+        "name": "黑爪零式",
+        "element": "dragon",
+        "rarity": "R",
+        "base_damage": 68,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_R_1",
+        "name": "滅波",
+        "element": "dragon",
+        "rarity": "R",
+        "base_damage": 71,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_R_2",
+        "name": "闇隕降臨",
+        "element": "dragon",
+        "rarity": "R",
+        "base_damage": 71,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_R_3",
+        "name": "滅咆哮之極",
+        "element": "dragon",
+        "rarity": "R",
+        "base_damage": 42,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_R_4",
+        "name": "厄爪",
+        "element": "dragon",
+        "rarity": "R",
+        "base_damage": 44,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_R_5",
+        "name": "神爪狂亂",
+        "element": "dragon",
+        "rarity": "R",
+        "base_damage": 70,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_dragon_R_6",
+        "name": "闇隕",
+        "element": "dragon",
+        "rarity": "R",
+        "base_damage": 67,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_0",
+        "name": "終焉・瞬撞",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 356,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_1",
+        "name": "終焉・強衝",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 367,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_2",
+        "name": "滅・烈撞降臨",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 419,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_3",
+        "name": "神・強衝真打",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 429,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_4",
+        "name": "滅・狂突狂亂",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 462,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_5",
+        "name": "終焉・猛撞真打",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 392,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_6",
+        "name": "終焉・瞬衝之極",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 470,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_UR_7",
+        "name": "滅・破斬降臨",
+        "element": "normal",
+        "rarity": "UR",
+        "base_damage": 419,
+        "damage_scaling": 2,
+        "description": "傳說中的禁忌招式，擁有足以毀滅生態系的恐怖破壞力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_0",
+        "name": "霸・烈牙零式",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 288,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_1",
+        "name": "霸・瞬碎",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 280,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_2",
+        "name": "超・強衝亂舞",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 180,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_3",
+        "name": "狂・強突猛擊",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 250,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_4",
+        "name": "超・強吼",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 201,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_5",
+        "name": "狂・瞬擊咆哮",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 226,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_6",
+        "name": "狂・烈擊之極",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 292,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SSR_7",
+        "name": "狂・狂衝",
+        "element": "normal",
+        "rarity": "SSR",
+        "base_damage": 200,
+        "damage_scaling": 1.6,
+        "description": "魔物將體內能量激發至極限所釋放的高階大招。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SR_0",
+        "name": "迅猛衝亂舞",
+        "element": "normal",
+        "rarity": "SR",
+        "base_damage": 105,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SR_1",
+        "name": "大狂突",
+        "element": "normal",
+        "rarity": "SR",
+        "base_damage": 96,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SR_2",
+        "name": "迅剛吼零式",
+        "element": "normal",
+        "rarity": "SR",
+        "base_damage": 106,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SR_3",
+        "name": "重狂牙真打",
+        "element": "normal",
+        "rarity": "SR",
+        "base_damage": 125,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SR_4",
+        "name": "大烈斬亂舞",
+        "element": "normal",
+        "rarity": "SR",
+        "base_damage": 133,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SR_5",
+        "name": "大猛撞一閃",
+        "element": "normal",
+        "rarity": "SR",
+        "base_damage": 106,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_SR_6",
+        "name": "大狂牙",
+        "element": "normal",
+        "rarity": "SR",
+        "base_damage": 131,
+        "damage_scaling": 1.3,
+        "description": "極具威脅的強大攻擊，能對獵人造成不小的壓力。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_R_0",
+        "name": "猛撞之極",
+        "element": "normal",
+        "rarity": "R",
+        "base_damage": 51,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_R_1",
+        "name": "剛吼一閃",
+        "element": "normal",
+        "rarity": "R",
+        "base_damage": 66,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_R_2",
+        "name": "烈突咆哮",
+        "element": "normal",
+        "rarity": "R",
+        "base_damage": 46,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_R_3",
+        "name": "破牙狂亂",
+        "element": "normal",
+        "rarity": "R",
+        "base_damage": 70,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_R_4",
+        "name": "烈牙",
+        "element": "normal",
+        "rarity": "R",
+        "base_damage": 65,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_R_5",
+        "name": "烈碎崩壞",
+        "element": "normal",
+        "rarity": "R",
+        "base_damage": 66,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    },
+    {
+        "id": "skill_normal_R_6",
+        "name": "破吼崩壞",
+        "element": "normal",
+        "rarity": "R",
+        "base_damage": 45,
+        "damage_scaling": 1.1,
+        "description": "魔物的基礎攻擊招式，發動速度快。",
+        "type": "offensive"
+    }
+]

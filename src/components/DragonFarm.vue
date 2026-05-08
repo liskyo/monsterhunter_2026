@@ -110,12 +110,22 @@
           </button>
         </div>
         
-        <div class="skills-list" v-if="selectedDragon.skills.length > 0">
+        <div class="skills-list">
           <h4>已學會技能</h4>
-          <div class="skill-tags">
-            <span v-for="(skill, idx) in selectedDragon.skills" :key="idx" class="skill-tag" :class="selectedDragon.element">
-              {{ skill }}
+          <div class="skill-tags" v-if="selectedDragon.skills.length > 0">
+            <span 
+              v-for="(skillName, idx) in selectedDragon.skills" 
+              :key="idx" 
+              class="skill-tag" 
+              :class="selectedDragon.element"
+              @click="triggerBreath"
+              :title="getSkillDescription(skillName)"
+            >
+              {{ skillName }}
             </span>
+          </div>
+          <div v-else class="empty-skills">
+            (目前尚未學習任何技能，點擊上方按鈕解鎖)
           </div>
         </div>
       </div>
@@ -129,6 +139,9 @@ import { supabase } from '../supabase';
 
 const emit = defineEmits(['back']);
 const coins = ref(2500);
+
+// 技能庫
+const monsterSkillsData = ref([]);
 
 // 從資料庫讀取的龍
 const dragons = ref([]);
@@ -274,8 +287,35 @@ const feedDragon = async () => {
 const learnSkill = async () => {
   if (!selectedDragon.value) return;
   if (coins.value >= 200) {
-    const newSkill = selectedDragon.value.element === 'fire' ? '爆裂炎息' : '海嘯水砲';
-    if (!selectedDragon.value.skills.includes(newSkill)) {
+    const pool = monsterSkillsData.value;
+    if (pool.length === 0) return alert('技能庫尚未載入，請稍後再試！');
+    
+    // 依據魔物屬性給予相關的技能選擇 (專屬屬性 + 一般通用)
+    const elementSkills = pool.filter(s => s.element === selectedDragon.value.element || s.element === 'normal');
+    
+    // 過濾出尚未學習的技能
+    const availableSkills = elementSkills.filter(s => !selectedDragon.value.skills.includes(s.name));
+    
+    if (availableSkills.length > 0) {
+      // 依據稀有度抽技能 (UR: 5%, SSR: 15%, SR: 30%, R: 50%)
+      const rand = Math.random() * 100;
+      let targetRarity = '';
+      if (rand <= 5) targetRarity = 'UR';
+      else if (rand <= 20) targetRarity = 'SSR';
+      else if (rand <= 50) targetRarity = 'SR';
+      else targetRarity = 'R';
+      
+      let rarityPool = availableSkills.filter(s => s.rarity === targetRarity);
+      
+      // 如果該稀有度已經學完，則從剩餘所有可用技能中抽 (保底)
+      if (rarityPool.length === 0) {
+        rarityPool = availableSkills;
+      }
+
+      // 隨機學習一招
+      const randomIndex = Math.floor(Math.random() * rarityPool.length);
+      const newSkill = rarityPool[randomIndex].name;
+      
       coins.value -= 200;
       selectedDragon.value.skills.push(newSkill);
       triggerBreath();
@@ -286,12 +326,29 @@ const learnSkill = async () => {
           skills: selectedDragon.value.skills
         }).eq('id', selectedDragon.value.id);
       }
+      
+      alert(`抽到了 ${targetRarity} 級技能：${newSkill}！`);
     } else {
-      alert(`${selectedDragon.value.name} 已經學會所有基礎技能了!`);
+      alert(`${selectedDragon.value.name} 已經學會所有的技能了!`);
     }
   } else {
     alert('金幣不足！');
   }
+};
+
+const getSkillDescription = (skillName) => {
+  const skill = monsterSkillsData.value.find(s => s.name === skillName);
+  if (skill) {
+    // 計算技能升等的比例 (依據魔物的等級)
+    let powerInfo = '';
+    if (skill.base_damage > 0) {
+      const currentPower = Math.floor(skill.base_damage * Math.pow(skill.damage_scaling, selectedDragon.value.level - 1));
+      powerInfo = `\n基礎攻擊力: ${skill.base_damage} ➔ [Lv.${selectedDragon.value.level} 實際威力: ${currentPower}]\n成長倍率: 每次升級增長 ${skill.damage_scaling}x`;
+    }
+    
+    return `【${skill.rarity}】 ${skill.name}\n屬性: ${skill.element} | 類型: ${skill.type}${powerInfo}\n\n${skill.description}`;
+  }
+  return '點擊施放技能';
 };
 
 const triggerBreath = () => {
@@ -343,8 +400,20 @@ const randomWalk = () => {
   });
 };
 
+const fetchSkillsData = async () => {
+  try {
+    const res = await fetch('/game_jsons/Monster_skills.json');
+    if (res.ok) {
+      monsterSkillsData.value = await res.json();
+    }
+  } catch (err) {
+    console.error('Failed to load Monster_skills.json', err);
+  }
+};
+
 onMounted(() => {
   fetchDragons();
+  fetchSkillsData();
   moveInterval = setInterval(randomWalk, 3500);
 });
 
@@ -505,8 +574,11 @@ onUnmounted(() => {
 
 /* 技能列表 */
 .skills-list h4 { margin: 0 0 10px 0; font-size: 0.9rem; color: #ddd; }
+.empty-skills { font-size: 0.8rem; color: #888; font-style: italic; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.skill-tag { padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+.skill-tag { padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; text-shadow: 0 1px 2px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.2s; }
+.skill-tag:hover { transform: scale(1.05); }
+.skill-tag:active { transform: scale(0.95); }
 .skill-tag.fire { background: rgba(244, 67, 54, 0.3); border: 1px solid #f44336; color: #ffc107; }
 .skill-tag.water { background: rgba(33, 150, 243, 0.3); border: 1px solid #2196f3; color: #e1f5fe; }
 
