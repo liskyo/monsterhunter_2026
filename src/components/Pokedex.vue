@@ -93,17 +93,18 @@ const selectedMonster = ref(null);
 const initPokedex = async () => {
   try {
     isLoading.value = true;
-    const res = await fetch('/game_jsons/mhr.json');
+    const res = await fetch('https://mhw-db.com/monsters');
     const data = await res.json();
     
-    const pool = Array.isArray(data) ? data : Object.values(data);
+    // 過濾出大型魔物 (比較有龍的感覺)
+    const largeMonsters = data.filter(m => m.type === 'large');
     
-    monsters.value = pool.map((m, index) => {
-      const mName = m.names?.EN || m.name || 'Unknown';
+    monsters.value = largeMonsters.map((m, index) => {
+      const mName = m.name || 'Unknown';
       return {
         originalIndex: index + 1,
         name: mName,
-        type: m.type || m.species || '魔物',
+        type: m.species || '未知種',
         description: m.description || '棲息於各地的大型魔物，生態仍有許多未解之謎。',
         image: `/game_images/monsters-small/${mName}.webp`
       };

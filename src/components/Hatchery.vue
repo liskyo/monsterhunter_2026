@@ -82,15 +82,15 @@ const initGameData = async () => {
     
     // 同時讀取魔物與技能資料
     const [monsterRes, skillRes] = await Promise.all([
-      fetch('/game_jsons/mhr.json'),
+      fetch('https://mhw-db.com/monsters'),
       fetch('/game_jsons/mhnow_skills.json')
     ])
 
     const mData = await monsterRes.json()
     const sData = await skillRes.json()
 
-    // 處理資料格式 (確保是陣列)
-    monsterPool.value = Array.isArray(mData) ? mData : Object.values(mData)
+    // 處理資料格式 (過濾大型魔物)
+    monsterPool.value = Array.isArray(mData) ? mData.filter(m => m.type === 'large') : []
     skillPool.value = Array.isArray(sData) ? sData : Object.values(sData)
 
     console.log('✅ 資料載入成功:', monsterPool.value.length, '隻魔物')
@@ -128,12 +128,12 @@ const handleHatchClick = () => {
     const randomMonster = monsterPool.value[Math.floor(Math.random() * monsterPool.value.length)]
     const randomSkill = skillPool.value[Math.floor(Math.random() * skillPool.value.length)]
 
-    const mName = randomMonster.names?.EN || randomMonster.name || 'Unknown'
+    const mName = randomMonster.name || 'Unknown'
     const sName = randomSkill.names?.EN || randomSkill.name || randomSkill.skills?.[0]?.name || '神秘力量'
     
-    // 隨機屬性 (可以改成從 JSON 讀取，這裡暫時隨機)
-    const elements = ['fire', 'water', 'normal']
-    const element = elements[Math.floor(Math.random() * elements.length)]
+    // 從 API 取得屬性 (若無則隨機)
+    const elements = randomMonster.elements && randomMonster.elements.length > 0 ? randomMonster.elements : ['fire', 'water', 'normal']
+    const element = typeof elements[0] === 'string' ? elements[0] : elements[Math.floor(Math.random() * elements.length)]
 
     hatchedMonster.value = {
       name: mName,
