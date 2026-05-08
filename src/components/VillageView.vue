@@ -22,7 +22,12 @@
     <main class="village-main">
       <div v-if="companion" class="companion-area">
         <div class="alert-bubble companion-speech">💬 {{ companion.name }} 看起來精神很好！</div>
-        <img :src="companion.image" class="companion-img" @click="showCompanionSelect = true" />
+        <div class="companion-wrapper" :class="[companion.element, { walking: companion.isWalking, breathing: companion.isBreathing }]">
+          <div class="companion-flip" :style="{ transform: `scaleX(${companion.direction || 1})` }">
+            <img :src="companion.image" class="companion-img" @click="showCompanionSelect = true" />
+            <div v-if="companion.isBreathing" class="breath" :class="companion.element"></div>
+          </div>
+        </div>
         <div class="companion-label">
           <span class="lv">Lv.{{ companion.level }}</span> <span class="name-text">{{ companion.name }}</span>
           <button class="change-btn" @click.stop="showCompanionSelect = true">🔁 更換</button>
@@ -81,7 +86,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { supabase } from '../supabase';
 
 const emit = defineEmits(['to-hatchery', 'to-farm', 'to-inventory', 'to-pokedex']);
@@ -98,11 +103,11 @@ const fetchDragons = async () => {
       myDragons.value = data;
       // 讀取上次選擇的隨行獸，沒有的話預設第一隻
       const savedId = localStorage.getItem('companionDragonId');
+      let selected = data[0];
       if (savedId) {
-        companion.value = data.find(d => d.id === savedId) || data[0];
-      } else {
-        companion.value = data[0];
+        selected = data.find(d => d.id === savedId) || data[0];
       }
+      companion.value = { ...selected, isWalking: false, isBreathing: false, direction: 1 };
     }
   } catch (err) {
     console.error('獲取隨行獸資料失敗:', err);
@@ -110,13 +115,40 @@ const fetchDragons = async () => {
 };
 
 const selectCompanion = (dragon) => {
-  companion.value = dragon;
+  companion.value = { ...dragon, isWalking: false, isBreathing: false, direction: 1 };
   localStorage.setItem('companionDragonId', dragon.id);
   showCompanionSelect.value = false;
 };
 
+let actionInterval = null;
+
+const randomAction = () => {
+  if (!companion.value || companion.value.isBreathing) return;
+  
+  const rand = Math.random();
+  if (rand > 0.8) {
+    // 20% 機率吐息
+    companion.value.isBreathing = true;
+    setTimeout(() => {
+      if (companion.value) companion.value.isBreathing = false;
+    }, 2000);
+  } else if (rand > 0.4) {
+    // 40% 機率原地跳動並隨機轉向
+    companion.value.isWalking = true;
+    companion.value.direction = Math.random() > 0.5 ? 1 : -1;
+    setTimeout(() => {
+      if (companion.value) companion.value.isWalking = false;
+    }, 1000);
+  }
+};
+
 onMounted(() => {
   fetchDragons();
+  actionInterval = setInterval(randomAction, 3500);
+});
+
+onUnmounted(() => {
+  if (actionInterval) clearInterval(actionInterval);
 });
 </script>
 
@@ -172,18 +204,32 @@ onMounted(() => {
 .chip:hover { transform: scale(1.05); }
 
 /* 中間提示與隨行獸 */
-.village-main { flex: 1; position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 20px; }
+.village-main { flex: 1; position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 20px; }
 .alert-bubble { background: rgba(255,255,255,0.9); color: #333; padding: 10px 20px; border-radius: 20px 20px 20px 0; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: bounce 3s infinite; margin-bottom: 15px; }
 
 .companion-area { display: flex; flex-direction: column; align-items: center; }
 .companion-speech { animation: float-bubble 4s infinite ease-in-out; border-radius: 20px 20px 0 20px; }
+
+.companion-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
+.companion-flip { position: relative; transition: transform 0.4s ease-in-out; display: flex; align-items: center; justify-content: center; }
+
 .companion-img {
   width: 180px; height: 180px; object-fit: contain;
   filter: drop-shadow(0 15px 15px rgba(0,0,0,0.8));
-  animation: float-dragon 4s ease-in-out infinite;
-  cursor: pointer; transition: transform 0.3s;
+  animation: float-dragon 3s infinite ease-in-out;
+  cursor: pointer;
 }
 .companion-img:hover { transform: scale(1.1); }
+
+/* 動作狀態 */
+.walking .companion-img { animation: walkBounce 0.5s infinite alternate ease-in-out; }
+.breathing .companion-img { animation: breatheScale 2s; }
+
+/* 吐息動畫 */
+.breath { position: absolute; top: 40px; left: -90px; width: 120px; height: 25px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; pointer-events: none; }
+.breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 8px #ff5722); }
+.breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
+
 .companion-label {
   margin-top: -10px; background: rgba(0,0,0,0.8); padding: 6px 16px; border-radius: 30px;
   border: 1px solid rgba(255, 215, 0, 0.5); color: white; font-weight: bold; font-size: 0.85rem;
@@ -278,5 +324,14 @@ onMounted(() => {
 @keyframes float-bubble {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
+}
+
+@keyframes walkBounce { 0% { transform: translateY(0) rotate(0); } 100% { transform: translateY(-15px) rotate(5deg); } }
+@keyframes breatheScale { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15) rotate(-5deg); } }
+@keyframes breathShoot { 
+  0% { opacity: 0; transform: scaleX(0); } 
+  20% { opacity: 1; transform: scaleX(1); } 
+  80% { opacity: 1; transform: scaleX(1); } 
+  100% { opacity: 0; transform: scaleX(1.2); } 
 }
 </style>
