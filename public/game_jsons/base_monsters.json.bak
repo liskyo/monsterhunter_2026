@@ -4,8 +4,8 @@
       "_id": {
         "$oid": "5e157f1c8a80af35ce52d772"
       },
-      "name": "冥海龍",
-      "type": "海龍種",
+      "name": "Abyssal Lagiacrus",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -30,8 +30,8 @@
       "_id": {
         "$oid": "5e1566638a80af35ce52d747"
       },
-      "name": "硫斬龍",
-      "type": "獸龍種",
+      "name": "Acidic Glavenus",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "ailments": [
         "Defence Down"
@@ -51,8 +51,8 @@
       "_id": {
         "$oid": "5dfc5b0eef22781e77ab8187"
       },
-      "name": "炎戈龍",
-      "type": "海龍種",
+      "name": "Agnaktor",
+      "type": "Leviathan",
       "isLarge": true,
       "subSpecies": [
         "Glacial Agnaktor"
@@ -97,8 +97,8 @@
       "_id": {
         "$oid": "5e1459598a80af35ce52d729"
       },
-      "name": "閣螳螂",
-      "type": "甲蟲種",
+      "name": "Ahtal-Ka",
+      "type": "Neopteron",
       "isLarge": true,
       "ailments": [
         "Defence Down",
@@ -121,8 +121,8 @@
       "_id": {
         "$oid": "5e1562978a80af35ce52d74c"
       },
-      "name": "炎尾猴",
-      "type": "牙獸種",
+      "name": "Ajarakan",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -146,8 +146,8 @@
       "_id": {
         "$oid": "5e143dab8a80af35ce52d706"
       },
-      "name": "霸龍",
-      "type": "飛龍種",
+      "name": "Akantor",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -186,8 +186,8 @@
       "_id": {
         "$oid": "6067120dbcd8bb76ea11b6b8"
       },
-      "name": "傘鳥",
-      "type": "鳥龍種",
+      "name": "Aknosom",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -212,8 +212,8 @@
       "_id": {
         "$oid": "5e1581998a80af35ce52d776"
       },
-      "name": "煌黑龍",
-      "type": "古龍種",
+      "name": "Alatreon",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -260,8 +260,8 @@
       "_id": {
         "$oid": "607e88681c899e0f3acd409b"
       },
-      "name": "泥翁龍",
-      "type": "海龍種",
+      "name": "Almudron",
+      "type": "Leviathan",
       "isLarge": true,
       "subSpecies": [
         "Magma Almudron"
@@ -290,8 +290,8 @@
       "_id": {
         "$oid": "5e1580a08a80af35ce52d773"
       },
-      "name": "阿爾塔羅斯",
-      "type": "甲蟲種",
+      "name": "Altaroth",
+      "type": "Neopteron",
       "isLarge": false,
       "ailments": [
         "Defence Down",
@@ -345,8 +345,8 @@
       "_id": {
         "$oid": "5e1424a48a80af35ce52d6ec"
       },
-      "name": "嵐龍",
-      "type": "古龍種",
+      "name": "Amatsu",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Water"
@@ -377,8 +377,8 @@
       "_id": {
         "$oid": "5e158ce68a80af35ce52d78d"
       },
-      "name": "古代鹿首精",
-      "type": "遺存種",
+      "name": "Ancient Leshen",
+      "type": "Relict",
       "isLarge": true,
       "ailments": [
         "Bleeding"
@@ -398,8 +398,8 @@
       "_id": {
         "$oid": "5e13357b25d9c11597488ae3"
       },
-      "name": "蠻顎龍",
-      "type": "獸龍種",
+      "name": "Anjanath",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Fulgur Anjanath"
@@ -436,8 +436,8 @@
       "_id": {
         "$oid": "5e15781d8a80af35ce52d765"
       },
-      "name": "雪鹿",
-      "type": "草食種",
+      "name": "Anteka",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -474,8 +474,8 @@
       "_id": {
         "$oid": "5e1556e78a80af35ce52d72b"
       },
-      "name": "草食龍",
-      "type": "草食種",
+      "name": "Apceros",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -520,8 +520,8 @@
       "_id": {
         "$oid": "608413b741460e8216704352"
       },
-      "name": "首領青熊獸",
-      "type": "牙獸種",
+      "name": "Apex Arzuros",
+      "type": "Fanged Beast",
       "isLarge": true,
       "weakness": [
         "Fire",
@@ -540,8 +540,8 @@
       "_id": {
         "$oid": "608413b741460e8216704359"
       },
-      "name": "首領角龍",
-      "type": "飛龍種",
+      "name": "Apex Diablos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "weakness": [
         "Water",
@@ -562,8 +562,8 @@
       "_id": {
         "$oid": "6084142841460e8216704354"
       },
-      "name": "首領泡狐龍",
-      "type": "海龍種",
+      "name": "Apex Mizutsune",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Water"
@@ -589,8 +589,8 @@
       "_id": {
         "$oid": "6084142841460e8216704358"
       },
-      "name": "首領雄火龍",
-      "type": "飛龍種",
+      "name": "Apex Rathalos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -617,8 +617,8 @@
       "_id": {
         "$oid": "6084142841460e8216704353"
       },
-      "name": "首領雌火龍",
-      "type": "飛龍種",
+      "name": "Apex Rathian",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -644,8 +644,8 @@
       "_id": {
         "$oid": "6084142847460e8216704353"
       },
-      "name": "首領雷狼龍",
-      "type": "牙龍種",
+      "name": "Apex Zinogre",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -672,8 +672,8 @@
       "_id": {
         "$oid": "5dfc9bde9dabf81e7717cea6"
       },
-      "name": "草食龍",
-      "type": "草食種",
+      "name": "Aptonoth",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -726,8 +726,8 @@
       "_id": {
         "$oid": "5e1569978a80af353e92d74c"
       },
-      "name": "鎖刃龍",
-      "type": "飛龍種",
+      "name": "Arkveld",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Guardian Arkveld"
@@ -753,8 +753,8 @@
       "_id": {
         "$oid": "5e1570f48a80af35ce52d757"
       },
-      "name": "青熊獸",
-      "type": "牙獸種",
+      "name": "Arzuros",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Redhelm Arzuros",
@@ -799,8 +799,8 @@
       "_id": {
         "$oid": "5e15bafc8a80af35ce52d79f"
       },
-      "name": "白猿狐",
-      "type": "牙獸種",
+      "name": "Ash Kecha Wacha",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -836,8 +836,8 @@
       "_id": {
         "$oid": "5e15bafc8a89af35ce52d79f"
       },
-      "name": "蒼老山龍",
-      "type": "古龍種",
+      "name": "Ashen Lao-Shan Lung",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -856,8 +856,8 @@
       "_id": {
         "$oid": "5e142a928a80af35ce52d6ef"
       },
-      "name": "電龍",
-      "type": "飛龍種",
+      "name": "Astalos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Boltreaver Astalos"
@@ -898,8 +898,8 @@
       "_id": {
         "$oid": "607d74421c899e0f3acd4a9a"
       },
-      "name": "冰人魚龍",
-      "type": "海龍種",
+      "name": "Aurora Somnacanth",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -924,8 +924,8 @@
       "_id": {
         "$oid": "5e15604e8a80af35ce52d73b"
       },
-      "name": "蒼火龍",
-      "type": "飛龍種",
+      "name": "Azure Rathalos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -977,8 +977,8 @@
       "_id": {
         "$oid": "5dfda7319dabf81e7717ceaa"
       },
-      "name": "眠狗龍",
-      "type": "鳥龍種",
+      "name": "Baggi",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "ailments": [
         "Sleep"
@@ -1014,8 +1014,8 @@
       "_id": {
         "$oid": "5f1569978a80af35ce52d74c"
       },
-      "name": "沙海龍",
-      "type": "海龍種",
+      "name": "Balahara",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Water"
@@ -1038,8 +1038,8 @@
       "_id": {
         "$oid": "5e1433468a80af35ce52d6f8"
       },
-      "name": "電怪龍",
-      "type": "飛龍種",
+      "name": "Baleful Gigginox",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -1064,8 +1064,8 @@
       "_id": {
         "$oid": "5e1565f28a80af35ce52d746"
       },
-      "name": "猛牛龍",
-      "type": "獸龍種",
+      "name": "Banbaro",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "weakness": [
         "Dragon",
@@ -1083,8 +1083,8 @@
       "_id": {
         "$oid": "5dfc99059dabf81e7717cea5"
       },
-      "name": "冰牙龍",
-      "type": "飛龍種",
+      "name": "Barioth",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Sand  Barioth",
@@ -1141,8 +1141,8 @@
       "_id": {
         "$oid": "5e15c1fb8a80af35ce52d7af"
       },
-      "name": "翼蛇龍",
-      "type": "翼龍種",
+      "name": "Barnos",
+      "type": "Wingdrake",
       "isLarge": false,
       "ailments": [
         "Defence Down"
@@ -1162,8 +1162,8 @@
       "_id": {
         "$oid": "5e1587a38a80af35ce52d783"
       },
-      "name": "土砂龍",
-      "type": "獸龍種",
+      "name": "Barroth",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Jade Barroth"
@@ -1217,8 +1217,8 @@
       "_id": {
         "$oid": "5dfc6c6c9dabf81e7717ce9f"
       },
-      "name": "岩龍",
-      "type": "飛龍種",
+      "name": "Basarios",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Ruby Basarios"
@@ -1276,8 +1276,8 @@
       "_id": {
         "$oid": "5e25a0247cc58343965ed7e3"
       },
-      "name": "維薩·皮特魯",
-      "type": "古龍種",
+      "name": "Versa Pietru",
+      "type": "Elder Dragon",
       "isLarge": true,
       "weakness": [
         "Fire"
@@ -1294,8 +1294,8 @@
       "_id": {
         "$oid": "5e1a69978a80af35ce52d74c"
       },
-      "name": "包諾斯",
-      "type": "翼龍種",
+      "name": "Baunos",
+      "type": "Wingdrake",
       "isLarge": false,
       "games": [
         {
@@ -1309,8 +1309,8 @@
       "_id": {
         "$oid": "5e1568ef8a80af35ce52d74b"
       },
-      "name": "爆鱗龍",
-      "type": "飛龍種",
+      "name": "Bazelgeuse",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Seething Bazelgeuse"
@@ -1349,8 +1349,8 @@
       "_id": {
         "$oid": "5e158bb58a80af35ce52d78a"
       },
-      "name": "貝希摩斯",
-      "type": "古龍種",
+      "name": "Behemoth",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -1378,8 +1378,8 @@
       "_id": {
         "$oid": "5e156a238a80af35ce52d74d"
       },
-      "name": "冰魚龍",
-      "type": "魚龍種",
+      "name": "Beotodus",
+      "type": "Piscine Wyvern",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -1403,8 +1403,8 @@
       "_id": {
         "$oid": "5e15b6ec8a80af35ce52d797"
       },
-      "name": "荒鬼蛙",
-      "type": "兩棲種",
+      "name": "Berserk Tetsucabra",
+      "type": "Amphibian",
       "isLarge": true,
       "ailments": [
         "Fatigue"
@@ -1426,8 +1426,8 @@
       "_id": {
         "$oid": "607a666674ab71e230b18b14"
       },
-      "name": "天狗獸",
-      "type": "牙獸種",
+      "name": "Bishaten",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Blood Orange Bishaten"
@@ -1454,8 +1454,8 @@
       "_id": {
         "$oid": "5e1562ff8a80af35ce52d73f"
       },
-      "name": "黑角龍",
-      "type": "飛龍種",
+      "name": "Black Diablos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Stun"
@@ -1501,8 +1501,8 @@
       "_id": {
         "$oid": "5e1561b28a80af35ce52d73d"
       },
-      "name": "黑鎧龍",
-      "type": "飛龍種",
+      "name": "Black Gravios",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -1541,8 +1541,8 @@
       "_id": {
         "$oid": "5e15713d8a80af35ce52d758"
       },
-      "name": "霧瘴屍套龍",
-      "type": "古龍種",
+      "name": "Blackveil Vaal Hazak",
+      "type": "Elder Dragon",
       "isLarge": true,
       "ailments": [
         "Effluvium"
@@ -1563,8 +1563,8 @@
       "_id": {
         "$oid": "5e1458598a80af35ce52d727"
       },
-      "name": "雪獅子",
-      "type": "牙獸種",
+      "name": "Blango",
+      "type": "Fanged Beast",
       "isLarge": false,
       "elements": [
         "Ice"
@@ -1599,8 +1599,8 @@
       "_id": {
         "$oid": "5e143b748a80af35ce52d702"
       },
-      "name": "雪獅子王",
-      "type": "牙獸種",
+      "name": "Blangonga",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Copper Blangonga"
@@ -1637,8 +1637,8 @@
       "_id": {
         "$oid": "607a666674aba1e230b18b14"
       },
-      "name": "緋天狗獸",
-      "type": "牙獸種",
+      "name": "Blood Orange Bishaten",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -1663,8 +1663,8 @@
       "_id": {
         "$oid": "5e15bc6e8a80af35ce52d7a3"
       },
-      "name": "鏖魔角龍",
-      "type": "飛龍種",
+      "name": "Bloodbath Diablos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "weakness": [
         "Water"
@@ -1687,8 +1687,8 @@
       "_id": {
         "$oid": "5e155f6e8a80af35ce52d739"
       },
-      "name": "青怪鳥",
-      "type": "鳥龍種",
+      "name": "Blue Yian Kut-Ku",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -1727,8 +1727,8 @@
       "_id": {
         "$oid": "5e1586e38a80af35ce52d782"
       },
-      "name": "飛甲蟲",
-      "type": "海龍種",
+      "name": "Bnahabra",
+      "type": "Leviathan",
       "isLarge": false,
       "ailments": [
         "Paralysis",
@@ -1777,8 +1777,8 @@
       "_id": {
         "$oid": "5e15c88b8a80af35ce52d7b7"
       },
-      "name": "獸纏族",
-      "type": "獸人種",
+      "name": "Boaboa",
+      "type": "Lynian",
       "isLarge": false,
       "ailments": [
         "Sleep",
@@ -1799,8 +1799,8 @@
       "_id": {
         "$oid": "5e15c88b8a80af3ace52d7b7"
       },
-      "name": "狡狗龍",
-      "type": "鳥龍種",
+      "name": "Boggi",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "games": [
         {
@@ -1814,8 +1814,8 @@
       "_id": {
         "$oid": "5e15b9848a80af35ce52d79b"
       },
-      "name": "青電主電龍",
-      "type": "飛龍種",
+      "name": "Boltreaver Astalos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -1846,8 +1846,8 @@
       "_id": {
         "$oid": "605f21a5a331a076a37a5204"
       },
-      "name": "狸獸",
-      "type": "牙獸種",
+      "name": "Bombadgy",
+      "type": "Fanged Beast",
       "isLarge": false,
       "games": [
         {
@@ -1861,8 +1861,8 @@
       "_id": {
         "$oid": "5e143f3b8a80af35ce52d708"
       },
-      "name": "碎龍",
-      "type": "獸龍種",
+      "name": "Brachydios",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Raging Brachydios"
@@ -1919,8 +1919,8 @@
       "_id": {
         "$oid": "5e144d618a80af35ce52d715"
       },
-      "name": "黑轟龍",
-      "type": "飛龍種",
+      "name": "Brute Tigrex",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "weakness": [
         "Water"
@@ -1959,8 +1959,8 @@
       "_id": {
         "$oid": "5dfda5a09dabf81e7717cea9"
       },
-      "name": "野豬王",
-      "type": "牙獸種",
+      "name": "Bulldrome",
+      "type": "Fanged Beast",
       "isLarge": true,
       "weakness": [
         "Thunder"
@@ -1993,8 +1993,8 @@
       "_id": {
         "$oid": "5e15699c8a80af35ce52d74c"
       },
-      "name": "布拉克奇",
-      "type": "甲蟲種",
+      "name": "Bulaqchi",
+      "type": "Neopteron",
       "isLarge": false,
       "games": [
         {
@@ -2008,8 +2008,8 @@
       "_id": {
         "$oid": "5e1557f58a80af35ce52d72c"
       },
-      "name": "野豬",
-      "type": "牙獸種",
+      "name": "Bullfango",
+      "type": "Fanged Beast",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -2054,8 +2054,8 @@
       "_id": {
         "$oid": "5e1180ade868a1687e6eeb51"
       },
-      "name": "大海龍",
-      "type": "古龍種",
+      "name": "Ceadeus",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Goldbeard Ceadeus"
@@ -2085,8 +2085,8 @@
       "_id": {
         "$oid": "5e1568958a80af35ce52d74a"
       },
-      "name": "鐮蟹",
-      "type": "甲殼種",
+      "name": "Ceanataur",
+      "type": "Carapaceon",
       "isLarge": false,
       "ailments": [
         "Poison"
@@ -2118,8 +2118,8 @@
       "_id": {
         "$oid": "5dfefe029dabf81e7717ceb8"
       },
-      "name": "沙龍王",
-      "type": "魚龍種",
+      "name": "Cephadrome",
+      "type": "Piscine Wyvern",
       "isLarge": true,
       "elements": [
         "Water"
@@ -2166,8 +2166,8 @@
       "_id": {
         "$oid": "5e155e638a80af35ce52d736"
       },
-      "name": "沙龍",
-      "type": "海龍種",
+      "name": "Cephalos",
+      "type": "Leviathan",
       "isLarge": false,
       "elements": [
         "Water"
@@ -2214,8 +2214,8 @@
       "_id": {
         "$oid": "5e156e978a80af35ce52d74c"
       },
-      "name": "角鯊屬",
-      "type": "草食種",
+      "name": "Ceratonoth",
+      "type": "Herbivore",
       "isLarge": false,
       "games": [
         {
@@ -2229,8 +2229,8 @@
       "_id": {
         "$oid": "5e1456b28a80af35ce52d723"
       },
-      "name": "霞龍",
-      "type": "古龍種",
+      "name": "Chameleos",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Risen Chameleos"
@@ -2276,8 +2276,8 @@
       "_id": {
         "$oid": "5e1567fb8a80af35ce52d749"
       },
-      "name": "混沌黑蝕龍",
-      "type": "未知",
+      "name": "Chaotic Gore Magala",
+      "type": "???",
       "isLarge": true,
       "ailments": [
         "Frenzy Virus"
@@ -2303,8 +2303,8 @@
       "_id": {
         "$oid": "531569978a80af35ce52d74c"
       },
-      "name": "纏蛙",
-      "type": "兩棲種",
+      "name": "Chatacabra",
+      "type": "Amphibian",
       "isLarge": true,
       "weakness": [
         "Ice",
@@ -2322,8 +2322,8 @@
       "_id": {
         "$oid": "5e1569978a80af35ce5ed74c"
       },
-      "name": "科馬奇",
-      "type": "甲蟲種",
+      "name": "Comaqchi",
+      "type": "Neopteron",
       "isLarge": false,
       "games": [
         {
@@ -2337,8 +2337,8 @@
       "_id": {
         "$oid": "5dfc951f9dabf81e7717cea4"
       },
-      "name": "桃毛獸",
-      "type": "牙獸種",
+      "name": "Conga",
+      "type": "Fanged Beast",
       "isLarge": false,
       "ailments": [
         "Soiled"
@@ -2385,8 +2385,8 @@
       "_id": {
         "$oid": "5e141cdc8a80af35ce52d6e4"
       },
-      "name": "桃毛獸王",
-      "type": "牙獸種",
+      "name": "Congalala",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Emerald Congalala"
@@ -2444,8 +2444,8 @@
       "_id": {
         "$oid": "5e15c0058a80af33ce52d7aa"
       },
-      "name": "砂獅子",
-      "type": "牙獸種",
+      "name": "Copper Blangonga",
+      "type": "Fanged Beast",
       "isLarge": true,
       "ailments": [
         "Stun"
@@ -2464,8 +2464,8 @@
       "_id": {
         "$oid": "5e15c0058a80af35ce52d7aa"
       },
-      "name": "水妖鳥",
-      "type": "鳥龍種",
+      "name": "Coral Pukei-Pukei",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "elements": [
         "Water"
@@ -2488,8 +2488,8 @@
       "_id": {
         "$oid": "5e1452ac8a80af35ce52d71c"
       },
-      "name": "翼鳴龍",
-      "type": "翼龍種",
+      "name": "Cortos",
+      "type": "Wingdrake",
       "isLarge": false,
       "weakness": [
         "Fire"
@@ -2506,8 +2506,8 @@
       "_id": {
         "$oid": "5e1564748a80af35ce52d742"
       },
-      "name": "紅黑龍",
-      "type": "古龍種",
+      "name": "Crimson Fatalis",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -2543,8 +2543,8 @@
       "_id": {
         "$oid": "5e1457f08a80af35ce52d726"
       },
-      "name": "紅彩鳥",
-      "type": "鳥龍種",
+      "name": "Crimson Qurupeco",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -2580,8 +2580,8 @@
       "_id": {
         "$oid": "5e1457f08a80af35ca52d726"
       },
-      "name": "秘紅赫耀的天彗龍",
-      "type": "古龍種",
+      "name": "Crimson Glow Valstrax",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -2608,8 +2608,8 @@
       "_id": {
         "$oid": "5e156c658a80af35ce52d751"
       },
-      "name": "寶纏爆鎚龍",
-      "type": "獸龍種",
+      "name": "Crystalbeard Uragaan",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -2636,8 +2636,8 @@
       "_id": {
         "$oid": "5e1572cb8a80af35ce52d75c"
       },
-      "name": "豪山龍",
-      "type": "古龍種",
+      "name": "Dah'ren Mohran",
+      "type": "Elder Dragon",
       "isLarge": true,
       "weakness": [
         "Thunder",
@@ -2656,8 +2656,8 @@
       "_id": {
         "$oid": "5e157ca08a80af35ce52d76c"
       },
-      "name": "大名盾蟹",
-      "type": "甲殼種",
+      "name": "Daimyo Hermitaur",
+      "type": "Carapaceon",
       "isLarge": true,
       "subSpecies": [
         "Plum Daimyo Hermitaur",
@@ -2712,8 +2712,8 @@
       "_id": {
         "$oid": "5e15bc218a80af35ce52d7a2"
       },
-      "name": "蛇王龍",
-      "type": "古龍種",
+      "name": "Dalamadur",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Shah Dalamadur"
@@ -2737,8 +2737,8 @@
       "_id": {
         "$oid": "5e1569978a80aa35ce52d74c"
       },
-      "name": "多爾西頓",
-      "type": "草食種",
+      "name": "Daltyhdon",
+      "type": "Herbivore",
       "isLarge": false,
       "games": [
         {
@@ -2752,8 +2752,8 @@
       "_id": {
         "$oid": "5e158d2e8a80af35ce52d78e"
       },
-      "name": "隻眼黑狼鳥",
-      "type": "海龍種",
+      "name": "Deadeye Yian Garuga",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -2780,8 +2780,8 @@
       "_id": {
         "$oid": "5e143fe38a80af35ce52d709"
       },
-      "name": "沙龍",
-      "type": "魚龍種",
+      "name": "Delex",
+      "type": "Piscine Wyvern",
       "isLarge": false,
       "elements": [
         "Water"
@@ -2818,8 +2818,8 @@
       "_id": {
         "$oid": "5e15b8998a80af35ce52d799"
       },
-      "name": "斧甲蟲",
-      "type": "甲蟲種",
+      "name": "Desert Seltas",
+      "type": "Neopteron",
       "isLarge": true,
       "ailments": [
         "Paralysis"
@@ -2841,8 +2841,8 @@
       "_id": {
         "$oid": "5e15653c8a80af35ce52d744"
       },
-      "name": "炮甲蟲",
-      "type": "甲蟲種",
+      "name": "Desert Seltas Queen",
+      "type": "Neopteron",
       "isLarge": true,
       "elements": [
         "Water"
@@ -2875,8 +2875,8 @@
       "_id": {
         "$oid": "5e1447e68a80af35ce52d713"
       },
-      "name": "恐暴龍",
-      "type": "獸龍種",
+      "name": "Deviljho",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Savage Deviljho"
@@ -2932,8 +2932,8 @@
       "_id": {
         "$oid": "5e1336e225d9c11597488ae4"
       },
-      "name": "角龍",
-      "type": "飛龍種",
+      "name": "Diablos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Black Diablos",
@@ -2994,8 +2994,8 @@
       "_id": {
         "$oid": "5e15811f8a80af35ce52d775"
       },
-      "name": "煉黑龍",
-      "type": "古龍種",
+      "name": "Dire Miralis",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -3020,8 +3020,8 @@
       "_id": {
         "$oid": "5e144db78a80af35ce52d716"
       },
-      "name": "岩賊龍",
-      "type": "牙龍種",
+      "name": "Dodogama",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "ailments": [
         "Blastblight"
@@ -3041,8 +3041,8 @@
       "_id": {
         "$oid": "5e1569978a8aaf35ce52d74c"
       },
-      "name": "闢獸",
-      "type": "牙獸種",
+      "name": "Doshaguma",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Guardian Doshaguma"
@@ -3063,8 +3063,8 @@
       "_id": {
         "$oid": "5e15bcb78a80af35ce52d7a4"
       },
-      "name": "黑炎王雄火龍",
-      "type": "飛龍種",
+      "name": "Dreadking Rathalos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -3095,8 +3095,8 @@
       "_id": {
         "$oid": "5e1437fa8a80af35ce52d700"
       },
-      "name": "紫毒姬雌火龍",
-      "type": "飛龍種",
+      "name": "Dreadqueen Rathian",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -3128,8 +3128,8 @@
       "_id": {
         "$oid": "5e15b51e8a80af35ce52d794"
       },
-      "name": "岩穿鬼蛙",
-      "type": "兩棲種",
+      "name": "Drilltusk Tetsucabra",
+      "type": "Amphibian",
       "isLarge": true,
       "ailments": [
         "Fatigue",
@@ -3152,8 +3152,8 @@
       "_id": {
         "$oid": "5e15835c8a80af35ce52d77a"
       },
-      "name": "尾槌龍",
-      "type": "獸龍種",
+      "name": "Duramboros",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Rust Duramboros"
@@ -3189,8 +3189,8 @@
       "_id": {
         "$oid": "5e1434cb8a80af35ce52d6fc"
       },
-      "name": "凶爪龍",
-      "type": "牙龍種",
+      "name": "Ebony Odogaron",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Guardian Ebony Odogaron"
@@ -3217,8 +3217,8 @@
       "_id": {
         "$oid": "5e15ba698a80af35ce52d79d"
       },
-      "name": "銀嶺巨獸",
-      "type": "牙獸種",
+      "name": "Elderfrost Gammoth",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -3249,8 +3249,8 @@
       "_id": {
         "$oid": "5dfeff419dabf81e7717ceb9"
       },
-      "name": "綠毛獸",
-      "type": "牙獸種",
+      "name": "Emerald Congalala",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -3292,8 +3292,8 @@
       "_id": {
         "$oid": "5dff87fd9dabf81e7717cec1"
       },
-      "name": "水生獸",
-      "type": "草食種",
+      "name": "Epioth",
+      "type": "Herbivore",
       "isLarge": false,
       "elements": [
         "Water"
@@ -3316,8 +3316,8 @@
       "_id": {
         "$oid": "5dff27fd9dabf81e7717cec1"
       },
-      "name": "棘龍",
-      "type": "飛龍種",
+      "name": "Espinas",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Flaming Espinas"
@@ -3345,8 +3345,8 @@
       "_id": {
         "$oid": "5e1564268a80af35ce52d741"
       },
-      "name": "黑龍",
-      "type": "古龍種",
+      "name": "Fatalis",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Crimson Fatalis",
@@ -3404,8 +3404,8 @@
       "_id": {
         "$oid": "5e155a588a80af35ce52d730"
       },
-      "name": "艾路貓",
-      "type": "獸人種",
+      "name": "Felyne",
+      "type": "Lynian",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -3458,8 +3458,8 @@
       "_id": {
         "$oid": "5e15866f8a80af35ce52d781"
       },
-      "name": "魚類",
-      "type": "魚類",
+      "name": "Fish",
+      "type": "Fish",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -3481,8 +3481,8 @@
       "_id": {
         "$oid": "5e15040e8a80af35ce52d75f"
       },
-      "name": "棘茶龍",
-      "type": "飛龍種",
+      "name": "Flaming Espinas",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -3507,8 +3507,8 @@
       "_id": {
         "$oid": "5f0dc6a7e1dab80a94e21619"
       },
-      "name": "霜刃冰牙龍",
-      "type": "飛龍種",
+      "name": "Frostfang Barioth",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -3531,8 +3531,8 @@
       "_id": {
         "$oid": "5e1572758a80af35ce52d75b"
       },
-      "name": "雷顎龍",
-      "type": "獸龍種",
+      "name": "Fulgur Anjanath",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Guardian Fulgur Anjanath"
@@ -3564,8 +3564,8 @@
       "_id": {
         "$oid": "5e157e328a80af35ce52d770"
       },
-      "name": "激昂金獅子",
-      "type": "牙獸種",
+      "name": "Furious Rajang",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -3606,8 +3606,8 @@
       "_id": {
         "$oid": "5e157e328a80af359e52d770"
       },
-      "name": "冥淵龍",
-      "type": "古龍種",
+      "name": "Gaismagorm",
+      "type": "Elder Dragon",
       "isLarge": true,
       "ailments": [
         "Blastblight"
@@ -3629,8 +3629,8 @@
       "_id": {
         "$oid": "5e15c7f98a80af35ce52d7b5"
       },
-      "name": "奇面族",
-      "type": "獸人種",
+      "name": "Gajalaka",
+      "type": "Lynian",
       "isLarge": false,
       "ailments": [
         "Poison",
@@ -3651,8 +3651,8 @@
       "_id": {
         "$oid": "5e15c4128a80af35ce52d7b3"
       },
-      "name": "咬魚",
-      "type": "魚類",
+      "name": "Gajau",
+      "type": "Fish",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -3675,8 +3675,8 @@
       "_id": {
         "$oid": "5e1569998a80af35ce52d74c"
       },
-      "name": "咬魚",
-      "type": "海龍種",
+      "name": "Gajios",
+      "type": "Leviathan",
       "isLarge": false,
       "games": [
         {
@@ -3690,8 +3690,8 @@
       "_id": {
         "$oid": "5e1423e98a80af35ce52d6eb"
       },
-      "name": "巨獸",
-      "type": "牙獸種",
+      "name": "Gammoth",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Elderfrost Gammoth"
@@ -3725,8 +3725,8 @@
       "_id": {
         "$oid": "5e1423ee8a80af35ce52d6eb"
       },
-      "name": "剛纏獸",
-      "type": "牙獸種",
+      "name": "Garangolm",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -3754,8 +3754,8 @@
       "_id": {
         "$oid": "5e1585d28a80af35ce52d780"
       },
-      "name": "丸鳥",
-      "type": "鳥龍種",
+      "name": "Gargwa",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "weakness": [
         "Water",
@@ -3803,8 +3803,8 @@
       "_id": {
         "$oid": "5e15c2418a80af35ce52d7b0"
       },
-      "name": "突擊龍",
-      "type": "海龍種",
+      "name": "Gastodon",
+      "type": "Leviathan",
       "isLarge": false,
       "weakness": [
         "Thunder"
@@ -3821,8 +3821,8 @@
       "_id": {
         "$oid": "ae1569978a80af35ce52d74c"
       },
-      "name": "格利德隆",
-      "type": "兩棲種",
+      "name": "Gelidron",
+      "type": "Amphibian",
       "isLarge": false,
       "games": [
         {
@@ -3836,8 +3836,8 @@
       "_id": {
         "$oid": "5e1420708a80af35ce52d6e8"
       },
-      "name": "黃速龍王",
-      "type": "鳥龍種",
+      "name": "Gendrome",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Paralysis"
@@ -3880,8 +3880,8 @@
       "_id": {
         "$oid": "5e155fca8a80af35ce52d73a"
       },
-      "name": "黃速龍",
-      "type": "鳥龍種",
+      "name": "Genprey",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "ailments": [
         "Paralysis"
@@ -3925,8 +3925,8 @@
       "_id": {
         "$oid": "5e141eb18a80af35ce52d6e6"
       },
-      "name": "白速龍王",
-      "type": "鳥龍種",
+      "name": "Giadrome",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -3956,8 +3956,8 @@
       "_id": {
         "$oid": "5e156d838a80af35ce52d752"
       },
-      "name": "白速龍",
-      "type": "鳥龍種",
+      "name": "Giaprey",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "elements": [
         "Ice"
@@ -3987,8 +3987,8 @@
       "_id": {
         "$oid": "5e15852a8a80af35ce52d77e"
       },
-      "name": "毒怪龍幼體",
-      "type": "飛龍種",
+      "name": "Giggi",
+      "type": "Flying Wyvern",
       "isLarge": false,
       "ailments": [
         "Life Drain",
@@ -4007,8 +4007,8 @@
       "_id": {
         "$oid": "5e1583038a80af35ce52d779"
       },
-      "name": "毒怪龍",
-      "type": "飛龍種",
+      "name": "Gigginox",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Baleful Gigginox"
@@ -4033,8 +4033,8 @@
       "_id": {
         "$oid": "5e15bde58a80af35ce52d7a6"
       },
-      "name": "凶顎龍",
-      "type": "牙龍種",
+      "name": "Girros",
+      "type": "Fanged Wyvern",
       "isLarge": false,
       "ailments": [
         "Paralysis"
@@ -4054,8 +4054,8 @@
       "_id": {
         "$oid": "5e1434728a80af35ce52d6fb"
       },
-      "name": "凍戈龍",
-      "type": "海龍種",
+      "name": "Glacial Agnaktor",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Ice",
@@ -4092,8 +4092,8 @@
       "_id": {
         "$oid": "5e13118625d9c11597488ada"
       },
-      "name": "斬龍",
-      "type": "獸龍種",
+      "name": "Glavenus",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Acidic Glavenus",
@@ -4136,8 +4136,8 @@
       "_id": {
         "$oid": "5dfc90fc9dabf81e7717cea1"
       },
-      "name": "燈魚龍",
-      "type": "海龍種",
+      "name": "Gobul",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Water"
@@ -4163,8 +4163,8 @@
       "_id": {
         "$oid": "5e15b8fe8a80af35ce52d79a"
       },
-      "name": "巨戟龍",
-      "type": "古龍種",
+      "name": "Gogmazios",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -4195,8 +4195,8 @@
       "_id": {
         "$oid": "5e132c9c25d9c11597488ae0"
       },
-      "name": "金火龍",
-      "type": "飛龍種",
+      "name": "Gold Rathian",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -4260,8 +4260,8 @@
       "_id": {
         "$oid": "5e1580e68a80af35ce52d774"
       },
-      "name": "皇海龍",
-      "type": "古龍種",
+      "name": "Goldbeard Ceadeus",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Water"
@@ -4285,7 +4285,7 @@
       "_id": {
         "$oid": "5e15ba038a80af35ce52d79c"
       },
-      "name": "黑蝕龍",
+      "name": "Gore Magala",
       "type": "Demi Elder",
       "isLarge": true,
       "subSpecies": [
@@ -4329,8 +4329,8 @@
       "_id": {
         "$oid": "607e89e01c899e0f3acd409c"
       },
-      "name": "雪鬼獸",
-      "type": "牙獸種",
+      "name": "Goss Harag",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -4355,8 +4355,8 @@
       "_id": {
         "$oid": "607e89e01c899e0a3acd409c"
       },
-      "name": "麗羊獸",
-      "type": "草食種",
+      "name": "Gowngoat",
+      "type": "Herbivore",
       "isLarge": false,
       "games": [
         {
@@ -4370,8 +4370,8 @@
       "_id": {
         "$oid": "5e155e018a80af35ce52d735"
       },
-      "name": "鎧龍",
-      "type": "飛龍種",
+      "name": "Gravios",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Black Gravios"
@@ -4425,8 +4425,8 @@
       "_id": {
         "$oid": "5e1423578a80af35ce52d6ea"
       },
-      "name": "眠狗龍王",
-      "type": "鳥龍種",
+      "name": "Great Baggi",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Sleep"
@@ -4463,8 +4463,8 @@
       "_id": {
         "$oid": "5e25910c7cc58343965ed7e7"
       },
-      "name": "大蝕龍蟲",
-      "type": "甲蟲種",
+      "name": "Great Dracophage Bug",
+      "type": "Neopteron",
       "isLarge": false,
       "elements": [
         "Dragon"
@@ -4489,8 +4489,8 @@
       "_id": {
         "$oid": "5e158d7c8a80af35ce52d78f"
       },
-      "name": "大凶顎龍",
-      "type": "牙龍種",
+      "name": "Great Girros",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "ailments": [
         "Paralysis"
@@ -4511,8 +4511,8 @@
       "_id": {
         "$oid": "6008e4cafb2d26938389447d"
       },
-      "name": "鐮鼬龍王",
-      "type": "鳥龍種",
+      "name": "Great Izuchi",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "weakness": [
         "Thunder",
@@ -4531,8 +4531,8 @@
       "_id": {
         "$oid": "5e1423038a80af35ce52d6e9"
       },
-      "name": "狗龍王",
-      "type": "鳥龍種",
+      "name": "Great Jaggi",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "weakness": [
         "Fire"
@@ -4566,8 +4566,8 @@
       "_id": {
         "$oid": "5e1423038a80af35ce52d6e8"
       },
-      "name": "大凶豺龍",
-      "type": "牙龍種",
+      "name": "Great Jagras",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "weakness": [
         "Fire"
@@ -4584,8 +4584,8 @@
       "_id": {
         "$oid": "5e141dd08a80af35ce52d6e5"
       },
-      "name": "跳狗龍王",
-      "type": "鳥龍種",
+      "name": "Great Maccao",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "weakness": [
         "Fire"
@@ -4603,8 +4603,8 @@
       "_id": {
         "$oid": "5e156c138a80af35ce52d750"
       },
-      "name": "大雷光蟲",
-      "type": "甲蟲種",
+      "name": "Great Thunderbug",
+      "type": "Neopteron",
       "isLarge": false,
       "elements": [
         "Thunder"
@@ -4643,8 +4643,8 @@
       "_id": {
         "$oid": "5e143c508a80af35ce52d704"
       },
-      "name": "毒狗龍王",
-      "type": "鳥龍種",
+      "name": "Great Wroggi",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Poison"
@@ -4671,8 +4671,8 @@
       "_id": {
         "$oid": "5e258e227cc58343965ed7e6"
       },
-      "name": "綠迅龍",
-      "type": "飛龍種",
+      "name": "Green Nargacuga",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Stun"
@@ -4704,8 +4704,8 @@
       "_id": {
         "$oid": "5e1558d78a80af35ce52d72e"
       },
-      "name": "翠水龍",
-      "type": "魚龍種",
+      "name": "Green Plesioth",
+      "type": "Piscine Wyvern",
       "isLarge": true,
       "elements": [
         "Water"
@@ -4740,8 +4740,8 @@
       "_id": {
         "$oid": "5e15c8498a80af35ce52d7b6"
       },
-      "name": "德特爾",
-      "type": "獸人種",
+      "name": "Grimalkyne",
+      "type": "Lynian",
       "isLarge": false,
       "games": [
         {
@@ -4754,8 +4754,8 @@
       "_id": {
         "$oid": "5e15b4ca8a80af35ce52d793"
       },
-      "name": "荒鉤爪轟龍",
-      "type": "飛龍種",
+      "name": "Grimclaw Tigrex",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Iceblight",
@@ -4783,8 +4783,8 @@
       "_id": {
         "$oid": "5e1569978a80af35ce52d744"
       },
-      "name": "守護者鎖刃龍",
-      "type": "機關體",
+      "name": "Guardian Arkveld",
+      "type": "Construct",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -4807,8 +4807,8 @@
       "_id": {
         "$oid": "5e1569978a80af35ce92d74c"
       },
-      "name": "守護者闢獸",
-      "type": "機關體",
+      "name": "Guardian Doshaguma",
+      "type": "Construct",
       "isLarge": true,
       "weakness": [
         "Fire",
@@ -4828,8 +4828,8 @@
       "_id": {
         "$oid": "5e156997ca80af35ce52d74c"
       },
-      "name": "守護者凶爪龍",
-      "type": "機關體",
+      "name": "Guardian Ebony Odogaron",
+      "type": "Construct",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -4853,8 +4853,8 @@
       "_id": {
         "$oid": "5e1569978a800f35ce52d74c"
       },
-      "name": "守護者雷顎龍",
-      "type": "機關體",
+      "name": "Guardian Fulgur Anjanath",
+      "type": "Construct",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -4879,8 +4879,8 @@
       "_id": {
         "$oid": "5ee56997ba80af35ce52d74c"
       },
-      "name": "守護者雄火龍",
-      "type": "機關體",
+      "name": "Guardian Rathalos",
+      "type": "Construct",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -4905,8 +4905,8 @@
       "_id": {
         "$oid": "ee1569978a80af35ce52d74c"
       },
-      "name": "守護者鷺鷹龍",
-      "type": "機關體",
+      "name": "Guardian Seikret",
+      "type": "Construct",
       "isLarge": false,
       "games": [
         {
@@ -4920,8 +4920,8 @@
       "_id": {
         "$oid": "5e1416d58a80af35ce52d6de"
       },
-      "name": "毒怪鳥",
-      "type": "鳥龍種",
+      "name": "Gypceros",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Purple Gypceros"
@@ -4972,8 +4972,8 @@
       "_id": {
         "$oid": "9e1569978a80af35ce52d74c"
       },
-      "name": "哈皮奧斯",
-      "type": "翼龍種",
+      "name": "Harpios",
+      "type": "Wingdrake",
       "isLarge": false,
       "games": [
         {
@@ -4987,8 +4987,8 @@
       "_id": {
         "$oid": "5e1585638a80af35ce52d77f"
       },
-      "name": "靈山龍",
-      "type": "古龍種",
+      "name": "Hallowed Jhen Mohran",
+      "type": "Elder Dragon",
       "isLarge": true,
       "weakness": [
         "Fire"
@@ -5006,8 +5006,8 @@
       "_id": {
         "$oid": "5e1457048a80af35ce52d724"
       },
-      "name": "燼滅刃斬龍",
-      "type": "獸龍種",
+      "name": "Hellblade Glavenus",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -5038,8 +5038,8 @@
       "_id": {
         "$oid": "5e13407925d9c11597488ae6"
       },
-      "name": "盾蟹",
-      "type": "甲殼種",
+      "name": "Hermitaur",
+      "type": "Carapaceon",
       "isLarge": false,
       "weakness": [
         "Thunder"
@@ -5083,8 +5083,8 @@
       "_id": {
         "$oid": "5e15a9978a80af35ce52d74c"
       },
-      "name": "平波",
-      "type": "海龍種",
+      "name": "Hirabami",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -5108,8 +5108,8 @@
       "_id": {
         "$oid": "5e155c7f8a80af35ce52d734"
       },
-      "name": "巨甲蟲",
-      "type": "甲蟲種",
+      "name": "Hornetaur",
+      "type": "Neopteron",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -5144,8 +5144,8 @@
       "_id": {
         "$oid": "5e143bfd8f80af35ce52d703"
       },
-      "name": "眠鳥",
-      "type": "鳥龍種",
+      "name": "Hypnocatrice",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Sleep"
@@ -5165,8 +5165,8 @@
       "_id": {
         "$oid": "5e143bfd8a80af35ce52d703"
       },
-      "name": "紅速龍王",
-      "type": "鳥龍種",
+      "name": "Iodrome",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Poison"
@@ -5209,8 +5209,8 @@
       "_id": {
         "$oid": "5e155f298a80af35ce52d738"
       },
-      "name": "紅速龍",
-      "type": "鳥龍種",
+      "name": "Ioprey",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "ailments": [
         "Poison"
@@ -5252,8 +5252,8 @@
       "_id": {
         "$oid": "5e144b608a80af35ce52d714"
       },
-      "name": "白海龍",
-      "type": "海龍種",
+      "name": "Ivory Lagiacrus",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Thunder",
@@ -5290,8 +5290,8 @@
       "_id": {
         "$oid": "605f21e7a331a076a37a5205"
       },
-      "name": "鐮鼬龍",
-      "type": "鳥龍種",
+      "name": "Izuchi",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "games": [
         {
@@ -5305,8 +5305,8 @@
       "_id": {
         "$oid": "5e1441068a80af35ce52d70a"
       },
-      "name": "冰碎龍",
-      "type": "獸龍種",
+      "name": "Jade Barroth",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -5342,8 +5342,8 @@
       "_id": {
         "$oid": "5e13318a25d9c11597488ae2"
       },
-      "name": "狗龍",
-      "type": "鳥龍種",
+      "name": "Jaggi",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "weakness": [
         "Fire"
@@ -5388,8 +5388,8 @@
       "_id": {
         "$oid": "5e1584d68a80af35ce52d77d"
       },
-      "name": "雌狗龍",
-      "type": "鳥龍種",
+      "name": "Jaggia",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "weakness": [
         "Fire"
@@ -5434,8 +5434,8 @@
       "_id": {
         "$oid": "5e1435f98a80af35ce52d6fe"
       },
-      "name": "凶豺龍",
-      "type": "牙龍種",
+      "name": "Jagras",
+      "type": "Fanged Wyvern",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -5458,8 +5458,8 @@
       "_id": {
         "$oid": "5e156b168a80af35ce52d74f"
       },
-      "name": "峯山龍",
-      "type": "古龍種",
+      "name": "Jhen Mohran",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Hallowed Jhen Mohran"
@@ -5481,8 +5481,8 @@
       "_id": {
         "$oid": "4e1569978a80af35ce52d74c"
       },
-      "name": "金達哈德",
-      "type": "海龍種",
+      "name": "Jin Dahaad",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -5505,8 +5505,8 @@
       "_id": {
         "$oid": "5e1419a88a80af35ce52d6e1"
       },
-      "name": "泥魚龍",
-      "type": "魚龍種",
+      "name": "Jyuratodus",
+      "type": "Piscine Wyvern",
       "isLarge": true,
       "elements": [
         "Water"
@@ -5537,8 +5537,8 @@
       "_id": {
         "$oid": "5e15b47b8a80af35ce52d792"
       },
-      "name": "奇猿狐",
-      "type": "牙獸種",
+      "name": "Kecha Wacha",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Ash Kecha Wacha"
@@ -5582,8 +5582,8 @@
       "_id": {
         "$oid": "5e1560e88a80af35ce52d73c"
       },
-      "name": "精靈鹿",
-      "type": "草食種",
+      "name": "Kelbi",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -5641,8 +5641,8 @@
       "_id": {
         "$oid": "5e15c3be8a80af35ce52d7b2"
       },
-      "name": "冠突龍",
-      "type": "草食種",
+      "name": "Kestodon",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Water",
@@ -5665,8 +5665,8 @@
       "_id": {
         "$oid": "5e131daa25d9c11597488adb"
       },
-      "name": "奇怪龍",
-      "type": "飛龍種",
+      "name": "Khezu",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Red Khezu"
@@ -5722,8 +5722,8 @@
       "_id": {
         "$oid": "5df0a37b9dabf81e7717cea8"
       },
-      "name": "奇面王",
-      "type": "獸人種",
+      "name": "King Shakalaka",
+      "type": "Lynian",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -5746,8 +5746,8 @@
       "_id": {
         "$oid": "5dfda37b9dabf81e7717cea8"
       },
-      "name": "麒麟",
-      "type": "古龍種",
+      "name": "Kirin",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Oroshi Kirin"
@@ -5802,8 +5802,8 @@
       "_id": {
         "$oid": "5e1343df25d9c11597488ae7"
       },
-      "name": "盾蟲",
-      "type": "海龍種",
+      "name": "Konchu",
+      "type": "Leviathan",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -5842,8 +5842,8 @@
       "_id": {
         "$oid": "6e1569978a80af35ce52d74c"
       },
-      "name": "砂冠鳥",
-      "type": "鳥龍種",
+      "name": "Kranodath",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "games": [
         {
@@ -5857,8 +5857,8 @@
       "_id": {
         "$oid": "5dfda8049dabf81e7717ceac"
       },
-      "name": "搔鳥",
-      "type": "鳥龍種",
+      "name": "Kulu-Ya-Ku",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Stun"
@@ -5889,8 +5889,8 @@
       "_id": {
         "$oid": "5e1453968a80af35ce52d71e"
       },
-      "name": "絢輝龍",
-      "type": "古龍種",
+      "name": "Kulve Taroth",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -5919,8 +5919,8 @@
       "_id": {
         "$oid": "5e133bca25d9c11597488ae5"
       },
-      "name": "鋼龍",
-      "type": "古龍種",
+      "name": "Kushala Daora",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Rusted Kushala Daora",
@@ -5984,8 +5984,8 @@
       "_id": {
         "$oid": "5e142b2d8a80af35ce52d6f0"
       },
-      "name": "海龍",
-      "type": "海龍種",
+      "name": "Lagiacrus",
+      "type": "Leviathan",
       "isLarge": true,
       "subSpecies": [
         "Ivory Lagiacrus",
@@ -6035,8 +6035,8 @@
       "_id": {
         "$oid": "5e156fcd8a80af35ce52d756"
       },
-      "name": "白兔獸",
-      "type": "牙獸種",
+      "name": "Lagombi",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Snowbaron Lagombi"
@@ -6092,8 +6092,8 @@
       "_id": {
         "$oid": "ce1569978a80af35ce52d74c"
       },
-      "name": "刺花蜘蛛",
-      "type": "鋏角種",
+      "name": "Lala Barina",
+      "type": "Temnoceran",
       "isLarge": true,
       "ailments": [
         "Paralysis"
@@ -6113,8 +6113,8 @@
       "_id": {
         "$oid": "5e1558798a80af35ce52d72d"
       },
-      "name": "老山龍",
-      "type": "古龍種",
+      "name": "Lao-Shan Lung",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Ashen Lao-Shan Lung"
@@ -6137,8 +6137,8 @@
       "_id": {
         "$oid": "5e144e028a80af35ce52d717"
       },
-      "name": "首鳴龍",
-      "type": "草食種",
+      "name": "Larinoth",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -6164,8 +6164,8 @@
       "_id": {
         "$oid": "5dfc91659dabf81e7717cea2"
       },
-      "name": "烤魚",
-      "type": "魚龍種",
+      "name": "Lavasioth",
+      "type": "Piscine Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -6199,8 +6199,8 @@
       "_id": {
         "$oid": "5e1452518a80af35ce52d71b"
       },
-      "name": "風漂龍",
-      "type": "飛龍種",
+      "name": "Legiana",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Shrieking Legiana"
@@ -6232,7 +6232,7 @@
       "_id": {
         "$oid": "5e158b318a80af35ce52d788"
       },
-      "name": "鹿首精",
+      "name": "Leshen",
       "type": "Relicts",
       "isLarge": true,
       "ailments": [
@@ -6253,8 +6253,8 @@
       "_id": {
         "$oid": "5e157b318a80af35ce52d788"
       },
-      "name": "月辰迅龍",
-      "type": "飛龍種",
+      "name": "Lucent Nargacuga",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Poison"
@@ -6281,8 +6281,8 @@
       "_id": {
         "$oid": "5e1583ba8a80af35ce52d77b"
       },
-      "name": "水獸",
-      "type": "海龍種",
+      "name": "Ludroth",
+      "type": "Leviathan",
       "isLarge": false,
       "elements": [
         "Water"
@@ -6328,8 +6328,8 @@
       "_id": {
         "$oid": "607e89e01c399e0f3acd409c"
       },
-      "name": "冰狼龍",
-      "type": "牙龍種",
+      "name": "Lunagaron",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -6354,8 +6354,8 @@
       "_id": {
         "$oid": "5e1454d98a80af35ce52d720"
       },
-      "name": "炎妃龍",
-      "type": "古龍種",
+      "name": "Lunastra",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -6385,8 +6385,8 @@
       "_id": {
         "$oid": "5e158db18a80af35ce52d790"
       },
-      "name": "跳狗龍",
-      "type": "鳥龍種",
+      "name": "Maccao",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "weakness": [
         "Fire"
@@ -6404,8 +6404,8 @@
       "_id": {
         "$oid": "607e89e01c899e0f3acd4092"
       },
-      "name": "熔翁龍",
-      "type": "海龍種",
+      "name": "Magma Almudron",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -6430,8 +6430,8 @@
       "_id": {
         "$oid": "604f1141120ad70edb880c13"
       },
-      "name": "怨虎龍",
-      "type": "牙龍種",
+      "name": "Magnamalo",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Scorned Magnamalo"
@@ -6456,8 +6456,8 @@
       "_id": {
         "$oid": "5e259f777cc58343965ed7e8"
       },
-      "name": "馬基利·皮特魯",
-      "type": "古龍種",
+      "name": "Makili Pietru",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -6484,8 +6484,8 @@
       "_id": {
         "$oid": "5e1556728a80af35ce52d72a"
       },
-      "name": "夜鳥",
-      "type": "鳥龍種",
+      "name": "Malfestio",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Nightcloak Malfestio"
@@ -6511,8 +6511,8 @@
       "_id": {
         "$oid": "607e89e01c899e0f3aca409c"
       },
-      "name": "爵銀龍",
-      "type": "古龍種",
+      "name": "Malzeno",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Primordial Malzeno"
@@ -6541,8 +6541,8 @@
       "_id": {
         "$oid": "5e1562398a80af35ce52d73e"
       },
-      "name": "梅拉露",
-      "type": "獸人種",
+      "name": "Melynx",
+      "type": "Lynian",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -6585,8 +6585,8 @@
       "_id": {
         "$oid": "5e15c45d8a80af35ce52d7b4"
       },
-      "name": "翼龍",
-      "type": "翼龍種",
+      "name": "Mernos",
+      "type": "Wingdrake",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -6606,8 +6606,8 @@
       "_id": {
         "$oid": "5e142a028a80af35ce52d6ee"
       },
-      "name": "泡狐龍",
-      "type": "海龍種",
+      "name": "Mizutsune",
+      "type": "Leviathan",
       "isLarge": true,
       "subSpecies": [
         "Soulseer Mizutsune",
@@ -6654,8 +6654,8 @@
       "_id": {
         "$oid": "5e15bbd58a80af35ce52d7a1"
       },
-      "name": "大轟龍",
-      "type": "飛龍種",
+      "name": "Molten Tigrex",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Blastblight"
@@ -6687,8 +6687,8 @@
       "_id": {
         "$oid": "5e15636a8a80af35ce52d740"
       },
-      "name": "一角龍",
-      "type": "飛龍種",
+      "name": "Monoblos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "White Monoblos"
@@ -6725,8 +6725,8 @@
       "_id": {
         "$oid": "5e1577b28a80af35ce52d764"
       },
-      "name": "雲羊鹿",
-      "type": "草食種",
+      "name": "Moofah",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -6747,8 +6747,8 @@
       "_id": {
         "$oid": "5e1418868a80af35ce52d6df"
       },
-      "name": "苔蘚豬",
-      "type": "草食種",
+      "name": "Mosswine",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -6779,8 +6779,8 @@
       "_id": {
         "$oid": "5dfc9def9dabf81e7717cea7"
       },
-      "name": "絞蛇龍",
-      "type": "蛇龍種",
+      "name": "Najarala",
+      "type": "Snake Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Tidal Najarala"
@@ -6812,8 +6812,8 @@
       "_id": {
         "$oid": "5e15b4288a80af35ce52d791"
       },
-      "name": "骸龍",
-      "type": "古龍種",
+      "name": "Nakarkos",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -6844,8 +6844,8 @@
       "_id": {
         "$oid": "5e15786d8a80af35ce52d766"
       },
-      "name": "溟波龍",
-      "type": "古龍種",
+      "name": "Namielle",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Water",
@@ -6870,8 +6870,8 @@
       "_id": {
         "$oid": "5e1432758a80af35ce52d6f6"
       },
-      "name": "迅龍",
-      "type": "飛龍種",
+      "name": "Nargacuga",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Green Nargacuga",
@@ -6929,8 +6929,8 @@
       "_id": {
         "$oid": "5e143275aa80af35ce52d6f6"
       },
-      "name": "百龍淵源雷神龍",
-      "type": "古龍種",
+      "name": "Narwa the Allmother",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -6955,8 +6955,8 @@
       "_id": {
         "$oid": "5e158ca58a80af35ce52d78c"
       },
-      "name": "滅盡龍",
-      "type": "古龍種",
+      "name": "Nergigante",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Ruiner Nergigante"
@@ -6981,8 +6981,8 @@
       "_id": {
         "$oid": "5dfda79e9dabf81e7717ceab"
       },
-      "name": "影蜘蛛",
-      "type": "鋏角種",
+      "name": "Nerscylla",
+      "type": "Temnoceran",
       "isLarge": true,
       "subSpecies": [
         "Shrouded Nerscylla"
@@ -7031,8 +7031,8 @@
       "_id": {
         "$oid": "5e1569978a80a835ce52d74c"
       },
-      "name": "影蜘蛛幼體",
-      "type": "鋏角種",
+      "name": "Nerscylla Hatchling",
+      "type": "Temnoceran",
       "isLarge": false,
       "games": [
         {
@@ -7046,8 +7046,8 @@
       "_id": {
         "$oid": "5e13444d25d9c11597488ae8"
       },
-      "name": "潛口龍",
-      "type": "海龍種",
+      "name": "Nibelsnarf",
+      "type": "Leviathan",
       "isLarge": true,
       "ailments": [
         "Waterblight"
@@ -7075,8 +7075,8 @@
       "_id": {
         "$oid": "5e158b6b8a80af35ce52d789"
       },
-      "name": "朧隱夜鳥",
-      "type": "鳥龍種",
+      "name": "Nightcloak Malfestio",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Sleep",
@@ -7098,8 +7098,8 @@
       "_id": {
         "$oid": "5e1573608a80af35ce52d75e"
       },
-      "name": "浮眠龍",
-      "type": "飛龍種",
+      "name": "Nightshade Paolumu",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Sleep"
@@ -7119,8 +7119,8 @@
       "_id": {
         "$oid": "5e15c0c68a80af35ce52d7ac"
       },
-      "name": "響翼龍",
-      "type": "翼龍種",
+      "name": "Noios",
+      "type": "Wingdrake",
       "isLarge": false,
       "weakness": [
         "Water",
@@ -7139,8 +7139,8 @@
       "_id": {
         "$oid": "5ee560978a80af35ce52d74c"
       },
-      "name": "努烏德拉",
-      "type": "頭足種",
+      "name": "Nu Udra",
+      "type": "Cephalopod",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -7163,8 +7163,8 @@
       "_id": {
         "$oid": "5dfc91d89dabf81e7717cea3"
       },
-      "name": "慘爪龍",
-      "type": "牙龍種",
+      "name": "Odogaron",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Ebony Odogaron"
@@ -7188,8 +7188,8 @@
       "_id": {
         "$oid": "5dfc91d81dabf81e7717ce63"
       },
-      "name": "祖龍",
-      "type": "古龍種",
+      "name": "Old Fatalis",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Thunder",
@@ -7209,8 +7209,8 @@
       "_id": {
         "$oid": "5dfc91d89dabf81e7717ce63"
       },
-      "name": "傲途娜",
-      "type": "古龍種",
+      "name": "Oltura",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -7231,8 +7231,8 @@
       "_id": {
         "$oid": "5dfc91d89daef81e7717ce63"
       },
-      "name": "歐米茄行星",
-      "type": "未知",
+      "name": "Omega Planetes",
+      "type": "???",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -7258,8 +7258,8 @@
       "_id": {
         "$oid": "5e144e8e8a80af35ce52d718"
       },
-      "name": "冰麒麟",
-      "type": "古龍種",
+      "name": "Oroshi Kirin",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -7295,8 +7295,8 @@
       "_id": {
         "$oid": "5e156eb88a80af35ce52d754"
       },
-      "name": "浮空龍",
-      "type": "飛龍種",
+      "name": "Paolumu",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Nightshade Paolumu"
@@ -7321,8 +7321,8 @@
       "_id": {
         "$oid": "5e1436ca8a80af35ce52d6ff"
       },
-      "name": "櫻火龍",
-      "type": "飛龍種",
+      "name": "Pink Rathian",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -7374,8 +7374,8 @@
       "_id": {
         "$oid": "511569978a80af35ce52d74c"
       },
-      "name": "皮拉吉爾",
-      "type": "海龍種",
+      "name": "Piragill",
+      "type": "Leviathan",
       "isLarge": false,
       "games": [
         {
@@ -7389,8 +7389,8 @@
       "_id": {
         "$oid": "5e1455af8a80af35ce52d721"
       },
-      "name": "水龍",
-      "type": "魚龍種",
+      "name": "Plesioth",
+      "type": "Piscine Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Green Plesioth"
@@ -7435,8 +7435,8 @@
       "_id": {
         "$oid": "5e157d5f8a80af35ce52d76e"
       },
-      "name": "紫盾蟹",
-      "type": "甲殼種",
+      "name": "Plum Daimyo Hermitaur",
+      "type": "Carapaceon",
       "isLarge": true,
       "elements": [
         "Water"
@@ -7475,8 +7475,8 @@
       "_id": {
         "$oid": "5e14546a8a80af35ce52d71f"
       },
-      "name": "波波",
-      "type": "草食種",
+      "name": "Popo",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Fire"
@@ -7531,8 +7531,8 @@
       "_id": {
         "$oid": "5e1569978a80af33ce52d74c"
       },
-      "name": "豬羽",
-      "type": "鳥龍種",
+      "name": "Porkeplume",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "games": [
         {
@@ -7546,8 +7546,8 @@
       "_id": {
         "$oid": "607e89e01c89ae0f3aca409c"
       },
-      "name": "原初爵銀龍",
-      "type": "古龍種",
+      "name": "Primordial Malzeno",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -7572,8 +7572,8 @@
       "_id": {
         "$oid": "5e15795e8a80af35ce52d768"
       },
-      "name": "毒妖鳥",
-      "type": "鳥龍種",
+      "name": "Pukei-Pukei",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Coral Pukei-Pukei"
@@ -7608,8 +7608,8 @@
       "_id": {
         "$oid": "5e155ac68a80af35ce52d731"
       },
-      "name": "毒怪鳥亞種",
-      "type": "鳥龍種",
+      "name": "Purple Gypceros",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Poison",
@@ -7646,8 +7646,8 @@
       "_id": {
         "$oid": "5e1581e98a80af35ce52d777"
       },
-      "name": "紫水獸",
-      "type": "海龍種",
+      "name": "Purple Ludroth",
+      "type": "Leviathan",
       "isLarge": true,
       "ailments": [
         "Poison",
@@ -7680,8 +7680,8 @@
       "_id": {
         "$oid": "607a89e01c899e0f3acd409c"
       },
-      "name": "皮蘭圖拉屬",
-      "type": "鋏角種",
+      "name": "Pyrantula",
+      "type": "Temnoceran",
       "isLarge": false,
       "games": [
         {
@@ -7695,8 +7695,8 @@
       "_id": {
         "$oid": "607e89e01c829e0f3acd409c"
       },
-      "name": "熾妃蜘蛛",
-      "type": "鋏角種",
+      "name": "Pyre Rakna-Kadaki",
+      "type": "Temnoceran",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -7723,8 +7723,8 @@
       "_id": {
         "$oid": "5e1569c78a80af35ce52d74c"
       },
-      "name": "炎鳥",
-      "type": "獸龍種",
+      "name": "Quematrice",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -7747,8 +7747,8 @@
       "_id": {
         "$oid": "5e15823c8a80af35ce52d778"
       },
-      "name": "彩鳥",
-      "type": "鳥龍種",
+      "name": "Qurupeco",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Crimson Qurupeco"
@@ -7787,8 +7787,8 @@
       "_id": {
         "$oid": "6079ad32c1dbb4bf8d8288af"
       },
-      "name": "臣蜘蛛",
-      "type": "鋏角種",
+      "name": "Rachnoid",
+      "type": "Temnoceran",
       "isLarge": false,
       "games": [
         {
@@ -7802,8 +7802,8 @@
       "_id": {
         "$oid": "5e1564e38a80af35ce52d743"
       },
-      "name": "骨鎚龍",
-      "type": "獸龍種",
+      "name": "Radobaan",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "ailments": [
         "Sleep"
@@ -7824,8 +7824,8 @@
       "_id": {
         "$oid": "5ee569978a80af35ce52d74c"
       },
-      "name": "拉夫瑪",
-      "type": "草食種",
+      "name": "Rafma",
+      "type": "Herbivore",
       "isLarge": false,
       "games": [
         {
@@ -7839,8 +7839,8 @@
       "_id": {
         "$oid": "5e1578ce8a80af35ce52d767"
       },
-      "name": "猛爆碎龍",
-      "type": "獸龍種",
+      "name": "Raging Brachydios",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "ailments": [
         "Blastblight",
@@ -7866,8 +7866,8 @@
       "_id": {
         "$oid": "5e1360b625d9c11597488af1"
       },
-      "name": "金獅子",
-      "type": "牙獸種",
+      "name": "Rajang",
+      "type": "Fanged Beast",
       "isLarge": true,
       "subSpecies": [
         "Furious Rajang"
@@ -7926,8 +7926,8 @@
       "_id": {
         "$oid": "607e8d391c899e0f3acd409d"
       },
-      "name": "妃蜘蛛",
-      "type": "鋏角種",
+      "name": "Rakna-Kadaki",
+      "type": "Temnoceran",
       "isLarge": true,
       "subSpecies": [
         "Pyre Rakna-Kadaki"
@@ -7956,8 +7956,8 @@
       "_id": {
         "$oid": "5e15c18e8a80af35ce52d7ae"
       },
-      "name": "貓頭翼龍",
-      "type": "翼龍種",
+      "name": "Raphinos",
+      "type": "Wingdrake",
       "isLarge": false,
       "weakness": [
         "Thunder"
@@ -7974,8 +7974,8 @@
       "_id": {
         "$oid": "5e1322d725d9c11597488add"
       },
-      "name": "雄火龍",
-      "type": "飛龍種",
+      "name": "Rathalos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Azure Rathalos",
@@ -8052,8 +8052,8 @@
       "_id": {
         "$oid": "5e13708225d9c11597488af2"
       },
-      "name": "雌火龍",
-      "type": "飛龍種",
+      "name": "Rathian",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Pink Rathian",
@@ -8128,8 +8128,8 @@
       "_id": {
         "$oid": "5e1446648a80af35ce52d710"
       },
-      "name": "赤甲龍",
-      "type": "飛龍種",
+      "name": "Red Khezu",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -8168,8 +8168,8 @@
       "_id": {
         "$oid": "5e15bab08a80af35ce52d79e"
       },
-      "name": "紅兜青熊獸",
-      "type": "牙獸種",
+      "name": "Redhelm Arzuros",
+      "type": "Fanged Beast",
       "isLarge": true,
       "ailments": [
         "Stun"
@@ -8191,8 +8191,8 @@
       "_id": {
         "$oid": "5e157be98a80af35ce52d76b"
       },
-      "name": "蛇龍",
-      "type": "蛇龍種",
+      "name": "Remobra",
+      "type": "Snake Wyvern",
       "isLarge": false,
       "ailments": [
         "Poison"
@@ -8240,8 +8240,8 @@
       "_id": {
         "$oid": "5e156997ea80af35ce52d74c"
       },
-      "name": "煌雷龍",
-      "type": "飛龍種",
+      "name": "Rey Dau",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -8265,8 +8265,8 @@
       "_id": {
         "$oid": "5e15740e8a80af35ce52d75f"
       },
-      "name": "硬甲龍",
-      "type": "草食種",
+      "name": "Rhenoplos",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Water",
@@ -8303,8 +8303,8 @@
       "_id": {
         "$oid": "5e15740e8a80af3cce52d75f"
       },
-      "name": "傀異克服霞龍",
-      "type": "古龍種",
+      "name": "Risen Chameleos",
+      "type": "Elder Dragon",
       "isLarge": true,
       "ailments": [
         "Noxious Poison"
@@ -8326,8 +8326,8 @@
       "_id": {
         "$oid": "5e15740e8a80af3aae52d75f"
       },
-      "name": "傀異克服鋼龍",
-      "type": "古龍種",
+      "name": "Risen Kushala Daora",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon",
@@ -8354,8 +8354,8 @@
       "_id": {
         "$oid": "5e15740e8a80af3aae52a75f"
       },
-      "name": "傀異克服天廻龍",
-      "type": "古龍種",
+      "name": "Risen Shagaru Magala",
+      "type": "Elder Dragon",
       "isLarge": true,
       "ailments": [
         "Frenzy Virus"
@@ -8377,8 +8377,8 @@
       "_id": {
         "$oid": "5e157add8a80ff35ce52d769"
       },
-      "name": "傀異克服炎王龍",
-      "type": "古龍種",
+      "name": "Risen Teostra",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -8404,8 +8404,8 @@
       "_id": {
         "$oid": "5e157add8a80ff35ce52d764"
       },
-      "name": "傀異克服秘紅赫耀的天彗龍",
-      "type": "古龍種",
+      "name": "Risen Crimson Glow Valstrax",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -8432,8 +8432,8 @@
       "_id": {
         "$oid": "5e1549978a80af35ce52d74c"
       },
-      "name": "泥波龍",
-      "type": "獸龍種",
+      "name": "Rompopolo",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "ailments": [
         "Poison"
@@ -8453,8 +8453,8 @@
       "_id": {
         "$oid": "5e141a5b8a80af35ce52d6e2"
       },
-      "name": "水獸",
-      "type": "海龍種",
+      "name": "Royal Ludroth",
+      "type": "Leviathan",
       "isLarge": true,
       "subSpecies": [
         "Purple Ludroth"
@@ -8504,8 +8504,8 @@
       "_id": {
         "$oid": "5e13294225d9c11597488adf"
       },
-      "name": "桃岩龍",
-      "type": "飛龍種",
+      "name": "Ruby Basarios",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -8543,8 +8543,8 @@
       "_id": {
         "$oid": "5e15bf5a8a80af35ce52d7a7"
       },
-      "name": "殲世滅盡龍",
-      "type": "古龍種",
+      "name": "Ruiner Nergigante",
+      "type": "Elder Dragon",
       "isLarge": true,
       "ailments": [
         "Bleeding"
@@ -8564,8 +8564,8 @@
       "_id": {
         "$oid": "5e1453428a80af35ce52d71d"
       },
-      "name": "尾斧龍",
-      "type": "獸龍種",
+      "name": "Rust Duramboros",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "ailments": [
         "Muddy"
@@ -8587,8 +8587,8 @@
       "_id": {
         "$oid": "5e157d098a80af35ce52d76d"
       },
-      "name": "鏽鋼龍",
-      "type": "古龍種",
+      "name": "Rusted Kushala Daora",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -8615,8 +8615,8 @@
       "_id": {
         "$oid": "5e15b75d8a80af35ce52d798"
       },
-      "name": "鎧裂將軍鐮蟹",
-      "type": "甲殼種",
+      "name": "Rustrazor Ceanataur",
+      "type": "Carapaceon",
       "isLarge": true,
       "elements": [
         "Water"
@@ -8643,8 +8643,8 @@
       "_id": {
         "$oid": "5e15bf928a80af35ce52d7a8"
       },
-      "name": "冥赤龍",
-      "type": "古龍種",
+      "name": "Safi'jiiva",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -8667,8 +8667,8 @@
       "_id": {
         "$oid": "5e157ec88a80af35ce52d771"
       },
-      "name": "風牙龍",
-      "type": "飛龍種",
+      "name": "Sand Barioth",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "weakness": [
         "Ice",
@@ -8697,8 +8697,8 @@
       "_id": {
         "$oid": "5e1588618a80af35ce52d784"
       },
-      "name": "怒食恐暴龍",
-      "type": "獸龍種",
+      "name": "Savage Deviljho",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -8736,8 +8736,8 @@
       "_id": {
         "$oid": "5e15c12c8a80af35ce52d7ad"
       },
-      "name": "戰痕黑狼鳥",
-      "type": "飛龍種",
+      "name": "Scarred Yian Garuga",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -8771,8 +8771,8 @@
       "_id": {
         "$oid": "607e89e01c869e0f3acd409c"
       },
-      "name": "怨嗟響徹怨虎龍",
-      "type": "牙龍種",
+      "name": "Scorned Magnamalo",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "ailments": [
         "Hellfireblight"
@@ -8794,8 +8794,8 @@
       "_id": {
         "$oid": "5e15c0438a80af35ce52d7ab"
       },
-      "name": "紅蓮滾滾爆鱗龍",
-      "type": "飛龍種",
+      "name": "Seething Bazelgeuse",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -8825,8 +8825,8 @@
       "_id": {
         "$oid": "5dfc90379dabf81e7717cea0"
       },
-      "name": "徹甲蟲",
-      "type": "甲蟲種",
+      "name": "Seltas",
+      "type": "Neopteron",
       "isLarge": true,
       "subSpecies": [
         "Desert Seltas"
@@ -8863,8 +8863,8 @@
       "_id": {
         "$oid": "5e1574868a80af35ce52d760"
       },
-      "name": "重甲蟲",
-      "type": "甲蟲種",
+      "name": "Seltas Queen",
+      "type": "Neopteron",
       "isLarge": true,
       "subSpecies": [
         "Desert Seltas Queen"
@@ -8905,8 +8905,8 @@
       "_id": {
         "$oid": "5e1418e58a80af35ce52d6e0"
       },
-      "name": "千刃龍",
-      "type": "飛龍種",
+      "name": "Seregios",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Bleeding"
@@ -8949,8 +8949,8 @@
       "_id": {
         "$oid": "5e1588d88a80af35ce52d785"
       },
-      "name": "天廻龍",
-      "type": "古龍種",
+      "name": "Shagaru Magala",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Risen Shagaru Magala"
@@ -8987,8 +8987,8 @@
       "_id": {
         "$oid": "5e15bcf48a80af35ce52d7a5"
       },
-      "name": "蛇帝龍",
-      "type": "古龍種",
+      "name": "Shah Dalamadur",
+      "type": "Elder Dragon",
       "isLarge": true,
       "ailments": [
         "Paralysis"
@@ -9011,8 +9011,8 @@
       "_id": {
         "$oid": "5e25874b7cc58343965ed7e5"
       },
-      "name": "奇面族",
-      "type": "獸人種",
+      "name": "Shakalaka",
+      "type": "Lynian",
       "isLarge": false,
       "ailments": [
         "Sleep",
@@ -9043,8 +9043,8 @@
       "_id": {
         "$oid": "5e15c30f8a80af35ce52d7b1"
       },
-      "name": "突眼龍",
-      "type": "牙龍種",
+      "name": "Shamos",
+      "type": "Fanged Wyvern",
       "isLarge": false,
       "weakness": [
         "Fire",
@@ -9062,8 +9062,8 @@
       "_id": {
         "$oid": "5e15bfc68a80af35ce52d7a9"
       },
-      "name": "天地煌啼龍",
-      "type": "古龍種",
+      "name": "Shara Ishvalda",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -9086,8 +9086,8 @@
       "_id": {
         "$oid": "5e1588888a80af35ce52d785"
       },
-      "name": "砦蟹",
-      "type": "甲殼種",
+      "name": "Shen Gaoren",
+      "type": "Carapaceon",
       "isLarge": true,
       "weakness": [
         "Dragon"
@@ -9104,8 +9104,8 @@
       "_id": {
         "$oid": "5e157dec8a80af35ce52d76f"
       },
-      "name": "將軍鐮蟹",
-      "type": "甲殼種",
+      "name": "Shogun Ceanataur",
+      "type": "Carapaceon",
       "isLarge": true,
       "subSpecies": [
         "Rustrazor Ceanataur",
@@ -9146,8 +9146,8 @@
       "_id": {
         "$oid": "5e1589338a80af35ce52d786"
       },
-      "name": "霜翼風漂龍",
-      "type": "飛龍種",
+      "name": "Shrieking Legiana",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -9171,8 +9171,8 @@
       "_id": {
         "$oid": "5e1571948a80af35ce52d759"
       },
-      "name": "骸蜘蛛",
-      "type": "鋏角種",
+      "name": "Shrouded Nerscylla",
+      "type": "Temnoceran",
       "isLarge": true,
       "ailments": [
         "Paralysis",
@@ -9207,8 +9207,8 @@
       "_id": {
         "$oid": "5e1458fd8a80af35ce52d728"
       },
-      "name": "銀火龍",
-      "type": "飛龍種",
+      "name": "Silver Rathalos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -9272,8 +9272,8 @@
       "_id": {
         "$oid": "5e15b6848a80af35ce52d796"
       },
-      "name": "白疾風迅龍",
-      "type": "飛龍種",
+      "name": "Silverwind Nargacuga",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "ailments": [
         "Bleeding"
@@ -9300,8 +9300,8 @@
       "_id": {
         "$oid": "5e156e198a80af35ce52d753"
       },
-      "name": "垂皮龍",
-      "type": "草食種",
+      "name": "Slagtoth",
+      "type": "Herbivore",
       "isLarge": false,
       "weakness": [
         "Thunder",
@@ -9347,8 +9347,8 @@
       "_id": {
         "$oid": "5e158bf28a80af35ce52d78b"
       },
-      "name": "大雪主白兔獸",
-      "type": "牙獸種",
+      "name": "Snowbaron Lagombi",
+      "type": "Fanged Beast",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -9375,8 +9375,8 @@
       "_id": {
         "$oid": "607d74421c899e0f3acd409a"
       },
-      "name": "人魚龍",
-      "type": "海龍種",
+      "name": "Somnacanth",
+      "type": "Leviathan",
       "isLarge": true,
       "subSpecies": [
         "Aurora Somnacanth"
@@ -9404,8 +9404,8 @@
       "_id": {
         "$oid": "5e15bb638a80af35ce52d7a0"
       },
-      "name": "天眼泡狐龍",
-      "type": "海龍種",
+      "name": "Soulseer Mizutsune",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -9438,8 +9438,8 @@
       "_id": {
         "$oid": "5e1447098a80af35ce52d712"
       },
-      "name": "鋼鎚龍",
-      "type": "獸龍種",
+      "name": "Steel Uragaan",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -9465,8 +9465,8 @@
       "_id": {
         "$oid": "5e1433a48a80af35ce52d6f9"
       },
-      "name": "矛碎大名盾蟹",
-      "type": "甲殼種",
+      "name": "Stonefist Hermitaur",
+      "type": "Carapaceon",
       "isLarge": true,
       "elements": [
         "Water"
@@ -9490,8 +9490,8 @@
       "_id": {
         "$oid": "5e1572198a80af35ce52d75a"
       },
-      "name": "獄狼龍",
-      "type": "牙龍種",
+      "name": "Stygian Zinogre",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -9536,8 +9536,8 @@
       "_id": {
         "$oid": "5e1569978a80af356e52d74c"
       },
-      "name": "塔利奧斯",
-      "type": "鳥龍種",
+      "name": "Talioth",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "games": [
         {
@@ -9551,8 +9551,8 @@
       "_id": {
         "$oid": "5e157add8a80af35ce52d769"
       },
-      "name": "炎王龍",
-      "type": "古龍種",
+      "name": "Teostra",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Risen Teostra"
@@ -9616,8 +9616,8 @@
       "_id": {
         "$oid": "5e157ade8a80af35ce52d769"
       },
-      "name": "鐮蟹亞種",
-      "type": "甲殼種",
+      "name": "Terra Shogun Ceanataur",
+      "type": "Carapaceon",
       "isLarge": true,
       "elements": [
         "Water"
@@ -9636,8 +9636,8 @@
       "_id": {
         "$oid": "6069547d7e190896f4a83816"
       },
-      "name": "河童蛙",
-      "type": "兩棲種",
+      "name": "Tetranadon",
+      "type": "Amphibian",
       "isLarge": true,
       "elements": [
         "Water"
@@ -9662,8 +9662,8 @@
       "_id": {
         "$oid": "5e1567728a80af35ce52d748"
       },
-      "name": "鬼蛙",
-      "type": "兩棲種",
+      "name": "Tetsucabra",
+      "type": "Amphibian",
       "isLarge": true,
       "subSpecies": [
         "Berserk Tetsucabra",
@@ -9700,8 +9700,8 @@
       "_id": {
         "$oid": "60608cd2efac50a2f809c1c9"
       },
-      "name": "雷神龍",
-      "type": "古龍種",
+      "name": "Thunder Serpent Narwa",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Narwa the Allmother"
@@ -9729,8 +9729,8 @@
       "_id": {
         "$oid": "5e1573208a80af35ce52d75d"
       },
-      "name": "金雷公雷狼龍",
-      "type": "牙龍種",
+      "name": "Thunderlord Zinogre",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "elements": [
         "Thunder"
@@ -9760,8 +9760,8 @@
       "_id": {
         "$oid": "5e1446bd8a80af35ce52d711"
       },
-      "name": "水蛇龍",
-      "type": "蛇龍種",
+      "name": "Tidal Najarala",
+      "type": "Snake Wyvern",
       "isLarge": true,
       "elements": [
         "Water"
@@ -9787,8 +9787,8 @@
       "_id": {
         "$oid": "5e15b5d08a80af35ce52d795"
       },
-      "name": "虎鮫",
-      "type": "兩棲種",
+      "name": "Tigerstripe Zamtrios",
+      "type": "Amphibian",
       "isLarge": true,
       "elements": [
         "Water"
@@ -9814,8 +9814,8 @@
       "_id": {
         "$oid": "5e132e4225d9c11597488ae1"
       },
-      "name": "轟龍",
-      "type": "飛龍種",
+      "name": "Tigrex",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Brute Tigrex",
@@ -9871,8 +9871,8 @@
       "_id": {
         "$oid": "5e156f138a80af35ce52d755"
       },
-      "name": "飛雷龍",
-      "type": "牙龍種",
+      "name": "Tobi-Kadachi",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Viper Tobi-Kadachi"
@@ -9909,8 +9909,8 @@
       "_id": {
         "$oid": "5e14560c8a80af35ce52d722"
       },
-      "name": "眩鳥",
-      "type": "鳥龍種",
+      "name": "Tzitzi-Ya-Ku",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "ailments": [
         "Stun"
@@ -9931,8 +9931,8 @@
       "_id": {
         "$oid": "5e141b338a80af35ce52d6e3"
       },
-      "name": "崩龍",
-      "type": "飛龍種",
+      "name": "Ukanlos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -9968,8 +9968,8 @@
       "_id": {
         "$oid": "5e143e4f8a80af35ce52d707"
       },
-      "name": "爆鎚龍",
-      "type": "獸龍種",
+      "name": "Uragaan",
+      "type": "Brute Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Steel Uragaan",
@@ -10020,8 +10020,8 @@
       "_id": {
         "$oid": "5e1432d88a80af35ce52d6f7"
       },
-      "name": "溶岩獸",
-      "type": "海龍種",
+      "name": "Uroktor",
+      "type": "Leviathan",
       "isLarge": false,
       "elements": [
         "Fire"
@@ -10066,8 +10066,8 @@
       "_id": {
         "$oid": "5e156997ba80af35ce52d74c"
       },
-      "name": "波衣龍",
-      "type": "海龍種",
+      "name": "Uth Duna",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Water"
@@ -10090,8 +10090,8 @@
       "_id": {
         "$oid": "5e155ed08a80af35ce52d737"
       },
-      "name": "屍套龍",
-      "type": "古龍種",
+      "name": "Vaal Hazak",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Blackveil Vaal Hazak"
@@ -10115,8 +10115,8 @@
       "_id": {
         "$oid": "5e1325fc25d9c11597488ade"
       },
-      "name": "天彗龍",
-      "type": "古龍種",
+      "name": "Valstrax",
+      "type": "Elder Dragon",
       "isLarge": true,
       "subSpecies": [
         "Crimson Glow Valstrax",
@@ -10147,8 +10147,8 @@
       "_id": {
         "$oid": "5e156aab8a80af35ce52d74e"
       },
-      "name": "冰呪龍",
-      "type": "古龍種",
+      "name": "Velkhana",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Ice"
@@ -10184,8 +10184,8 @@
       "_id": {
         "$oid": "5e141f248a80af35ce52d6e7"
       },
-      "name": "藍速龍王",
-      "type": "鳥龍種",
+      "name": "Velocidrome",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "weakness": [
         "Thunder",
@@ -10225,8 +10225,8 @@
       "_id": {
         "$oid": "5e155bdd8a80af35ce52d733"
       },
-      "name": "藍速龍",
-      "type": "鳥龍種",
+      "name": "Velociprey",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "weakness": [
         "Thunder",
@@ -10271,8 +10271,8 @@
       "_id": {
         "$oid": "5e25a0247cc58343965ed7e9"
       },
-      "name": "維薩·皮特魯",
-      "type": "古龍種",
+      "name": "Versa Pietru",
+      "type": "Elder Dragon",
       "isLarge": true,
       "weakness": [
         "Fire"
@@ -10289,8 +10289,8 @@
       "_id": {
         "$oid": "5e143d198a80af35ce52d705"
       },
-      "name": "巨蜂",
-      "type": "甲蟲種",
+      "name": "Vespoid",
+      "type": "Neopteron",
       "isLarge": false,
       "ailments": [
         "Paralysis"
@@ -10342,8 +10342,8 @@
       "_id": {
         "$oid": "5e143d198ad0af35ce52d705"
       },
-      "name": "女王蟲",
-      "type": "甲蟲種",
+      "name": "Vespoid Queen",
+      "type": "Neopteron",
       "isLarge": true,
       "ailments": [
         "Paralysis",
@@ -10364,8 +10364,8 @@
       "_id": {
         "$oid": "5e15740e8a80af3ace52d75f"
       },
-      "name": "焰狐龍",
-      "type": "海龍種",
+      "name": "Violet Mizutsune",
+      "type": "Leviathan",
       "isLarge": true,
       "elements": [
         "Fire"
@@ -10391,8 +10391,8 @@
       "_id": {
         "$oid": "5e1565928a80af35ce52d745"
       },
-      "name": "飛毒龍",
-      "type": "牙龍種",
+      "name": "Viper Tobi-Kadachi",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "ailments": [
         "Poison",
@@ -10415,8 +10415,8 @@
       "_id": {
         "$oid": "5e143a4f8a80af35ce52d701"
       },
-      "name": "赤甲獸",
-      "type": "牙獸種",
+      "name": "Volvidon",
+      "type": "Fanged Beast",
       "isLarge": true,
       "ailments": [
         "Paralysis",
@@ -10450,8 +10450,8 @@
       "_id": {
         "$oid": "5e157b998a80af35ce52d76a"
       },
-      "name": "祖龍",
-      "type": "古龍種",
+      "name": "White Fatalis",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Thunder",
@@ -10477,8 +10477,8 @@
       "_id": {
         "$oid": "5e1433fa8a80af35ce52d6fa"
       },
-      "name": "白一角龍",
-      "type": "飛龍種",
+      "name": "White Monoblos",
+      "type": "Flying Wyvern",
       "isLarge": true,
       "weakness": [
         "Thunder"
@@ -10510,8 +10510,8 @@
       "_id": {
         "$oid": "60799c7bc1dbb4bf8d8288ae"
       },
-      "name": "風神龍",
-      "type": "古龍種",
+      "name": "Wind Serpent Ibushi",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Dragon"
@@ -10536,8 +10536,8 @@
       "_id": {
         "$oid": "5e1584718a80af35ce52d77c"
       },
-      "name": "毒狗龍",
-      "type": "鳥龍種",
+      "name": "Wroggi",
+      "type": "Bird Wyvern",
       "isLarge": false,
       "ailments": [
         "Poison"
@@ -10563,8 +10563,8 @@
       "_id": {
         "$oid": "5e1435378a80af35ce52d6fd"
       },
-      "name": "冰豺狼",
-      "type": "牙龍種",
+      "name": "Wulg",
+      "type": "Fanged Wyvern",
       "isLarge": false,
       "weakness": [
         "Fire"
@@ -10581,8 +10581,8 @@
       "_id": {
         "$oid": "5e158ae08a80af35ce52d787"
       },
-      "name": "冥燈龍",
-      "type": "古龍種",
+      "name": "Xeno'jiiva",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -10611,8 +10611,8 @@
       "_id": {
         "$oid": "be1569978a80af35ce52d74c"
       },
-      "name": "徐武",
-      "type": "頭足種",
+      "name": "Xu Wu",
+      "type": "Cephalopod",
       "isLarge": true,
       "weakness": [
         "Ice"
@@ -10629,8 +10629,8 @@
       "_id": {
         "$oid": "5e1559948280af35ce52d72f"
       },
-      "name": "浮岳龍",
-      "type": "古龍種",
+      "name": "Yama Tsukami",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -10652,8 +10652,8 @@
       "_id": {
         "$oid": "5e1559948a80af35ce52d72f"
       },
-      "name": "黑狼鳥",
-      "type": "鳥龍種",
+      "name": "Yian Garuga",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Deadeye Yian Garuga",
@@ -10708,8 +10708,8 @@
       "_id": {
         "$oid": "5e155b378a80af35ce52d732"
       },
-      "name": "大怪鳥",
-      "type": "鳥龍種",
+      "name": "Yian Kut-Ku",
+      "type": "Bird Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Blue Yian Kut-Ku"
@@ -10763,8 +10763,8 @@
       "_id": {
         "$oid": "5dfc66269dabf81e7717ce9e"
       },
-      "name": "變形冰鯊幼體",
-      "type": "兩棲種",
+      "name": "Zamite",
+      "type": "Amphibian",
       "isLarge": false,
       "elements": [
         "Ice"
@@ -10811,8 +10811,8 @@
       "_id": {
         "$oid": "5e1457858a80af35ce52d725"
       },
-      "name": "化鮫",
-      "type": "兩棲種",
+      "name": "Zamtrios",
+      "type": "Amphibian",
       "isLarge": true,
       "subSpecies": [
         "Tigerstripe Zamtrios"
@@ -10859,8 +10859,8 @@
       "_id": {
         "$oid": "5e1429578a80af35ce52d6ed"
       },
-      "name": "雷狼龍",
-      "type": "牙龍種",
+      "name": "Zinogre",
+      "type": "Fanged Wyvern",
       "isLarge": true,
       "subSpecies": [
         "Stygian Zinogre",
@@ -10922,8 +10922,8 @@
       "_id": {
         "$oid": "5e1569978a80afd5ce52d74c"
       },
-      "name": "佐希亞",
-      "type": "機關體",
+      "name": "Zoh Shia",
+      "type": "Construct",
       "isLarge": true,
       "elements": [
         "Fire",
@@ -10948,8 +10948,8 @@
       "_id": {
         "$oid": "5e1569978a80af35ce52d74c"
       },
-      "name": "熔山龍",
-      "type": "古龍種",
+      "name": "Zorah Magdaros",
+      "type": "Elder Dragon",
       "isLarge": true,
       "elements": [
         "Fire"
