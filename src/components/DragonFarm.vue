@@ -38,7 +38,7 @@
         :style="{ left: dragon.x + '%', top: dragon.y + '%' }"
         @click="selectDragon(dragon)"
       >
-        <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing }]">
+        <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing }]" :style="{ width: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px`, height: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px` }">
           <div class="dragon-flip-wrapper" :style="{ transform: `scaleX(${dragon.direction || 1})` }">
             <!-- 真實龍的圖片 -->
             <img v-if="dragon.image" :src="dragon.image" class="real-dragon-img" alt="Dragon" />
@@ -48,7 +48,7 @@
             <div v-if="dragon.isBreathing" class="breath" :class="dragon.element"></div>
           </div>
         </div>
-        <div class="dragon-shadow"></div>
+        <div class="dragon-shadow" :style="{ transform: `scaleX(${Math.min(2, 1 + (dragon.level - 1) * 0.1)})` }"></div>
         <!-- 名字標籤 -->
         <div class="dragon-label">Lv.{{ dragon.level }} {{ dragon.name }}</div>
       </div>
@@ -310,7 +310,7 @@ onUnmounted(() => {
 }
 
 .dragon-label {
-  margin-top: 15px; background: rgba(0,0,0,0.85); padding: 3px 8px; border-radius: 50px;
+  margin-top: 2px; background: rgba(0,0,0,0.85); padding: 3px 8px; border-radius: 50px;
   font-size: 0.6rem; font-weight: 800; white-space: nowrap; 
   border: 1px solid #ffd700; color: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
@@ -320,7 +320,7 @@ onUnmounted(() => {
 .dragon-wrapper:hover .dragon-label { opacity: 1; transform: scale(1.1); }
 
 /* 龍的本體 (圖片替換與 3D 強化) */
-.dragon { position: relative; width: 90px; height: 90px; transition: transform 0.3s; display: flex; align-items: center; justify-content: center; }
+.dragon { position: relative; transition: width 0.3s, height 0.3s, transform 0.3s; display: flex; align-items: center; justify-content: center; }
 .dragon:hover { transform: scale(1.15); }
 .dragon-flip-wrapper { width: 100%; height: 100%; position: relative; transition: transform 0.4s ease-in-out; display: flex; align-items: center; justify-content: center; }
 .real-dragon-img { 
