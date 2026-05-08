@@ -97,8 +97,8 @@ const initPokedex = async () => {
     const res = await fetch('/game_jsons/base_monsters.json');
     const data = await res.json();
     
-    // 過濾出大型魔物，並且只保留「我們本地有圖片的魔物」
-    const largeMonsters = data.monsters.filter(m => m.isLarge && validMonsterImages.includes(m.englishName));
+    // 顯示所有大型魔物 (無圖片者會自動使用龍蛋替代)
+    const largeMonsters = data.monsters.filter(m => m.isLarge);
     
     monsters.value = largeMonsters.map((m, index) => {
       // 取得介紹 (取最後一代的介紹)
