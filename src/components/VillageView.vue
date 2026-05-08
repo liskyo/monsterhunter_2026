@@ -23,6 +23,7 @@
       <div v-if="companion" class="companion-area">
         <div class="alert-bubble companion-speech">💬 {{ companion.name }} 看起來精神很好！</div>
         <div class="companion-wrapper" :class="[companion.element, { walking: companion.isWalking, breathing: companion.isBreathing, flying: companion.isFlying }]">
+          <div class="companion-shadow"></div>
           <div class="companion-flip" :style="{ transform: `scaleX(${companion.direction || 1})` }">
             <img :src="companion.image" class="companion-img" @click="showCompanionSelect = true" />
             <div v-if="companion.isBreathing" class="breath" :class="companion.element"></div>
@@ -213,15 +214,21 @@ onUnmounted(() => {
 .village-main { flex: 1; position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 20px; }
 .alert-bubble { background: rgba(255,255,255,0.9); color: #333; padding: 10px 20px; border-radius: 20px 20px 20px 0; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: bounce 3s infinite; margin-bottom: 15px; }
 
-.companion-area { display: flex; flex-direction: column; align-items: center; margin-top: -160px; }
+.companion-area { position: absolute; top: 12%; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; width: 100%; z-index: 10; }
 .companion-speech { animation: float-bubble 4s infinite ease-in-out; border-radius: 20px 20px 0 20px; }
 
 .companion-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
 .companion-flip { position: relative; transition: transform 0.4s ease-in-out; display: flex; align-items: center; justify-content: center; }
+.companion-shadow { 
+  position: absolute; bottom: 20px; left: 50%; margin-left: -60px; 
+  width: 120px; height: 20px; background: rgba(0,0,0,0.8); 
+  border-radius: 50%; filter: blur(6px); z-index: -1; 
+  animation: shadowFloat 3s infinite ease-in-out;
+}
 
 .companion-img {
   width: 180px; height: 180px; object-fit: contain;
-  filter: drop-shadow(0 15px 15px rgba(0,0,0,0.8));
+  filter: drop-shadow(0 25px 20px rgba(0,0,0,0.7)) drop-shadow(0 5px 5px rgba(0,0,0,0.5)) brightness(1.15) contrast(1.1);
   animation: float-dragon 3s infinite ease-in-out;
   cursor: pointer;
 }
@@ -331,6 +338,11 @@ onUnmounted(() => {
 @keyframes float-bubble {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
+}
+
+@keyframes shadowFloat {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(0.8); opacity: 0.4; }
 }
 
 @keyframes walkBounce { 0% { transform: translateY(0) rotate(0); } 100% { transform: translateY(-15px) rotate(5deg); } }
