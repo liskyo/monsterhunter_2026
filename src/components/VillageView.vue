@@ -213,7 +213,7 @@ onUnmounted(() => {
 .village-main { flex: 1; position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 20px; }
 .alert-bubble { background: rgba(255,255,255,0.9); color: #333; padding: 10px 20px; border-radius: 20px 20px 20px 0; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: bounce 3s infinite; margin-bottom: 15px; }
 
-.companion-area { display: flex; flex-direction: column; align-items: center; margin-top: -80px; }
+.companion-area { display: flex; flex-direction: column; align-items: center; margin-top: -160px; }
 .companion-speech { animation: float-bubble 4s infinite ease-in-out; border-radius: 20px 20px 0 20px; }
 
 .companion-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }

@@ -38,7 +38,7 @@
         :style="{ left: dragon.x + '%', top: dragon.y + '%' }"
         @click="selectDragon(dragon)"
       >
-        <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing }]" :style="{ width: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px`, height: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px` }">
+        <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing, flying: dragon.isFlying }]" :style="{ width: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px`, height: `${90 * Math.min(2, 1 + (dragon.level - 1) * 0.1)}px` }">
           <div class="dragon-flip-wrapper" :style="{ transform: `scaleX(${dragon.direction || 1})` }">
             <!-- 真實龍的圖片 -->
             <img v-if="dragon.image" :src="dragon.image" class="real-dragon-img" alt="Dragon" />
@@ -139,6 +139,7 @@ const fetchDragons = async () => {
         y: Math.max(45, Math.min(85, 40 + Math.random() * 40)),
         isWalking: false,
         isBreathing: false,
+        isFlying: false,
         direction: 1 // 1 面向左 (預設), -1 面向右
       }));
     }
@@ -216,11 +217,20 @@ const triggerBreath = () => {
   }
 };
 
-// 隨機走動邏輯
+// 隨機動作邏輯
 const randomWalk = () => {
   dragons.value.forEach(dragon => {
-    // 40% 機率移動
-    if (Math.random() > 0.6 && !dragon.isBreathing) {
+    if (dragon.isBreathing || dragon.isFlying) return;
+    
+    const rand = Math.random();
+    if (rand > 0.85) {
+      // 15% 機率展翅飛舞
+      dragon.isFlying = true;
+      setTimeout(() => {
+        dragon.isFlying = false;
+      }, 2500);
+    } else if (rand > 0.5) {
+      // 35% 機率移動
       dragon.isWalking = true;
       // 限制活動範圍
       const newX = Math.max(15, Math.min(85, dragon.x + (Math.random() * 30 - 15)));
@@ -333,6 +343,7 @@ onUnmounted(() => {
 /* 動作狀態 */
 .walking .real-dragon-img { animation: walkBounce 0.5s infinite alternate ease-in-out; }
 .breathing .real-dragon-img { animation: breatheScale 2s; }
+.flying .real-dragon-img { animation: flyHover 0.4s infinite alternate ease-in-out; }
 
 /* 吐息動畫 */
 .breath { position: absolute; top: 10px; left: -50px; width: 60px; height: 15px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; }
@@ -390,6 +401,10 @@ onUnmounted(() => {
 @keyframes idleFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 @keyframes walkBounce { 0% { transform: translateY(0) rotate(0); } 100% { transform: translateY(-10px) rotate(5deg); } }
 @keyframes breatheScale { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15) rotate(-5deg); } }
+@keyframes flyHover {
+  0% { transform: translateY(-40px) scaleY(1.05); filter: drop-shadow(0 40px 15px rgba(0,0,0,0.4)) brightness(1.1); }
+  100% { transform: translateY(-30px) scaleY(0.95); filter: drop-shadow(0 30px 10px rgba(0,0,0,0.6)) brightness(1.1); }
+}
 @keyframes breathShoot { 
   0% { opacity: 0; transform: scaleX(0); } 
   20% { opacity: 1; transform: scaleX(1); } 
