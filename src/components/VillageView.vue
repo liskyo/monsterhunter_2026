@@ -237,10 +237,20 @@ onUnmounted(() => {
 .breathing .companion-img { animation: breatheScale 2s; }
 .flying .companion-img { animation: flyHover 0.3s infinite alternate ease-in-out; }
 
-/* 吐息動畫 */
-.breath { position: absolute; top: 55%; margin-top: -12px; left: -90px; width: 120px; height: 25px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; pointer-events: none; }
-.breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 8px #ff5722); }
-.breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
+/* 吐息動畫升級 (錐形噴射與多重屬性) */
+.breath { 
+  position: absolute; top: 55%; margin-top: -50px; left: -150px; 
+  width: 180px; height: 100px; opacity: 0; pointer-events: none; 
+  clip-path: polygon(0 0, 100% 45%, 100% 55%, 0 100%);
+  transform-origin: right center; z-index: 10; 
+  animation: breathShoot 2s ease-out; 
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8) 60%, #fff); 
+  filter: drop-shadow(0 0 15px #fff) brightness(2); 
+}
+.breath.fire { background: linear-gradient(90deg, transparent, rgba(255,235,59,0.8) 50%, #ff5722); filter: drop-shadow(0 0 20px #ff5722) brightness(2); }
+.breath.water { background: linear-gradient(90deg, transparent, rgba(129,212,250,0.8) 50%, #0288d1); filter: drop-shadow(0 0 20px #0288d1) brightness(2); }
+.breath.ice { background: linear-gradient(90deg, transparent, rgba(224,247,250,0.8) 50%, #00bcd4); filter: drop-shadow(0 0 20px #00bcd4) brightness(2.5); }
+.breath.wind { background: linear-gradient(90deg, transparent, rgba(200,230,201,0.8) 50%, #4caf50); filter: drop-shadow(0 0 20px #4caf50) brightness(2); }
 
 .companion-label {
   margin-bottom: -15px; background: rgba(0,0,0,0.8); padding: 6px 16px; border-radius: 30px;
@@ -350,9 +360,9 @@ onUnmounted(() => {
   100% { transform: translateY(-30px) scaleY(0.95); filter: drop-shadow(0 30px 10px rgba(0,0,0,0.6)); }
 }
 @keyframes breathShoot { 
-  0% { opacity: 0; transform: scaleX(0); } 
-  20% { opacity: 1; transform: scaleX(1); } 
-  80% { opacity: 1; transform: scaleX(1); } 
-  100% { opacity: 0; transform: scaleX(1.2); } 
+  0% { opacity: 0; transform: rotate(25deg) scaleX(0) scaleY(0.1); } 
+  20% { opacity: 1; transform: rotate(25deg) scaleX(1) scaleY(1.3); filter: brightness(2.5); } 
+  80% { opacity: 1; transform: rotate(25deg) scaleX(1) scaleY(1); } 
+  100% { opacity: 0; transform: rotate(25deg) scaleX(1.2) scaleY(0); } 
 }
 </style>

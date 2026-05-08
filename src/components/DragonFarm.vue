@@ -444,10 +444,20 @@ onUnmounted(() => {
 .breathing .real-dragon-img { animation: breatheScale 2s; }
 .flying .real-dragon-img { animation: flyHover 0.4s infinite alternate ease-in-out; }
 
-/* 吐息動畫升級 */
-.breath { position: absolute; top: 55%; margin-top: -17px; left: -250px; width: 300px; height: 35px; border-radius: 10px; opacity: 0; animation: blastShock 2s cubic-bezier(0.1, 0.8, 0.1, 1); transform-origin: right center; z-index: 100; pointer-events: none; background: linear-gradient(90deg, transparent, #ccc, #fff); filter: drop-shadow(0 0 15px #fff) brightness(2); }
-.breath.fire { background: linear-gradient(90deg, transparent, #ffeb3b, #ff5722); filter: drop-shadow(0 0 20px #ff5722) brightness(2); }
-.breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 20px #0288d1) brightness(2); }
+/* 吐息動畫升級 (錐形噴射與多重屬性) */
+.breath { 
+  position: absolute; top: 55%; margin-top: -75px; left: -250px; 
+  width: 300px; height: 150px; opacity: 0; pointer-events: none; 
+  clip-path: polygon(0 0, 100% 45%, 100% 55%, 0 100%);
+  transform-origin: right center; z-index: 100; 
+  animation: blastShock 2s cubic-bezier(0.1, 0.8, 0.1, 1); 
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8) 60%, #fff); 
+  filter: drop-shadow(0 0 15px #fff) brightness(2); 
+}
+.breath.fire { background: linear-gradient(90deg, transparent, rgba(255,235,59,0.8) 50%, #ff5722); filter: drop-shadow(0 0 20px #ff5722) brightness(2); }
+.breath.water { background: linear-gradient(90deg, transparent, rgba(129,212,250,0.8) 50%, #0288d1); filter: drop-shadow(0 0 20px #0288d1) brightness(2); }
+.breath.ice { background: linear-gradient(90deg, transparent, rgba(224,247,250,0.8) 50%, #00bcd4); filter: drop-shadow(0 0 20px #00bcd4) brightness(2.5); }
+.breath.wind { background: linear-gradient(90deg, transparent, rgba(200,230,201,0.8) 50%, #4caf50); filter: drop-shadow(0 0 20px #4caf50) brightness(2); }
 
 /* 影子 */
 .dragon-shadow { 
@@ -509,11 +519,11 @@ onUnmounted(() => {
   100% { transform: translateY(-30px) scaleY(0.95); filter: drop-shadow(0 30px 10px rgba(0,0,0,0.6)) brightness(1.1); }
 }
 @keyframes blastShock {
-  0% { opacity: 0; transform: scaleX(0) scaleY(0.1); }
-  10% { opacity: 1; transform: scaleX(1.5) scaleY(2.5); filter: brightness(2); }
-  20% { opacity: 1; transform: scaleX(1) scaleY(1.5); }
-  80% { opacity: 0.8; transform: scaleX(1) scaleY(1); }
-  100% { opacity: 0; transform: scaleX(1.2) scaleY(0); }
+  0% { opacity: 0; transform: rotate(25deg) scaleX(0) scaleY(0.1); }
+  10% { opacity: 1; transform: rotate(25deg) scaleX(1.5) scaleY(1.3); filter: brightness(2.5); }
+  20% { opacity: 1; transform: rotate(25deg) scaleX(1) scaleY(1); }
+  80% { opacity: 0.8; transform: rotate(25deg) scaleX(1) scaleY(1); }
+  100% { opacity: 0; transform: rotate(25deg) scaleX(1.2) scaleY(0); }
 }
 @keyframes earthquake {
   0% { transform: translate(0, 0); }
