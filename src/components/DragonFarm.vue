@@ -39,12 +39,14 @@
         @click="selectDragon(dragon)"
       >
         <div class="dragon" :class="[dragon.element, { walking: dragon.isWalking, breathing: dragon.isBreathing }]">
-          <!-- 真實龍的圖片 -->
-          <img v-if="dragon.image" :src="dragon.image" class="real-dragon-img" alt="Dragon" />
-          <div v-else class="real-dragon-img placeholder-dragon">🐲</div>
-          
-          <!-- 吐息特效 (保留) -->
-          <div v-if="dragon.isBreathing" class="breath" :class="dragon.element"></div>
+          <div class="dragon-flip-wrapper" :style="{ transform: `scaleX(${dragon.direction || 1})` }">
+            <!-- 真實龍的圖片 -->
+            <img v-if="dragon.image" :src="dragon.image" class="real-dragon-img" alt="Dragon" />
+            <div v-else class="real-dragon-img placeholder-dragon">🐲</div>
+            
+            <!-- 吐息特效 (保留) -->
+            <div v-if="dragon.isBreathing" class="breath" :class="dragon.element"></div>
+          </div>
         </div>
         <div class="dragon-shadow"></div>
         <!-- 名字標籤 -->
@@ -136,7 +138,8 @@ const fetchDragons = async () => {
         x: Math.max(15, Math.min(85, 20 + Math.random() * 60)),
         y: Math.max(45, Math.min(85, 40 + Math.random() * 40)),
         isWalking: false,
-        isBreathing: false
+        isBreathing: false,
+        direction: 1 // 1 面向左 (預設), -1 面向右
       }));
     }
   } catch (err) {
@@ -223,6 +226,9 @@ const randomWalk = () => {
       const newX = Math.max(15, Math.min(85, dragon.x + (Math.random() * 30 - 15)));
       const newY = Math.max(45, Math.min(85, dragon.y + (Math.random() * 20 - 10)));
       
+      // 判斷方向 (如果向右走，則翻轉)
+      dragon.direction = newX > dragon.x ? -1 : 1;
+      
       dragon.x = newX;
       dragon.y = newY;
       
@@ -304,19 +310,24 @@ onUnmounted(() => {
 }
 
 .dragon-label {
-  margin-top: 15px; background: rgba(0,0,0,0.85); padding: 5px 12px; border-radius: 50px;
-  font-size: 0.75rem; font-weight: 800; white-space: nowrap; 
+  margin-top: 15px; background: rgba(0,0,0,0.85); padding: 3px 8px; border-radius: 50px;
+  font-size: 0.6rem; font-weight: 800; white-space: nowrap; 
   border: 1px solid #ffd700; color: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   transition: all 0.3s; opacity: 0.9;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 .dragon-wrapper:hover .dragon-label { opacity: 1; transform: scale(1.1); }
 
-/* 龍的本體 (圖片替換) */
-.dragon { position: relative; width: 80px; height: 80px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5)); transition: transform 0.3s; display: flex; align-items: center; justify-content: center; }
-.dragon:hover { transform: scale(1.1); }
-.real-dragon-img { width: 100%; height: 100%; object-fit: contain; animation: idleFloat 3s infinite ease-in-out; }
+/* 龍的本體 (圖片替換與 3D 強化) */
+.dragon { position: relative; width: 90px; height: 90px; transition: transform 0.3s; display: flex; align-items: center; justify-content: center; }
+.dragon:hover { transform: scale(1.15); }
+.dragon-flip-wrapper { width: 100%; height: 100%; position: relative; transition: transform 0.4s ease-in-out; display: flex; align-items: center; justify-content: center; }
+.real-dragon-img { 
+  width: 100%; height: 100%; object-fit: contain; 
+  animation: idleFloat 3s infinite ease-in-out;
+  filter: drop-shadow(0 15px 15px rgba(0,0,0,0.85)) drop-shadow(0 5px 5px rgba(0,0,0,0.5)) brightness(1.1) contrast(1.05); 
+}
 .placeholder-dragon { font-size: 3rem; display: flex; align-items: center; justify-content: center; }
 
 /* 動作狀態 */
