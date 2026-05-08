@@ -41,9 +41,9 @@
           <div class="icon">🗺️</div>
           <span>出擊</span>
         </button>
-        <button class="menu-item">
-          <div class="icon">⚙️</div>
-          <span>設定</span>
+        <button class="menu-item" @click="$emit('to-inventory')">
+          <div class="icon">🎒</div>
+          <span>背包</span>
         </button>
       </div>
     </footer>

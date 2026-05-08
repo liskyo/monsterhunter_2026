@@ -21,9 +21,10 @@
       </div>
     </div>
 
-    <VillageView v-else-if="currentPage === 'VILLAGE'" @to-hatchery="currentPage = 'HATCHERY'" @to-farm="currentPage = 'FARM'" />
+    <VillageView v-else-if="currentPage === 'VILLAGE'" @to-hatchery="currentPage = 'HATCHERY'" @to-farm="currentPage = 'FARM'" @to-inventory="currentPage = 'INVENTORY'" />
     <Hatchery v-else-if="currentPage === 'HATCHERY'" @back="currentPage = 'VILLAGE'" />
     <DragonFarm v-else-if="currentPage === 'FARM'" @back="currentPage = 'VILLAGE'" />
+    <Inventory v-else-if="currentPage === 'INVENTORY'" @back="currentPage = 'VILLAGE'" />
   </div>
 </template>
 
@@ -32,6 +33,7 @@ import { ref } from 'vue'
 import VillageView from './components/VillageView.vue'
 import Hatchery from './components/Hatchery.vue'
 import DragonFarm from './components/DragonFarm.vue'
+import Inventory from './components/Inventory.vue'
 
 const currentPage = ref('START')
 const enterVillage = () => { currentPage.value = 'VILLAGE' }
