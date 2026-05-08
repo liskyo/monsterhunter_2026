@@ -81,4 +81,29 @@ export const speciesZhMap = {
   "fanged beast": "牙獸種"
 };
 
-export const validMonsterImages = [Agnaktor,Altaroth,Anjanath,Apceros,Aptonoth,Arzuros,Ash Kecha Wacha,Astalos,Azure Rathalos,Baggi,Barioth,Barrel Felyne,Barroth,Basarios,Bazelgeuse,Black Diablos,Black Gravios,Bloodbath Diablos,Blue Yian Kut-Ku,Bnahabra (Blue),Bnahabra (Brown),Bnahabra (Green),Bnahabra (Red),Boltreaver Astalos,Brachydios,Brute Tigrex,Bulldrome,Bullfango,Cephadrome,Cephalos,Conga,Congalala,Crimson Qurupeco,Daimyo Hermitaur,Desert Seltas Queen,Deviljho,Diablos,Dreadking Rathalos,Dreadqueen Rathian,Duramboros,Elderfrost Gammoth,Emerald Congalala,Fulgur Anjanath,Gammoth,Gargwa,Gendrome,Genprey,Glacial Agnaktor,Glavenus,Gold Rathian,Gravios,Great Baggi,Great Jaggi,Green Nargacuga,Green Plesioth,Grimclaw Tigrex,Gypceros,Hellblade Glavenus,Hermitaur,Iodrome,Ioprey,Ivory Lagiacrus,Jade Barroth,Jaggi,Jaggia,Kecha Wacha,Kelbi,Khezu,Kirin,Konchu (Blue),Konchu (Green),Konchu (Red),Konchu (Yellow),Kulu-Ya-Ku,Kulve Taroth,Kushala Daora,Lagiacrus,Lagombi,Larinoth,Legiana,Ludroth,Mizutsune,Molten Tigrex,Monoblos,Nargacuga,Nergigante,Nerscylla,Oroshi Kirin,Palamute (Dragon),Palamute (Fire),Palamute (Ice),Palamute (Normal),Palamute (Thunder),Palamute (Water),Paolumu,Pink Rathian,Plesioth,Plum Daimyo Hermitaur,Popo,Pukei-Pukei,Purple Gypceros,Purple Ludroth,Qurupeco,Rajang,Rathalos,Rathian,Red Khezu,Remobra,Royal Ludroth,Ruby Basarios,Sand Barioth,Seltas Queen,Seltas,Seregios,Shakalaka,Shrouded Nerscylla,Silver Rathalos,Silverwind Nargacuga,Slagtoth (Brown),Slagtoth (Green),Soulseer Mizutsune,Stygian Zinogre,Teostra,Tetsucabra,Thunderlord Zinogre,Tigrex,Tobi-Kadachi,Uragaan,Uroktor,Velkhana,Velocidrome,Velociprey,Vespoid,White Monoblos,Yian Garuga,Yian Kut-Ku,Zamite,Zamtrios,Zinogre];
+export const validMonsterImages = [
+  "Agnaktor", "Altaroth", "Anjanath", "Apceros", "Aptonoth", "Arzuros", "Ash Kecha Wacha", 
+  "Astalos", "Azure Rathalos", "Baggi", "Barioth", "Barrel Felyne", "Barroth", "Basarios", 
+  "Bazelgeuse", "Black Diablos", "Black Gravios", "Bloodbath Diablos", "Blue Yian Kut-Ku", 
+  "Bnahabra (Blue)", "Bnahabra (Brown)", "Bnahabra (Green)", "Bnahabra (Red)", "Boltreaver Astalos", 
+  "Brachydios", "Brute Tigrex", "Bulldrome", "Bullfango", "Cephadrome", "Cephalos", "Conga", 
+  "Congalala", "Crimson Qurupeco", "Daimyo Hermitaur", "Desert Seltas Queen", "Deviljho", 
+  "Diablos", "Dreadking Rathalos", "Dreadqueen Rathian", "Duramboros", "Elderfrost Gammoth", 
+  "Emerald Congalala", "Fulgur Anjanath", "Gammoth", "Gargwa", "Gendrome", "Genprey", 
+  "Glacial Agnaktor", "Glavenus", "Gold Rathian", "Gravios", "Great Baggi", "Great Jaggi", 
+  "Green Nargacuga", "Green Plesioth", "Grimclaw Tigrex", "Gypceros", "Hellblade Glavenus", 
+  "Hermitaur", "Iodrome", "Ioprey", "Ivory Lagiacrus", "Jade Barroth", "Jaggi", "Jaggia", 
+  "Kecha Wacha", "Kelbi", "Khezu", "Kirin", "Konchu (Blue)", "Konchu (Green)", "Konchu (Red)", 
+  "Konchu (Yellow)", "Kulu-Ya-Ku", "Kulve Taroth", "Kushala Daora", "Lagiacrus", "Lagombi", 
+  "Larinoth", "Legiana", "Ludroth", "Mizutsune", "Molten Tigrex", "Monoblos", "Nargacuga", 
+  "Nergigante", "Nerscylla", "Oroshi Kirin", "Palamute (Dragon)", "Palamute (Fire)", 
+  "Palamute (Ice)", "Palamute (Normal)", "Palamute (Thunder)", "Palamute (Water)", "Paolumu", 
+  "Pink Rathian", "Plesioth", "Plum Daimyo Hermitaur", "Popo", "Pukei-Pukei", "Purple Gypceros", 
+  "Purple Ludroth", "Qurupeco", "Rajang", "Rathalos", "Rathian", "Red Khezu", "Remobra", 
+  "Royal Ludroth", "Ruby Basarios", "Sand Barioth", "Seltas Queen", "Seltas", "Seregios", 
+  "Shakalaka", "Shrouded Nerscylla", "Silver Rathalos", "Silverwind Nargacuga", "Slagtoth (Brown)", 
+  "Slagtoth (Green)", "Soulseer Mizutsune", "Stygian Zinogre", "Teostra", "Tetsucabra", 
+  "Thunderlord Zinogre", "Tigrex", "Tobi-Kadachi", "Uragaan", "Uroktor", "Velkhana", 
+  "Velocidrome", "Velociprey", "Vespoid", "White Monoblos", "Yian Garuga", "Yian Kut-Ku", 
+  "Zamite", "Zamtrios", "Zinogre"
+];
