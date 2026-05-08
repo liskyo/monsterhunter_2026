@@ -360,9 +360,9 @@ onUnmounted(() => {
   100% { transform: translateY(-30px) scaleY(0.95); filter: drop-shadow(0 30px 10px rgba(0,0,0,0.6)); }
 }
 @keyframes breathShoot { 
-  0% { opacity: 0; transform: rotate(25deg) scaleX(0) scaleY(0.1); } 
-  20% { opacity: 1; transform: rotate(25deg) scaleX(1) scaleY(1.3); filter: brightness(2.5); } 
-  80% { opacity: 1; transform: rotate(25deg) scaleX(1) scaleY(1); } 
-  100% { opacity: 0; transform: rotate(25deg) scaleX(1.2) scaleY(0); } 
+  0% { opacity: 0; transform: rotate(-25deg) scaleX(0) scaleY(0.1); } 
+  20% { opacity: 1; transform: rotate(-25deg) scaleX(1) scaleY(1.3); filter: brightness(2.5); } 
+  80% { opacity: 1; transform: rotate(-25deg) scaleX(1) scaleY(1); } 
+  100% { opacity: 0; transform: rotate(-25deg) scaleX(1.2) scaleY(0); } 
 }
 </style>

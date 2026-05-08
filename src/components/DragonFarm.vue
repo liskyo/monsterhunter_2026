@@ -519,11 +519,11 @@ onUnmounted(() => {
   100% { transform: translateY(-30px) scaleY(0.95); filter: drop-shadow(0 30px 10px rgba(0,0,0,0.6)) brightness(1.1); }
 }
 @keyframes blastShock {
-  0% { opacity: 0; transform: rotate(25deg) scaleX(0) scaleY(0.1); }
-  10% { opacity: 1; transform: rotate(25deg) scaleX(1.5) scaleY(1.3); filter: brightness(2.5); }
-  20% { opacity: 1; transform: rotate(25deg) scaleX(1) scaleY(1); }
-  80% { opacity: 0.8; transform: rotate(25deg) scaleX(1) scaleY(1); }
-  100% { opacity: 0; transform: rotate(25deg) scaleX(1.2) scaleY(0); }
+  0% { opacity: 0; transform: rotate(-25deg) scaleX(0) scaleY(0.1); }
+  10% { opacity: 1; transform: rotate(-25deg) scaleX(1.5) scaleY(1.3); filter: brightness(2.5); }
+  20% { opacity: 1; transform: rotate(-25deg) scaleX(1) scaleY(1); }
+  80% { opacity: 0.8; transform: rotate(-25deg) scaleX(1) scaleY(1); }
+  100% { opacity: 0; transform: rotate(-25deg) scaleX(1.2) scaleY(0); }
 }
 @keyframes earthquake {
   0% { transform: translate(0, 0); }
