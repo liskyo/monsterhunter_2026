@@ -22,7 +22,7 @@
     <main class="village-main">
       <div v-if="companion" class="companion-area">
         <div class="alert-bubble companion-speech">💬 {{ companion.name }} 看起來精神很好！</div>
-        <div class="companion-wrapper" :class="[companion.element, { walking: companion.isWalking, breathing: companion.isBreathing }]">
+        <div class="companion-wrapper" :class="[companion.element, { walking: companion.isWalking, breathing: companion.isBreathing, flying: companion.isFlying }]">
           <div class="companion-flip" :style="{ transform: `scaleX(${companion.direction || 1})` }">
             <img :src="companion.image" class="companion-img" @click="showCompanionSelect = true" />
             <div v-if="companion.isBreathing" class="breath" :class="companion.element"></div>
@@ -107,7 +107,7 @@ const fetchDragons = async () => {
       if (savedId) {
         selected = data.find(d => d.id === savedId) || data[0];
       }
-      companion.value = { ...selected, isWalking: false, isBreathing: false, direction: 1 };
+      companion.value = { ...selected, isWalking: false, isBreathing: false, isFlying: false, direction: 1 };
     }
   } catch (err) {
     console.error('獲取隨行獸資料失敗:', err);
@@ -115,7 +115,7 @@ const fetchDragons = async () => {
 };
 
 const selectCompanion = (dragon) => {
-  companion.value = { ...dragon, isWalking: false, isBreathing: false, direction: 1 };
+  companion.value = { ...dragon, isWalking: false, isBreathing: false, isFlying: false, direction: 1 };
   localStorage.setItem('companionDragonId', dragon.id);
   showCompanionSelect.value = false;
 };
@@ -123,17 +123,23 @@ const selectCompanion = (dragon) => {
 let actionInterval = null;
 
 const randomAction = () => {
-  if (!companion.value || companion.value.isBreathing) return;
+  if (!companion.value || companion.value.isBreathing || companion.value.isFlying) return;
   
   const rand = Math.random();
-  if (rand > 0.8) {
-    // 20% 機率吐息
+  if (rand > 0.75) {
+    // 25% 機率吐息
     companion.value.isBreathing = true;
     setTimeout(() => {
       if (companion.value) companion.value.isBreathing = false;
     }, 2000);
-  } else if (rand > 0.4) {
-    // 40% 機率原地跳動並隨機轉向
+  } else if (rand > 0.5) {
+    // 25% 機率展翅高飛 (飛到半空中懸停)
+    companion.value.isFlying = true;
+    setTimeout(() => {
+      if (companion.value) companion.value.isFlying = false;
+    }, 2500);
+  } else if (rand > 0.2) {
+    // 30% 機率原地跳動並隨機轉向
     companion.value.isWalking = true;
     companion.value.direction = Math.random() > 0.5 ? 1 : -1;
     setTimeout(() => {
@@ -207,7 +213,7 @@ onUnmounted(() => {
 .village-main { flex: 1; position: relative; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 20px; }
 .alert-bubble { background: rgba(255,255,255,0.9); color: #333; padding: 10px 20px; border-radius: 20px 20px 20px 0; font-size: 0.85rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); animation: bounce 3s infinite; margin-bottom: 15px; }
 
-.companion-area { display: flex; flex-direction: column; align-items: center; }
+.companion-area { display: flex; flex-direction: column; align-items: center; margin-top: -80px; }
 .companion-speech { animation: float-bubble 4s infinite ease-in-out; border-radius: 20px 20px 0 20px; }
 
 .companion-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
@@ -224,6 +230,7 @@ onUnmounted(() => {
 /* 動作狀態 */
 .walking .companion-img { animation: walkBounce 0.5s infinite alternate ease-in-out; }
 .breathing .companion-img { animation: breatheScale 2s; }
+.flying .companion-img { animation: flyHover 0.3s infinite alternate ease-in-out; }
 
 /* 吐息動畫 */
 .breath { position: absolute; top: 40px; left: -90px; width: 120px; height: 25px; border-radius: 20px; opacity: 0; animation: breathShoot 2s ease-out; transform-origin: right center; z-index: 10; pointer-events: none; }
@@ -328,6 +335,10 @@ onUnmounted(() => {
 
 @keyframes walkBounce { 0% { transform: translateY(0) rotate(0); } 100% { transform: translateY(-15px) rotate(5deg); } }
 @keyframes breatheScale { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15) rotate(-5deg); } }
+@keyframes flyHover {
+  0% { transform: translateY(-40px) scaleY(1.05); filter: drop-shadow(0 40px 15px rgba(0,0,0,0.4)); }
+  100% { transform: translateY(-30px) scaleY(0.95); filter: drop-shadow(0 30px 10px rgba(0,0,0,0.6)); }
+}
 @keyframes breathShoot { 
   0% { opacity: 0; transform: scaleX(0); } 
   20% { opacity: 1; transform: scaleX(1); } 
