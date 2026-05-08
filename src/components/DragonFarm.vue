@@ -351,7 +351,10 @@ onUnmounted(() => {
 .breath.water { background: linear-gradient(90deg, transparent, #81d4fa, #0288d1); filter: drop-shadow(0 0 8px #0288d1); }
 
 /* 影子 */
-.dragon-shadow { width: 40px; height: 10px; background: rgba(0,0,0,0.4); border-radius: 50%; filter: blur(2px); margin-top: -5px; }
+.dragon-shadow { 
+  width: 60px; height: 15px; background: rgba(0,0,0,0.7); 
+  border-radius: 50%; filter: blur(4px); margin-top: -10px; z-index: -1; 
+}
 
 /* 底部操作面板 (玻璃擬態) */
 .action-panel {
