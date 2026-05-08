@@ -34,7 +34,10 @@
           @click="selectItem(item)"
         >
           <div class="rarity-glow"></div>
-          <div class="item-icon">{{ item.icon || getIconFallback(item.type) }}</div>
+          <div class="item-icon">
+            <img v-if="item.isImage" :src="item.icon" class="mini-monster-img" />
+            <span v-else>{{ item.icon || getIconFallback(item.type) }}</span>
+          </div>
           <div v-if="item.count && item.count > 1" class="item-count">{{ item.count }}</div>
           <div v-if="item.level" class="item-level">Lv.{{ item.level }}</div>
           <div class="item-name">{{ item.name }}</div>
@@ -53,7 +56,8 @@
         <div class="panel-header">
           <div class="panel-title-group">
             <div class="detail-icon-wrap" :class="selectedItem.rarity">
-              <span class="detail-icon">{{ selectedItem.icon || getIconFallback(selectedItem.type) }}</span>
+              <img v-if="selectedItem.isImage" :src="selectedItem.icon" class="detail-monster-img" />
+              <span v-else class="detail-icon">{{ selectedItem.icon || getIconFallback(selectedItem.type) }}</span>
             </div>
             <div>
               <h3 :class="selectedItem.rarity + '-text'">{{ selectedItem.name }}</h3>
@@ -129,7 +133,8 @@ const fetchDragons = async () => {
         type: 'dragon',
         rarity: d.level > 10 ? 'legendary' : (d.level > 5 ? 'epic' : 'rare'),
         count: 1,
-        icon: '🐲',
+        icon: d.image || '🐲',
+        isImage: !!d.image,
         level: d.level,
         element: d.element,
         description: `你培育的魔物。目前擁有 ${d.skills?.length || 0} 個技能。`
@@ -221,6 +226,7 @@ const getDefaultDesc = (type) => {
 .item-level { position: absolute; top: 5px; left: 6px; font-size: 0.65rem; background: rgba(0,0,0,0.6); padding: 2px 5px; border-radius: 8px; color: #ffd700; z-index: 2; }
 .item-name { position: absolute; bottom: -20px; font-size: 0.6rem; white-space: nowrap; opacity: 0; transition: all 0.2s; }
 .item-card:hover .item-name { bottom: 5px; opacity: 1; background: rgba(0,0,0,0.8); padding: 2px 6px; border-radius: 10px; z-index: 3; }
+.mini-monster-img { width: 80%; height: 80%; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
 
 /* 稀有度邊框與光暈 */
 .rarity-glow { position: absolute; inset: 0; opacity: 0.2; z-index: 1; }
@@ -244,6 +250,7 @@ const getDefaultDesc = (type) => {
 .detail-icon-wrap { width: 60px; height: 60px; background: rgba(0,0,0,0.5); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; border: 1px solid rgba(255,255,255,0.1); }
 .detail-icon-wrap.legendary { border-color: #ecc94b; box-shadow: 0 0 15px rgba(236,201,75,0.4); }
 .detail-icon-wrap.epic { border-color: #9f7aea; box-shadow: 0 0 15px rgba(159,122,234,0.4); }
+.detail-monster-img { width: 90%; height: 90%; object-fit: contain; }
 .panel-title-group h3 { margin: 0 0 5px 0; font-size: 1.3rem; font-weight: 800; }
 .epic-text { color: #d6bcfa; } .legendary-text { color: #fef08a; text-shadow: 0 0 10px rgba(236,201,75,0.5); }
 .type-badge { font-size: 0.75rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 10px; color: #aaa; }

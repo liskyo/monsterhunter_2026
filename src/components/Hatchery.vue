@@ -51,7 +51,9 @@
               </div>
             </div>
 
-            <button @click="resetHatchery" class="next-btn">確認並領取</button>
+            <button @click="resetHatchery" class="next-btn" :disabled="isSaving">
+              {{ isSaving ? '傳送至牧場中...' : '確認並領取' }}
+            </button>
           </div>
         </div>
       </main>
@@ -71,6 +73,7 @@ const isHatched = ref(false)
 const isLoading = ref(true)
 const currentEggImage = ref('Rathalos.svg')
 const hatchedMonster = ref(null)
+const isSaving = ref(false)
 
 // --- 資料庫 ---
 const monsterPool = ref([])
@@ -147,8 +150,11 @@ const handleHatchClick = () => {
       maxExp: 100
     }
 
-    // 儲存到 Supabase
-    saveToSupabase(hatchedMonster.value)
+    // 啟動儲存程序 (不阻塞 UI 顯示，但在領取按鈕會檢查)
+    isSaving.value = true
+    saveToSupabase(hatchedMonster.value).then(() => {
+      isSaving.value = false
+    })
 
     isShaking.value = false
     isHatched.value = true
@@ -163,16 +169,22 @@ const saveToSupabase = async (dragon) => {
       level: dragon.level,
       exp: dragon.exp,
       maxExp: dragon.maxExp,
-      skills: [dragon.skill]
+      skills: [dragon.skill],
+      image: dragon.image
     }])
     if (error) throw error;
     console.log('成功存入背包/牧場!');
   } catch (err) {
     console.error('儲存龍資料失敗:', err);
+    alert('【資料庫錯誤】無法儲存龍資料，請檢查 Supabase 連線或資料表設定。');
   }
 }
 
 const resetHatchery = () => {
+  if (isSaving.value) {
+    alert('正在將龍放入背包，請稍候...')
+    return
+  }
   isHatched.value = false
   rollRandomEgg()
 }
