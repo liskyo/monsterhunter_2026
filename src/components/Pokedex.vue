@@ -94,26 +94,27 @@ const selectedMonster = ref(null);
 const initPokedex = async () => {
   try {
     isLoading.value = true;
-    const res = await fetch('/game_jsons/base_monsters.json');
+    const res = await fetch('/game_jsons/All_monsters.json');
     const data = await res.json();
     
     // 顯示所有大型魔物 (無圖片者會自動使用龍蛋替代)
-    const largeMonsters = data.monsters.filter(m => m.isLarge);
+    const largeMonsters = data.魔物.filter(m => m.大型);
     
     monsters.value = largeMonsters.map((m, index) => {
-      // 取得介紹 (取最後一代的介紹)
       let desc = '棲息於各地的大型魔物，生態仍有許多未解之謎。';
-      if (m.games && m.games.length > 0) {
-        desc = m.games[m.games.length - 1].info || desc;
-      }
+      const bits = [];
+      if (m.屬性?.length) bits.push(`屬性：${m.屬性.join('、')}`);
+      if (m.異常狀態?.length) bits.push(`異常狀態：${m.異常狀態.join('、')}`);
+      if (m.弱點?.length) bits.push(`弱點：${m.弱點.join('、')}`);
+      if (bits.length) desc = `${bits.join('；')}。`;
       
       return {
         originalIndex: index + 1,
-        name: m.name,
-        englishName: m.englishName,
-        type: m.type || '未知種',
+        name: m.名稱,
+        englishName: m.英文名,
+        type: m.種類 || '未知種',
         description: desc,
-        image: `/game_images/monsters-small/${m.englishName}.webp`
+        image: `/game_images/monsters-small/${m.英文名}.webp`
       };
     });
     
